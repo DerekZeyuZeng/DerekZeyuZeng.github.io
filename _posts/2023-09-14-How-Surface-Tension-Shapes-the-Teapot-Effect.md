@@ -20,26 +20,26 @@ This is the “adhesive” suction that presses the film against the solid as it
 **Meniscus geometry from Young–Laplace and contact-angle kinematics.** Along the wetted arc, a capillary meniscus must connect the solid at contact angle \\(\theta\\) to the outer free stream. The capillary adhesion arises from the Laplace jump \\(\gamma \kappa\\) integrated over the wetted arc; in the slender-wedge limit of a thin film wrapping a weakly curved rim, one obtains a meniscus angular width
 
 $$
-\psi_{\mathrm{men}} = \left(\frac{2\gamma (1+\cos\theta)}{r_i |\Delta P|}\right)^{\!1/2},
+\psi_{\mathrm{men}} = \left(\frac{2\gamma (1+\cos\theta)}{r_i |\Delta P|}\right)^{\!1/2}
 $$
 
 which encodes that more hydrophobic surfaces (larger \\(\theta\Rightarrow\\) smaller \\(1+\cos\theta\\)) reduce the capillary “grip,” while stronger inertial suction \\(|\Delta P|\\) or a smaller \\(r_i\\) both shrink the meniscus sector. Substituting the inertial \\(|\Delta P|\\) gives the convenient form
 
 $$
 \psi_{\mathrm{men}} = \sqrt{\frac{2(1+\cos\theta)}{\mathrm{We}} \frac{R}{r_i}},\qquad 
-\mathrm{We} \equiv \frac{\rho U^2 e_0}{\gamma}.
+\mathrm{We} \equiv \frac{\rho U^2 e_0}{\gamma}
 $$
 
 **Streamwise momentum change vs capillary adhesion (per unit span).** For a small detachment angle \\(\delta\psi_0\ll1\\), the streamwise momentum-flux change required to redirect the sheet by \\(\delta\psi_0\\) is
 
 $$
-D = \rho U^2 e_0 (1-\sin\psi_0) \simeq \tfrac12 \rho U^2 e_0 \delta\psi_0^{2}.
+D = \rho U^2 e_0 (1-\sin\psi_0) \simeq \tfrac12 \rho U^2 e_0 \delta\psi_0^{2}
 $$
 
 The horizontal component of the capillary-adhesion force integrated over the wetted arc \\(\psi_{\mathrm{wet}}=\delta\psi_0+\psi_{\mathrm{men}}\\) follows from the Laplace pressure \\(|\Delta P|\\) acting on the projected area of a rim-annulus of radius \\(r_i\\):
 
 $$
-F_x \approx \frac{|\Delta P| r_i}{2} \big(\delta\psi_0+\psi_{\mathrm{men}}\big)^2.
+F_x \approx \frac{|\Delta P| r_i}{2} \big(\delta\psi_0+\psi_{\mathrm{men}}\big)^2
 $$
 
 Equating \\(D=F_x\\) and inserting \\(|\Delta P|=\rho U^2 e_0/R\\) yields the exact algebraic relation
@@ -47,19 +47,19 @@ Equating \\(D=F_x\\) and inserting \\(|\Delta P|=\rho U^2 e_0/R\\) yields the ex
 $$
 \delta\psi_0^2 = \frac{r_i}{R} \big(\delta\psi_0+\psi_{\mathrm{men}}\big)^2
 \quad\Longrightarrow\quad
-\delta\psi_0 = \frac{\sqrt{r_i/R}}{1-\sqrt{r_i/R}} \psi_{\mathrm{men}}.
+\delta\psi_0 = \frac{\sqrt{r_i/R}}{1-\sqrt{r_i/R}} \psi_{\mathrm{men}}
 $$
 
 Using the expression for \\(\psi_{\mathrm{men}}\\) above, we obtain the compact detachment-angle formula
 
 $$
-\delta\psi_0 = \frac{1}{1-\sqrt{r_i/R}} \sqrt{\frac{2(1+\cos\theta)}{\mathrm{We}}}.
+\delta\psi_0 = \frac{1}{1-\sqrt{r_i/R}} \sqrt{\frac{2(1+\cos\theta)}{\mathrm{We}}}
 $$
 
 Equivalently, in the notational form \\(\delta\psi_0=\sqrt{F[r_i/R] (1+\cos\theta)/\mathrm{We}}\\), the shape factor is
 
 $$
-F(r_i/R) = \frac{2}{\big(1-\sqrt{r_i/R}\big)^{2}},\qquad R\approx r_i+\alpha e_0.
+F(r_i/R) = \frac{2}{\big(1-\sqrt{r_i/R}\big)^{2}},\qquad R\approx r_i+\alpha e_0
 $$
 
 **Sanity checks.** (i) Sharper rim \\(r_i\!\downarrow\Rightarrow r_i/R\to0\\) gives \\(F\to2\\) and a smaller \\(\delta\psi_0\\) threshold—detachment is easier. (ii) Blunter rim \\(r_i\!\uparrow\Rightarrow \sqrt{r_i/R}\to1^{-}\\) makes \\(F\\) blow up—detachment demands a much larger \\(\delta\psi_0\\), i.e., stronger tendency to dribble. (iii) Increased hydrophobicity (larger \\(\theta\Rightarrow\\) smaller \\(1+\cos\theta\\)) reduces the needed \\(\delta\psi_0\\), favoring clean pour. All three trends match intuition and experiments.
@@ -67,19 +67,19 @@ $$
 **Critical Weber number for clean detachment.** Suppose geometric constraints and spout shape demand a minimum \\(\delta\psi_0^{\min}\\) to clear the rim. The criterion \\(\delta\psi_0\ge \delta\psi_0^{\min}\\) is equivalent to
 
 $$
-\mathrm{We}_c = \frac{2(1+\cos\theta)}{\big(1-\sqrt{r_i/R}\big)^{2} \big(\delta\psi_0^{\min}\big)^{2}}.
+\mathrm{We}_c = \frac{2(1+\cos\theta)}{\big(1-\sqrt{r_i/R}\big)^{2} \big(\delta\psi_0^{\min}\big)^{2}}
 $$
 
 Using \\(R\approx r_i+\alpha e_0\\) and expanding for \\(r_i\gg e_0\\),
 
 $$
-1-\sqrt{\frac{r_i}{R}}=1-\left(1+\frac{\alpha e_0}{r_i}\right)^{-1/2} \simeq \frac{\alpha}{2} \frac{e_0}{r_i},
+1-\sqrt{\frac{r_i}{R}}=1-\left(1+\frac{\alpha e_0}{r_i}\right)^{-1/2} \simeq \frac{\alpha}{2} \frac{e_0}{r_i}
 $$
 
 so
 
 $$
-\mathrm{We}_c \simeq \frac{8}{\alpha^2} \frac{(1+\cos\theta)}{\big(\delta\psi_0^{\min}\big)^{2}} \left(\frac{r_i}{e_0}\right)^{2}.
+\mathrm{We}_c \simeq \frac{8}{\alpha^2} \frac{(1+\cos\theta)}{\big(\delta\psi_0^{\min}\big)^{2}} \left(\frac{r_i}{e_0}\right)^{2}
 $$
 
 Thus the widely quoted scaling \\(\mathrm{We}_c\propto(r_i/e_0)^2(1+\cos\theta)\\) is recovered with an explicit \\(\mathcal{O}(1)\\) prefactor set by \\(\alpha\\) and geometry.
@@ -93,7 +93,7 @@ $$
 and recompute \\(\psi_{\mathrm{men}}\\) via the same formula; this effectively replaces \\(\mathrm{We}\\) by a velocity-dependent \\(\mathrm{We}_{\mathrm{eff}}=\rho U^2 e_0/\gamma\\) inside a square root premultiplied by \\(1/\sqrt{1+\frac{g \Delta h R}{U^2 e_0}}\\), weakening capillary adhesion when gravity assists detachment and strengthening it otherwise. Viscous effects enter in two distinct ways: (i) streamwise dissipation that reduces the available momentum \\(D\\) as the film traverses the arc (a correction of relative size \\(\sim\mathrm{Re}^{-1}(R/e_0)\\) for a laminar film, with \\(\mathrm{Re}=\rho U e_0/\mu\\)), and (ii) dynamic wetting, which alters the effective contact angle via Cox–Voinov,
 
 $$
-\theta_d^3 \approx \theta_s^3+9 \mathrm{Ca} \ln\!\left(\frac{L}{\ell}\right),\qquad \mathrm{Ca}=\frac{\mu U}{\gamma},
+\theta_d^3 \approx \theta_s^3+9 \mathrm{Ca} \ln\!\left(\frac{L}{\ell}\right),\qquad \mathrm{Ca}=\frac{\mu U}{\gamma}
 $$
 
 so one should use \\(1+\cos\theta_d\\) in \\(\psi_{\mathrm{men}}\\) at higher speeds (partial dewetting at large \\(\mathrm{Ca}\\) further reduces adhesion). Both corrections are typically subleading when \\(\mathrm{Re}\gg1\\) and \\(\mathrm{Ca}\ll1\\), consistent with the clean inertial–capillary picture above. Gravity can also be expressed via the Bond number \\(\mathrm{Bo}=(e_0/\ell_c)^2\\) with capillary length \\(\ell_c=\sqrt{\gamma/(\rho g)}\\); appreciable hydrostatics correspond to \\(\mathrm{Bo}\gtrsim \mathcal{O}(1)\\) over the vertical excursion of the meniscus.
