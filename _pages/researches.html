@@ -1,0 +1,22 @@
+---
+layout: archive
+title: "Researches"
+permalink: /researches/
+author_profile: true
+---
+
+{% include base_path %}
+
+{%- comment -%}
+  The researches page lists all entries in the `researches` collection.  Each
+  entry corresponds to a publication or research project contained in the
+  `_researches` directory.  Without this file, the `/researches/` permalink
+  defined in `_data/navigation.yml` would return a 404 page, causing the
+  "Researches" link in the site navigation to appear broken.  This page uses
+  the `archive` layout to generate a list view and iterates over the
+  collection with Liquid.  Adjust the order (for example, reverse) as needed.
+{%- endcomment -%}
+
+{% for post in site.researches reversed %}
+  {% include archive-single.html %}
+{% endfor %}
