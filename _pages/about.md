@@ -11,4 +11,4 @@ Hello! My name is Derek Zeng, and I am an undergraduate student at the Universit
 
 This site is a place where I share my research, study notes, and projects. I hope these resources can inspire others who are exploring mathematics and physics.
 
-Feel free to explore the research section for more details, and reach out via the contact links in the sidebar.
+Feel free to explore other sections for more details, and reach out via the contact links in the sidebar.
