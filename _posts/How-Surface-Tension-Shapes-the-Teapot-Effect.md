@@ -1,7 +1,7 @@
 ---
 title: 'How Surface Tension Shapes the Teapot Effect'
 date: 2023-09-14
-permalink: /posts/How-Surface-Tension-Shapes-the-Teapot-Effect.md/
+permalink: /posts/How-Surface-Tension-Shapes-the-Teapot-Effect.md
 tags:
   - Fluid Mechanics
   - Teapot Effect
