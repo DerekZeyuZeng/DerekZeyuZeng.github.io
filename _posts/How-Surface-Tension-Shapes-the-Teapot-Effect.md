@@ -9,25 +9,29 @@ tags:
 
 **Idea.** A fast, thin sheet of liquid curves around the teapot rim. Inertia demands a normal (centripetal) pressure drop, while capillarity (via the meniscus set by the contact angle) provides adhesion over the wetted sector. The competition sets whether the stream detaches cleanly or dribbles down the spout.
 
-## Geometry and assumptions
+Geometry and assumptions
+-----
 Thin film of thickness \(e_0\) flows at speed \(U\) over a rounded rim of radius \(r_i\). The streamline curvature is \(R\simeq r_i+\alpha e_0\) with \(\alpha\sim \tfrac12\). We neglect viscosity and gravity at high Reynolds and Froude numbers; how to include gravity is noted below. Let \(\delta\psi_0\) be the small deflection angle needed for detachment; the total wetted angular span is
 $$
 \psi_{\text{wet}}=\delta\psi_0+\psi_{\text{men}}.
 $$
 
-## Curvature-induced pressure drop
+Curvature-induced pressure drop
+-----
 Inertia across the film thickness yields a normal pressure drop
 $$
 |\Delta P| \;\approx\; \rho\,\frac{U^2\,e_0}{R}.
 $$
 
-## Meniscus from Young–Laplace
+Meniscus from Young–Laplace
+-----
 The meniscus width follows from the Young–Laplace relation and contact-angle geometry:
 $$
 \psi_{\text{men}} \;=\; \left[\frac{2\,\gamma\,(1+\cos\theta)}{r_i\,|\Delta P|}\right]^{1/2}.
 $$
 
-## Momentum balance (per unit span)
+Momentum balance (per unit span)
+-----
 Horizontal momentum-flux change for a small detachment angle is
 $$
 D \;=\; \rho U^2 e_0\,(1-\sin\psi_0)\;\simeq\;\tfrac12\,\rho U^2 e_0\,\delta\psi_0^{\,2}.
@@ -42,14 +46,16 @@ $$
 F[r_i/R]\simeq 2\big(1-\sqrt{r_i/R}\big)^2.
 $$
 
-## Critical Weber number (detachment criterion)
+Critical Weber number (detachment criterion)
+-----
 If clean detachment needs \(\delta\psi_0\ge \delta\psi_0^{\min}\), then
 $$
 \boxed{\,\mathrm{We}_c \;\propto\; \Big(\frac{r_i}{e_0}\Big)^{\!2}\,(1+\cos\theta)\,}.
 $$
 Thus, a larger contact angle (hydrophobicity), a sharper rim (smaller \(r_i\)), and a thinner film (smaller \(e_0\)) all favor clean detachment and suppress dribbling.
 
-## Gravity (when needed)
+Gravity (when needed)
+-----
 At low speeds or strong curvature of the free surface across a height change \(\Delta h\), include hydrostatics as
 $$
 |\Delta P| \;\approx\; \rho\,\frac{U^2 e_0}{R} \;+\; \rho g\,\Delta h,
