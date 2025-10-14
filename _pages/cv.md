@@ -1,20 +1,13 @@
-# _pages/cv.md  (or place this file anywhere as cv.md)
 ---
 layout: archive
 title: "CV"
 permalink: /cv/
-author_profile: false
-redirect_from:
-  - /resume/
-last_modified_at: 2025-10-13
+author_profile: true
 ---
 
-<p><a class="btn btn--primary" href="{{ 'files/CV_Zeyu_Zeng.pdf' | relative_url }}" download>Download PDF</a></p>
-
+<p><a href="{{ 'files/CV_Zeyu_Zeng.pdf' | relative_url }}" download>Download PDF</a></p>
 <object data="{{ 'files/CV_Zeyu_Zeng.pdf' | relative_url }}" type="application/pdf" width="100%" height="900">
-  <p>PDF preview is unavailable. Please
-    <a href="{{ 'files/CV_Zeyu_Zeng.pdf' | relative_url }}">download/open the CV</a>.
-  </p>
+  <p>PDF preview unavailable. <a href="{{ 'files/CV_Zeyu_Zeng.pdf' | relative_url }}">Open</a>.</p>
 </object>
 
 Education
