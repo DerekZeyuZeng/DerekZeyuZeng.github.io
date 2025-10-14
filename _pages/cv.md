@@ -5,11 +5,6 @@ permalink: /cv/
 author_profile: true
 ---
 
-<p><a href="{{ 'files/CV_Zeyu_Zeng.pdf' | relative_url }}" download>Download PDF</a></p>
-<object data="{{ 'files/CV_Zeyu_Zeng.pdf' | relative_url }}" type="application/pdf" width="100%" height="900">
-  <p>PDF preview unavailable. <a href="{{ 'files/CV_Zeyu_Zeng.pdf' | relative_url }}">Open</a>.</p>
-</object>
-
 Education
 ======
 - Undergraduate Student in Mathematics & Physics, University of Illinois Urbana–Champaign, 2024–present
@@ -61,3 +56,8 @@ Teaching
 Service and leadership
 ======
 - N/A
+
+<p><a href="{{ 'files/CV_Zeyu_Zeng.pdf' | relative_url }}" download>Download PDF</a></p>
+<object data="{{ 'files/CV_Zeyu_Zeng.pdf' | relative_url }}" type="application/pdf" width="100%" height="50">
+  <p>PDF preview unavailable. <a href="{{ 'files/CV_Zeyu_Zeng.pdf' | relative_url }}">Open</a>.</p>
+</object>
