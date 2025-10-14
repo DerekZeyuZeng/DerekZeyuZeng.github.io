@@ -6,15 +6,15 @@ author_profile: true
 ---
 
 Education
-======
+------
 - Undergraduate Student in Mathematics & Physics, University of Illinois Urbana–Champaign, 2024–present
 
 Work experience
-======
+------
 - N/A
 
 Skills
-======
+------
 - Undergraduate-level physics and mathematics
 - Differential Geometry on Manifolds (especially Riemannian Geometry)
 - Basic Algebraic Topology (Textbook-level homotopy, homology, and cohomology theory with some applications)
@@ -23,7 +23,7 @@ Skills
 - Wolfram Mathematica coding
 
 Researches
-======
+------
 {% if site.researches %}
 <ul>
   {% for post in site.researches reversed %}
@@ -35,7 +35,7 @@ Researches
 {% endif %}
 
 Talks
-======
+------
 {% if site.talks %}
 <ul>
   {% for post in site.talks reversed %}
@@ -47,7 +47,7 @@ Talks
 {% endif %}
 
 Teaching
-======
+------
 {% if site.teaching %}
 <ul>
   {% for post in site.teaching reversed %}
@@ -59,7 +59,7 @@ Teaching
 {% endif %}
 
 Service and leadership
-======
+------
 - N/A
 
 <p><a href="{{ 'files/CV_Zeyu_Zeng.pdf' | relative_url }}" download>Download PDF</a></p>
