@@ -5,9 +5,9 @@ layout: single
 author_profile: true
 ---
 
-[Doemload PDF](/files/cv.pdf)
+[Doemload PDF](files/CV_Zeyu_Zeng.pdf)
 
-<embed src="/files/cv.pdf" type="application/pdf" width="100%" height="900px" />
+<embed src="files/CV_Zeyu_Zeng.pdf" type="application/pdf" width="100%" height="900px" />
 
 ---
 layout: archive
