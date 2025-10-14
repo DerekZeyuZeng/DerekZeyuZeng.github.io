@@ -17,6 +17,7 @@ Skills
 ======
 - Undergraduate-level physics and mathematics
 - Differential Geometry on Manifolds (especially Riemannian Geometry)
+- Basic Algebraic Topology (Textbook-level homotopy, homology, and cohomology theory with some application)
 - Basic QFT and Gauge Theory
 - Python numerical methods
 - Wolfram Mathematica coding
