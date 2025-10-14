@@ -12,8 +12,8 @@ tags:
   - **[Open]** unsolved,
   - **[WIP]** in progress,
   - **[Solved]** with a brief proof/idea,
-  - **[Ex]** Just a small exercise/interesting HW problem.
-  - **[Note]** literature or folklore. 
+  - **[Ex]** Small exercise/interesting HW problem.
+  - **[Note]** Personal thoughts, literature, or folklore. 
 
 A linear algebra practice (2025-10-14). 
 ---
