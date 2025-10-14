@@ -1,15 +1,4 @@
 ---
-title: "CV"
-permalink: /cv/
-layout: single
-author_profile: true
----
-
-[Doemload PDF](files/CV_Zeyu_Zeng.pdf)
-
-<embed src="files/CV_Zeyu_Zeng.pdf" type="application/pdf" width="100%" height="900px" />
-
----
 layout: archive
 title: "CV"
 permalink: /cv/
@@ -18,7 +7,9 @@ redirect_from:
   - /resume
 ---
 
-{% include base_path %}
+[Doemload PDF](files/CV_Zeyu_Zeng.pdf)
+
+<embed src="files/CV_Zeyu_Zeng.pdf" type="application/pdf" width="100%" height="900px" />
 
 Education
 ======
