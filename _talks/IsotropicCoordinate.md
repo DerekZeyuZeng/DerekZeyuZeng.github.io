@@ -7,8 +7,8 @@ permalink: /talks/IsotropicCoordinate
 venue: "UIUC Undergraduate Research Symposium, Poster Session"
 date: 2025-04-24
 location: "Urbana, IL, USA"
----
-We present a unified construction of isotropic coordinates for static, spherically symmetric spacetimes
+
+excerpt： “We present a unified construction of isotropic coordinates for static, spherically symmetric spacetimes
 
 $$
 \mathrm{d}s^{2}= f(r)\mathrm{d}t^{2}+f(r)^{-1}\mathrm{d}r^{2}+r^{2}\mathrm{d}\Omega^{2}
@@ -27,5 +27,6 @@ $$
 $$
 
 from which we obtain closed forms for Schwarzschild and Reissner–Nordström and elliptic-integral expressions for Kottler \\(\Lambda \neq 0\\); extensions to Kiselev-type fluids are outlined.
-These explicit formulas enable clean, conformally flat initial data across near-horizon to cosmological scales and streamline boundary and matching conditions in \\(3{+}1\\) numerical relativity.
+These explicit formulas enable clean, conformally flat initial data across near-horizon to cosmological scales and streamline boundary and matching conditions in \\(3{+}1\\) numerical relativity.”
+---
 <p><a href="{{ 'files/Isotropic_Coordinate_Poster.pdf' | relative_url }}" download>Download PDF</a></p>
