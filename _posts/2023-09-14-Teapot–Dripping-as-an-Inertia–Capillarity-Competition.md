@@ -1,7 +1,7 @@
 ---
 title: 'Teapot–Dripping as an Inertia–Capillarity Competition'
 date: 2023-09-14
-permalink: /posts/2023/09/How-Surface-Tension-Shapes-the-Teapot-Effect/
+permalink: /posts/2023/09/Teapot–Dripping-as-an-Inertia–Capillarity-Competition/
 tags:
   - Fluid Mechanics
   - Teapot Effect
