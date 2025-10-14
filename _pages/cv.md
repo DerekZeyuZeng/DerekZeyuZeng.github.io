@@ -20,7 +20,7 @@ Skills
 Researches
 ======
 {% if site.researches %}
-<u
+<ul>
   {% for post in site.researches reversed %}
     {% include archive-single-cv.html %}
   {% endfor %}
