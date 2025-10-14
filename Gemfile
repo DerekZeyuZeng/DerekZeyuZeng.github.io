@@ -1,11 +1,10 @@
 source 'https://rubygems.org'
 
 group :jekyll_plugins do
-  
   gem 'jekyll-feed'
-  em 'jekyll-sitemap'
+  gem 'jekyll-sitemap'
   gem 'jekyll-redirect-from'
-  gem 'jemoji'
+  gem 'emoji'
   gem 'webrick', '~> 1.8'
 end
 
