@@ -32,7 +32,7 @@ $$
 $$
 
 *Lemma 1 (powers of a swapped product).* For every \\(k\in\mathbb N\\), \\(B(AB)^k=(BA)^kB,\qquad A(BA)^k=(AB)^kA \\). \
-*Proof.* Trivial for $k=1$. If it holds for $k$, then
+*Proof.* Trivial for \\(k=1\\). If it holds for \\(k\\), then
 
 $$
 B(AB)^{k+1}=B(AB)^k(AB)=(BA)^kB(AB)=(BA)^{k+1}B
@@ -47,17 +47,17 @@ $$
 (BA-\lambda I)^t\,B=B\,(AB-\lambda I)^t
 $$
 
-Hence \\(B:\ker(AB-\lambda I)^t\longrightarrow \ker(BA-\lambda I)^t\\) is an isomorphism (its inverse is induced by $A$). This carries Jordan chains to Jordan chains without changing their lengths, so block sizes match. \\(\square\\)
+Hence \\(B:\ker(AB-\lambda I)^t\longrightarrow \ker(BA - \lambda I)^t\\) is an isomorphism (its inverse is induced by \\(A\\)). This carries Jordan chains to Jordan chains without changing their lengths, so block sizes match. \\(\square\\)
 
 *Lemma 3 (zero blocks vanish after the $n$-th power).* If \\(J_m(0)\\) is a size-\\(m\\) Jordan block at the eigenvalue \\(0\\), then
 
 $$
-\big(J_m(0)\big)^n=0_{m\times m}\qquad (\text{since }m\le n).
+\big(J_m(0)\big)^n = 0_{m\times m} \qquad (\text{since }m\le n).
 $$
 
 *Proof.* \\(J_m(0)\\) is nilpotent of index \\(m\\), and \\(n\ge m\\). \\(\square\\)
 
-*Combine.* For a nonzero eigenvalue block \\(J_r(\lambda)=\lambda(I+N),\qquad N^r=0,\ \lambda\neq0\\), one has \\(J_r(\lambda)^n=\lambda^n(I+N)^n\\), which is still a single Jordan block of size \\(r\\) (only the eigenvalue changes to \\(\lambda^n\\) ). By Lemma 2,
+*Combine.* For a nonzero eigenvalue block \\(J_r(\lambda)=\lambda(I+N)\\), \\(N^r=0,\ \lambda\neq0\\), one has \\(J_r(\lambda)^n=\lambda^n(I+N)^n\\), which is still a single Jordan block of size \\(r\\) (only the eigenvalue changes to \\(\lambda^n\\) ). By Lemma 2,
 
 $$
 \big(J_{\mathrm{nz}}(AB)\big)^n \sim \big(J_{\mathrm{nz}}(BA)\big)^n .
