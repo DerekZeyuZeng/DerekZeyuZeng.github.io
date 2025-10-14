@@ -15,7 +15,11 @@ Work experience
 
 Skills
 ======
-- N/A
+- Undergraduate-level physics and mathematics
+- Differential Geometry on Manifolds (especially Riemannian Geometry)
+- Basic QFT and Gauge Theory
+- Python numerical methods
+- Wolfram Mathematica coding
 
 Researches
 ======
