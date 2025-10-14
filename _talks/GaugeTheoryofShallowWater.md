@@ -2,7 +2,7 @@
 title: "Gauge Theory of Shallow Water"
 collection: talks
 type: "Talk"
-permalink: /talks/2012-03-01-talk-1
+permalink: /talks/GaugeTheoryofShallowWater
 venue: "Tsung-Dao Lee Institute"
 date: 2025-07-17
 location: "Shanghai, China"
