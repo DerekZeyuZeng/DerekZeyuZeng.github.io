@@ -3,7 +3,7 @@
 layout: archive
 title: "CV"
 permalink: /cv/
-author_profile: true
+author_profile: false
 redirect_from:
   - /resume/
 last_modified_at: 2025-10-13
