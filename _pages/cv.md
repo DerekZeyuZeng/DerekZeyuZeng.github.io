@@ -18,7 +18,7 @@ Skills
 - Undergraduate-level physics and mathematics
 - Differential Geometry on Manifolds (especially Riemannian Geometry)
 - Basic Algebraic Topology (Textbook-level homotopy, homology, and cohomology theory with some applications)
-- Basic QFT and Gauge Theory (\\(\phi^4\\)-thoery, basic QED, path integral, basic renormalization theory)
+- Basic QFT and Gauge Theory (\\(\phi^4\\)-theory, basic QED, path integral, basic renormalization theory)
 - Python numerical methods
 - Wolfram Mathematica coding
 
