@@ -31,11 +31,11 @@ $$
 \big(J(M)\big)^n=\big(J_{\mathrm{nz}}(M)\big)^n\oplus \big(J_0(M)\big)^n
 $$
 
-*Lemma 1 (powers of a swapped product).* For every \\(k\in\mathbb N\\), \\(B(AB)^k=(BA)^kB,\qquad A(BA)^k=(AB)^kA \\). \
+*Lemma 1 (powers of a swapped product).* \\(\forall k\in\mathbb N\\), \\(B(AB)^k=(BA)^kB\\) and \\(A(BA)^k=(AB)^kA \\). \
 *Proof.* Trivial for \\(k=1\\). If it holds for \\(k\\), then
 
 $$
-B(AB)^{k+1}=B(AB)^k(AB)=(BA)^kB(AB)=(BA)^{k+1}B
+B(AB)^{k+1} = B(AB)^k(AB) = (BA)^kB(AB) = (BA)^{k+1} B
 $$
 
 And the second identity is analogous. \\(\square\\)
