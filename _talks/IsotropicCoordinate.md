@@ -7,7 +7,6 @@ permalink: /talks/IsotropicCoordinate
 venue: "UIUC Undergraduate Research Symposium, Poster Session"
 date: 2025-04-24
 location: "Urbana, IL, USA"
-
 excerpt： “We present a unified construction of isotropic coordinates for static, spherically symmetric spacetimes
 
 $$
