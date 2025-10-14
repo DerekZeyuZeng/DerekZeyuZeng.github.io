@@ -17,7 +17,7 @@ Skills
 ======
 - N/A
 
-Publications
+Researches
 ======
 {% if site.publications %}
 <ul>
