@@ -13,7 +13,7 @@ This site is a place where I share my research, talks & presentations, personal 
 
 Feel free to explore other sections for more details, and reach out via the contact links in the sidebar.
 
-Some Useful Limks
+Some Useful Links
 ----
 - [arXiv](https://arxiv.org/)
 - [Google Scholar](https://scholar.google.ca/schhp?hl=zh-CN)
