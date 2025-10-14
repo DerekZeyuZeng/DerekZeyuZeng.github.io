@@ -15,7 +15,7 @@ tags:
   - **[Ex]** Just a small exercise/interesting HW problem.
   - **[Note]** literature or folklore. 
 
-A linear algebra practice. 
+A linear algebra practice (2025-10-14). 
 ---
 **[Ex]** Let \\( A,B\in\mathbb C^{n\times n} \\). Prove that \\( (AB)^n \sim (BA)^n \\).
 
