@@ -21,7 +21,7 @@ Researches
 ======
 {% if site.publications %}
 <ul>
-  {% for post in site.publications reversed %}
+  {% for post in site.researches reversed %}
     {% include archive-single-cv.html %}
   {% endfor %}
 </ul>
