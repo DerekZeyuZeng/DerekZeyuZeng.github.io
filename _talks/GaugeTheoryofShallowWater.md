@@ -5,6 +5,7 @@ type: "Talk"
 permalink: /talks/GaugeTheoryofShallowWater
 venue: "Tsung-Dao Lee Institute"
 date: 2025-07-17
+paperurl: "{ 'files/CV_Zeyu_Zeng.pdf' | relative_url }"
 location: "Shanghai, China"
 ---
 
