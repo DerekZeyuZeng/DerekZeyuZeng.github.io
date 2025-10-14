@@ -5,7 +5,7 @@ collection: talks
 type: "Poster Presentation"
 permalink: /talks/IsotropicCoordinate
 venue: "UIUC Undergraduate Research Symposium, Poster Session"
-date: 2025-04
+date: 2025-04-24
 location: "Urbana, IL, USA"
 ---
 We present a unified construction of isotropic coordinates for static, spherically symmetric spacetimes \\( \mathrm{d}s^{2}=-f(r)\mathrm{d}t^{2}+f(r)^{-1}\mathrm{d}r^{2}+r^{2}\mathrm{d}\Omega^{2} \\)$, yielding the conformally flat spatial form \\(\mathrm{d}s^{2}=-F(\rho), \mathrm{d}t^{2}+G(\rho)(\mathrm{d}x^{2}+\mathrm{d}y^{2}+\mathrm{d}z^{2})\\).
