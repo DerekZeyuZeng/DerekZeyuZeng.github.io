@@ -19,8 +19,8 @@ Skills
 
 Researches
 ======
-{% if site.publications %}
-<ul>
+{% if site.researches %}
+<u
   {% for post in site.researches reversed %}
     {% include archive-single-cv.html %}
   {% endfor %}
