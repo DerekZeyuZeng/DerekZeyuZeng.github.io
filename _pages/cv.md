@@ -1,6 +1,6 @@
 ---
 layout: archive
-title: "CV"
+title: "Zeyu Zeng's CV"
 permalink: /cv/
 author_profile: true
 ---
