@@ -8,5 +8,4 @@ date: 2025-07-17
 location: "Shanghai, China"
 ---
 
-We presents striking similarities between shallow water currents and E&M fields, and cover how some of the conclusions of gauge
-theory are naturally derived into ocean physics based on David Tong's paper <i> arXiv:2209.10574 <i>, such as the physical relation beneath the chiral mode of Kelvin wave and global ocean current patterns.
+We present the striking parallels between shallow-water dynamics and electromagnetism (EM), and show how gauge-theoretic structures arise naturally in ocean physics following David Tong’s work ([arXiv:2209.10574](https://arxiv.org/abs/2209.10574)). Topics include the mapping between vorticity/divergence and EM fields, the role of Coriolis effects as effective sources, conserved currents and Bianchi-type identities, and the gauge interpretation of boundary conditions. We also discuss the physical link between the chiral Kelvin mode and large-scale ocean circulation patterns, clarifying when and how the gauge perspective yields testable consequences for geophysical flows.
