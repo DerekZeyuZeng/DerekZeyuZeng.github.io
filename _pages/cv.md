@@ -1,46 +1,70 @@
+# _pages/cv.md  (or place this file anywhere as cv.md)
 ---
 layout: archive
 title: "CV"
 permalink: /cv/
 author_profile: true
 redirect_from:
-  - /resume
+  - /resume/
+last_modified_at: 2025-10-13
 ---
 
-[Doemload PDF](files/CV_Zeyu_Zeng.pdf)
+<p><a class="btn btn--primary" href="{{ 'files/CV_Zeyu_Zeng.pdf' | relative_url }}" download>Download PDF</a></p>
 
-<embed src="files/CV_Zeyu_Zeng.pdf" type="application/pdf" width="100%" height="900px" />
+<object data="{{ 'files/CV_Zeyu_Zeng.pdf' | relative_url }}" type="application/pdf" width="100%" height="900">
+  <p>PDF preview is unavailable. Please
+    <a href="{{ 'files/CV_Zeyu_Zeng.pdf' | relative_url }}">download/open the CV</a>.
+  </p>
+</object>
 
 Education
 ======
-* Undergraduate Student in Mathematics & Physics, University of Illinois Urbana-Champaign, 2024 - present
+- Undergraduate Student in Mathematics & Physics, University of Illinois Urbana–Champaign, 2024–present
 
 Work experience
 ======
-* N/A
-  
+- N/A
+
 Skills
 ======
-* N/A
+- N/A
 
 Publications
 ======
-  <ul>{% for post in site.publications reversed %}
+{% if site.publications %}
+<ul>
+  {% for post in site.publications reversed %}
     {% include archive-single-cv.html %}
-  {% endfor %}</ul>
-  
+  {% endfor %}
+</ul>
+{% else %}
+<p>—</p>
+{% endif %}
+
 Talks
 ======
-  <ul>{% for post in site.talks reversed %}
+{% if site.talks %}
+<ul>
+  {% for post in site.talks reversed %}
     {% include archive-single-talk-cv.html  %}
-  {% endfor %}</ul>
-  
+  {% endfor %}
+</ul>
+{% else %}
+<p>—</p>
+{% endif %}
+
 Teaching
 ======
-  <ul>{% for post in site.teaching reversed %}
+{% if site.teaching %}
+<ul>
+  {% for post in site.teaching reversed %}
     {% include archive-single-cv.html %}
-  {% endfor %}</ul>
-  
+  {% endfor %}
+</ul>
+{% else %}
+<p>—</p>
+{% endif %}
+
 Service and leadership
 ======
-* N/A
+- N/A
