@@ -16,7 +16,7 @@ Feel free to explore other sections for more details, and reach out via the cont
 Some Useful Links
 ----
 - [arXiv](https://arxiv.org/)
-- [Google Scholar](https://scholar.google.ca/schhp?hl=zh-CN)
+- [Google Scholar](https://scholar.google.ca/)
 - [INSPIRE-HEP](https://inspirehep.net/)
-- An excellent [Knots Atlas](https://katlas.org/wiki/Main_Page)
+- An excellent [Knots Atlas](https://katlas.org/)
 - [SageMath](https://www.sagemath.org/) and an web interface [SageMathCell](https://sagecell.sagemath.org/)
