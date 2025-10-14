@@ -15,7 +15,11 @@ $$
 $$
 
 yielding the conformally flat spatial form 
-\\( \mathrm{d}s^{2}=-F(\rho) \\) and \\( \mathrm{d}t^{2}+G(\rho)(\mathrm{d}x^{2}+\mathrm{d}y^{2}+\mathrm{d}z^{2}) \\)
+
+$$
+\mathrm{d}s^{2}=-F(\rho)\mathrm{d}t^{2}+G(\rho)(\mathrm{d}x^{2}+\mathrm{d}y^{2}+\mathrm{d}z^{2})
+$$
+
 The key step is the general transformation
 
 $$
