@@ -1,5 +1,5 @@
 ---
-title: 'Teapot–dripping as an inertia–capillarity competition (expanded, single-thread derivation with checks and extensions)'
+title: 'Teapot–Dripping as an Inertia–Capillarity Competition'
 date: 2023-09-14
 permalink: /posts/2023/09/How-Surface-Tension-Shapes-the-Teapot-Effect/
 tags:
