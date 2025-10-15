@@ -5,6 +5,7 @@ group :jekyll_plugins do
   gem 'jekyll-sitemap'
   gem 'jekyll-redirect-from'
   gem 'emoji'
+  gem 'jekyll-scholar'
   gem 'webrick', '~> 1.8'
 end
 
