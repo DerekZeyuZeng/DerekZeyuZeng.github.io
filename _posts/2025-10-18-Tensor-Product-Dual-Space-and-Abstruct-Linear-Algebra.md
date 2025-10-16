@@ -12,3 +12,10 @@ tags:
 
 Tensor Product, Dual Space, and Abstruct Linear Algebra
 ---
+
+<script type="text/tikz">
+  \begin{tikzcd}
+    A \arrow[r, "\phi"] \arrow[d] & B \arrow[d, "\psi"] \\
+    C \arrow[r, "\eta"] & D
+  \end{tikzcd}
+</script>
