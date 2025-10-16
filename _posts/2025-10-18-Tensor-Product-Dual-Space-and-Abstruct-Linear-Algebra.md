@@ -12,7 +12,3 @@ tags:
 
 Tensor Product, Dual Space, and Abstruct Linear Algebra
 ---
-The tensor product is given by
-$$
-U \otimes V
-$$
