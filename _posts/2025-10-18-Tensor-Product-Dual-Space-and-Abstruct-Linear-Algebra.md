@@ -8,6 +8,7 @@ tags:
   - Linear Algebra
   - Tensor Analysis
 ---
+**Introduction**.
 
 Tensor Product, Dual Space, and Abstruct Linear Algebra
 ---

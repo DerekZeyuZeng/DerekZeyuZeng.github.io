@@ -41,3 +41,10 @@
     "vendor/font-awesome/solid",
     "vendor/font-awesome/brands"
 ;
+
+/* Improve MathJax block spacing so $$ $$ display math does not need manual blank lines */
+mjx-container[jax="CHTML"][display="true"] {
+  display: block;
+  margin: 1.5em 0;
+  text-align: center;
+}
