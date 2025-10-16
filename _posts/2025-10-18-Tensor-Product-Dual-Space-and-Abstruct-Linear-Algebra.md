@@ -10,12 +10,14 @@ tags:
 ---
 **Introduction**.
 
+Vector Space and their Dual Spaces
+---
+
 Ring and Module
 ---
 
-<script type="text/tikz">
-  \begin{tikzcd}
-    A \arrow[r, "\phi"] \arrow[d] & B \arrow[d, "\psi"] \\
-    C \arrow[r, "\eta"] & D
-  \end{tikzcd}
-</script>
+Tensor Product
+---
+
+Monodal Category
+---
