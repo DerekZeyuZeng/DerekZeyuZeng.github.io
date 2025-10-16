@@ -96,9 +96,7 @@ x \cdot V(x) = \sum_{i = 1}^{n + 1} (x^i x^{i+1} - x^{i + 1} x^1) = 0
 $$
 
 we have shown that $V(x)$ is always tangent to the hypersphere $S^{2n+1}$. Also, if $V(x) = 0$, then
-
 $$
 V(x) = (x^2, -x^1, \dots, x^{2n+2}, -x^{2n+1}) = 0 \implies x^i = 0 \ \forall i
 $$
-
 the fact that $(0, \dots, 0) \notin S^{2n+1}$ make $V(x)$ been no where vanishing.
