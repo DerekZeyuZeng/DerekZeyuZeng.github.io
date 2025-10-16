@@ -17,7 +17,11 @@ tags:
 
 A linear algebra practice (2025-10-14). 
 ---
-**[Ex]** Let \\( A,B\in\mathbb C^{n\times n} \\). Prove that \\( (AB)^n \sim (BA)^n \\).
+
+**[Ex]** Let \\( A,B\in\mathbb C^{n\times n} \\). Prove that 
+$$
+(AB)^n \sim (BA)^n
+$$
 
 **Proof** (via Jordan canonical form). Write the Jordan form of any square matrix \\(M\\) as
 
@@ -75,7 +79,9 @@ whence \\( (AB)^n \sim (BA)^n\\), which completes the proof. \\(\square\\)
 1. More generally, for any \\(k\\) not smaller than the largest size of a Jordan block of \\(AB\\) (equivalently of \\(BA\\)) at \\(0\\), one has \\((AB)^k\sim (BA)^k\\); in particular, \\(k=n\\) always works.  
 2. If either \\(A\\) or \\(B\\) is invertible, then \\(AB\sim BA\\) without taking powers.
 
+The Hairy Ball Theorem
+---
 
+**[Note]** Prove that there is no nowhere vanishing vector fields on \\(TS^{2n}\\), and thus \\(TS^{2n}\\) is not a trivial bundle.
 
-
-
+**Proof** (Via antipodal map). 
