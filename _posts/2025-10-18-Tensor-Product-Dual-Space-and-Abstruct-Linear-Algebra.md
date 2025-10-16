@@ -10,7 +10,7 @@ tags:
 ---
 **Introduction**.
 
-Tensor Product, Dual Space, and Abstruct Linear Algebra
+Ring and Module
 ---
 
 <script type="text/tikz">
