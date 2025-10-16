@@ -75,13 +75,11 @@ $$
 
 whence \\( (AB)^n \sim (BA)^n\\), which completes the proof. \\(\square\\)
 
-**Remarks**
-1. More generally, for any \\(k\\) not smaller than the largest size of a Jordan block of \\(AB\\) (equivalently of \\(BA\\)) at \\(0\\), one has \\((AB)^k\sim (BA)^k\\); in particular, \\(k=n\\) always works.  
-2. If either \\(A\\) or \\(B\\) is invertible, then \\(AB\sim BA\\) without taking powers.
+**Remarks**. More generally, for any \\(k\\) not smaller than the largest size of a Jordan block of \\(AB\\) (equivalently of \\(BA\\)) at \\(0\\), one has \\((AB)^k\sim (BA)^k\\); in particular, \\(k = n\\) always works. If either \\(A\\) or \\(B\\) is invertible, then \\(AB\sim BA\\) without taking powers.
 
 The Hairy Ball Theorem
 ---
 
-**[Note]** Prove that there is no nowhere vanishing vector fields on \\(TS^{2n}\\), and thus \\(TS^{2n}\\) is not a trivial bundle.
+**[Note]** Prove that there is no nowhere vanishing vector fields on \\(TS^{2n}\\), and thus \\(TS^{2n}\\) is not a trivial bundle. Also show that the statement is not true on \\(TS^{2n+1}\\).
 
-**Proof** (Via antipodal map). 
+**Proof** (Via antipodal map). First, we show that 
