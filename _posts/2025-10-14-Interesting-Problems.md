@@ -95,4 +95,4 @@ $$
 x \cdot V(x) = \sum_{i = 1}^{n + 1} (x^i x^{i+1} - x^{i + 1} x^1) = 0
 $$
 
-we have shown that \\(V(x)\\) is always tangent to the hypersphere \\(S^{2n+1}\\).
+we have shown that $V(x)$ is always tangent to the hypersphere \\(S^{2n+1}\\).
