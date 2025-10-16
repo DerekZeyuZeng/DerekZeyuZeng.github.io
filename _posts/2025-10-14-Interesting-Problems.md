@@ -6,19 +6,20 @@ tags:
   - Math&Physics Problems
   - Living Post
 ---
-**Introduction:** This is a living post where I log interesting problems and obstacles I encounter across mathematics and physics. This post is updated irregularly; a concise changelog is kept at the end. 
+**Introduction:** This is a living post where I log interesting problems and obstacles I encounter across mathematics and physics. This post is updated irregularly; a concise changelog is kept at the end.
 
 **Status labels guide navigation**:
-  - **[Open]** unsolved,
-  - **[WIP]** in progress,
-  - **[Solved]** with a brief proof/idea,
-  - **[Ex]** Small exercise/interesting HW problem.
-  - **[Note]** Personal thoughts, literature, or folklore. 
 
-A linear algebra practice (2025-10-14). 
+- **[Open]** unsolved,
+- **[WIP]** in progress,
+- **[Solved]** with a brief proof/idea,
+- **[Ex]** Small exercise/interesting HW problem.
+- **[Note]** Personal thoughts, literature, or folklore.
+
+A linear algebra practice (2025-10-14)
 ---
 
-**[Ex]** Let \\( A,B\in\mathbb C^{n\times n} \\). Prove that 
+**[Ex]** Let \\( A,B\in\mathbb C^{n\times n} \\). Prove that
 $$
 (AB)^n \sim (BA)^n
 $$
@@ -82,4 +83,12 @@ The Hairy Ball Theorem
 
 **[Note]** Prove that there is no nowhere vanishing vector fields on \\(TS^{2n}\\), and thus \\(TS^{2n}\\) is not a trivial bundle. Also show that the statement is not true on \\(TS^{2n+1}\\).
 
-**Proof** (Via antipodal map). First, we show that 
+**Proof** (Via antipodal map). First, embedded \\(S^{2n+1}\\) in $\mathbb{R}^{2n+2}$, consider the the vector field defined by \\(\forall x \in \mathbb{R}^{2n+2}\\)
+$$
+V(x^{1}, \dots, x^{2n+2}) = (x^2, -x^1, \dots, x^{2n+2}, -x^{2n+1})
+$$
+By considering the dot product
+$$
+x \cdot V(x) = \sum_{i = 1}^{n + 1} (x^i x^{i+1} - x^{i + 1} x^1) = 0
+$$
+we have shown that \\(V(x)\\) is always tangent to the hypersphere \\(S^{2n+1}\\).
