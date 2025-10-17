@@ -26,14 +26,13 @@ Mathematicians developed the category theory mainly to discribe the widly existe
 4. $\forall X, Y, Z \in \mathrm{Obj}(\mathcal{C})$, the composite map of morphisms is given by $\circ: \mathrm{Hom}_\mathcal{C}(X, Y) \times \mathrm{Hom}_\mathcal{C}(Y, Z) \to \mathrm{Hom}_\mathcal{C}(Y, Z)$
 
 **Remark**. We often use commutative diagrams to represent the composition of morphisms, since $\forall f \in \mathrm{Hom}_\mathcal{C}(X, Y)$, it can be also denote as $f: X \to Y$ or $X \xrightarrow{f} Y$, we can also represent the morphism in "arrows". The following diagram is just $g \circ f = h$:
-$$
+
 <script type="text/tikz">
   \begin{tikzcd}
     X \arrow[r, "f"] \arrow[rd, "h"] & Y \arrow[d, "g"] \\
     & Z
   \end{tikzcd}
 </script>
-$$
 
 
 
