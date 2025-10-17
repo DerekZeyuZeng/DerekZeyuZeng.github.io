@@ -7,23 +7,27 @@ author_profile: true
 
 Education
 ------
+
 - Undergraduate Student in Mathematics & Physics, University of Illinois Urbana–Champaign, 2024–present
 
 Work experience
 ------
+
 - N/A
 
 Skills
 ------
+
 - Undergraduate-level physics and mathematics
 - Differential Geometry on Manifolds (especially Riemannian Geometry)
 - Basic Algebraic Topology (Textbook-level homotopy, homology, and cohomology theory with some applications)
-- Basic QFT and Gauge Theory (\\(\phi^4\\)-theory, basic QED, path integral, basic renormalization theory)
+- Basic QFT and Gauge Theory ($\phi^4$-theory, basic QED, path integral, basic renormalization theory)
 - Python numerical methods
 - Wolfram Mathematica coding
 
 Researches
 ------
+
 {% if site.researches %}
 <ul>
   {% for post in site.researches reversed %}
@@ -36,6 +40,7 @@ Researches
 
 Talks
 ------
+
 {% if site.talks %}
 <ul>
   {% for post in site.talks reversed %}
@@ -48,6 +53,7 @@ Talks
 
 Teaching
 ------
+
 {% if site.teaching %}
 <ul>
   {% for post in site.teaching reversed %}
@@ -60,9 +66,11 @@ Teaching
 
 Service and leadership
 ------
+
 - N/A
 
 <p><a href="{{ 'files/CV_Zeyu_Zeng.pdf' | relative_url }}" download>Download PDF</a></p>
 <object data="{{ 'files/CV_Zeyu_Zeng.pdf' | relative_url }}" type="application/pdf" width="100%" height="100%">
+
   <p>PDF preview unavailable. <a href="{{ 'files/CV_Zeyu_Zeng.pdf' | relative_url }}">Open</a>.</p>
 </object>
