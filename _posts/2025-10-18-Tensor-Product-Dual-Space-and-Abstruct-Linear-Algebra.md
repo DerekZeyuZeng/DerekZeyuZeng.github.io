@@ -26,9 +26,8 @@ Mathematicians developed the category theory mainly to discribe the widly existe
    - Associtivity: $\forall f, g, h \in \Mor(\mathcal{C})$, $(f \circ g) \circ h = f \circ (g \circ h)$ if they both well-defined.
    - Identity: $\forall X, Y \in \Obj(\mathcal{C}): \forall f \in \Hom_\mathcal{C}(X, Y): \exists \id_X, \id_Y \in \Hom_\mathcal{C}(X,X), \Hom_\mathcal{C}(Y,Y)$ named identity morphism on $X$ and $Y$ such that $\id_Y \circ f = f \circ \id_Y$.
 
-**Remark**. 
+**Remark**.
 We often use commutative diagrams to represent the composition of morphisms, since $\forall f \in \Hom_{\mathcal{C}}(X, Y)$, it can be also denote as $f: X \to Y$ or $X \xrightarrow{f} Y$, we can also represent the morphism in "arrows". The diagram
-
 <div style="display:flex; justify-content:center; margin:1.5em 0;">
   <script type="text/tikz">
     \Large
@@ -38,7 +37,6 @@ We often use commutative diagrams to represent the composition of morphisms, sin
     \end{tikzcd}
   </script>
 </div>
-
  refers to the fact that $h = g \circ f: X \to Z$.
 
 Vector Space and their Dual Spaces
