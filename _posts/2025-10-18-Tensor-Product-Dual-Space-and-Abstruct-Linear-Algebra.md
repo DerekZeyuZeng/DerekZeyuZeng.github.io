@@ -21,23 +21,26 @@ Mathematicians developed the category theory mainly to discribe the widly existe
 **Def**. A category $\mathcal{C}$ consists the following data:
 
 1. The objext in the category, $\Obj(\mathcal{C})$.
-2. The morphism in the category, $\Mor(\mathcal{C})$, with a pair of map $s, t: \Mor(\mathcal{C}) \to \mathcal{C}$ wich specify the source and target of the morphism, which $\forall X, Y \in \Obj(\mathcal{C})$, we denote $\Hom_{\mathcal{C}}(X, Y) := s^{-1}(X) \cap t^{-1}(Y)$ which represents all morphism from $X$ to $Y$, $\forall f \in \Hom_{\mathcal{C}}(X, Y)$ we write $X \xrightarrow{f}Y$.
+2. The morphism in the category, $\Mor(\mathcal{C})$, with a pair of map $s, t: \Mor(\mathcal{C}) \to \mathcal{C}$ wich specify the source and target of the morphism, which $\forall X, Y \in \Obj(\mathcal{C})$, we denote $\Hom_{\mathcal{C}}(X, Y) := s^{-1}(X) \cap t^{-1}(Y)$ which represents all morphism from $X$ to $Y$, $\forall f \in \Hom_{\mathcal{C}}(X, Y)$ we write $X \xrightarrow{f}Y$. All morphism from $X$ to itself is named to be endomorphisms, denotes as $\End_\mathcal{C}(X) := \Hom_\mathcal{C}(X, X)$
 3. $\forall X, Y, Z \in \Obj(\mathcal{C})$, the composite map of morphisms is given by $\circ: \Hom_{\mathcal{C}}(X, Y) \times \Hom_{\mathcal{C}}(Y, Z) \to \Hom_{\mathcal{C}}(Y, Z)$ which follows that
    - Associtivity: $\forall f, g, h \in \Mor(\mathcal{C})$, $(f \circ g) \circ h = f \circ (g \circ h)$ if they both well-defined.
    - Identity: $\forall X, Y \in \Obj(\mathcal{C}): \forall f \in \Hom_\mathcal{C}(X, Y): \exists \id_X, \id_Y \in \Hom_\mathcal{C}(X,X), \Hom_\mathcal{C}(Y,Y)$ named identity morphism on $X$ and $Y$ such that $\id_Y \circ f = f \circ \id_Y$.
 
 **Remark**.
-We often use commutative diagrams to represent the composition of morphisms, since $\forall f \in \Hom_{\mathcal{C}}(X, Y)$, it can be also denote as $f: X \to Y$ or $X \xrightarrow{f} Y$, we can also represent the morphism in "arrows". The diagram
-<div style="display:flex; justify-content:center; margin:1.5em 0;">
-  <script type="text/tikz">
-    \Large
-    \begin{tikzcd}[row sep=3em, column sep=4em]
-      X \arrow[r, "f"] \arrow[rd, "h"] & Y \arrow[d, "g"] \\
-      & Z
-    \end{tikzcd}
-  </script>
-</div>
- refers to the fact that $h = g \circ f: X \to Z$.
+- We often use commutative diagrams to represent the composition of morphisms, since $\forall f \in \Hom_{\mathcal{C}}(X, Y)$, it can be also denote as $f: X \to Y$ or $X \xrightarrow{f} Y$, we can also represent the morphism in "arrows". The diagram
+
+  <div style="display:flex; justify-content:center; margin:1.5em 0;">
+    <script type="text/tikz">
+      \Large
+      \begin{tikzcd}[row sep=3em, column sep=4em]
+        X \arrow[r, "f"] \arrow[rd, "h"] & Y \arrow[d, "g"] \\
+        & Z
+      \end{tikzcd}
+    </script>
+  </div>
+
+  refers to the fact that $h = g \circ f: X \to Z$.
+- $\forall f \in \Hom_\mathcal{C}(X,Y)$, if $\exists g \in \Hom_\mathcal{C}(Y,X): g \circ f = \id_X, \ f \circ g = \id_Y$, we say that $f$ is an isomorphism between $X$ and $Y$. Then set of all isomorphism between $X$ and $Y$ is $\mathrm{Isom}_\mathcal{C}(X, Y)$. In particular, the automorphism is defined to be $\Aut_\mathcal{C}(X) := \mathrm{Isom}_\mathcal{C}(X,X)$.
 
 Vector Space and their Dual Spaces
 ---
