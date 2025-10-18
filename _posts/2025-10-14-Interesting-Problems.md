@@ -16,7 +16,7 @@ tags:
 - **[Ex]** Small exercise/interesting HW problem.
 - **[Note]** Personal thoughts, literature, or folklore.
 
-A linear algebra practice (2025-10-14)
+A Linear Algebra Practice (2025-10-14)
 ---
 
 **[Ex]** Let $ A,B\in\mathbb C^{n\times n} $. Prove that
@@ -68,12 +68,14 @@ whence $ (AB)^n \sim (BA)^n$, which completes the proof. $\square$
 
 **Remarks**. More generally, for any $k$ not smaller than the largest size of a Jordan block of $AB$ (equivalently of $BA$) at $0$, one has $(AB)^k\sim (BA)^k$; in particular, $k = n$ always works. If either $A$ or $B$ is invertible, then $AB\sim BA$ without taking powers.
 
-The Hairy Ball Theorem
+The Hairy Ball Theorem (2025-10-18)
 ---
 
 **[Note]** Prove that there is no nowhere vanishing vector fields on $TS^{2n}$, and thus $TS^{2n}$ is not a trivial bundle. Also show that the statement is not true on $TS^{2n+1}$.
 
-**Proof** (Via antipodal map). First, embedded $S^{2n+1}$ in $\mathbb{R}^{2n+2}$, consider the the vector field defined by $\forall x \in \mathbb{R}^{2n+2}$
+**Proof** (Via antipodal map). We embedded $S^{2n+1}$ in $\mathbb{R}^{2n+2}$.
+
+For the odd dimensional cases, consider the the vector field defined by $\forall x \in \mathbb{R}^{2n+2}$
 $$
 V(x^{1}, \dots, x^{2n+2}) = (x^2, -x^1, \dots, x^{2n+2}, -x^{2n+1})
 $$
@@ -81,8 +83,25 @@ By considering the dot product
 $$
 x \cdot V(x) = \sum_{i = 1}^{n + 1} (x^i x^{i+1} - x^{i + 1} x^1) = 0
 $$
+And the fact that $S^{2n + 1} := \{x \in \mathbb{R}^{2n+2} | \|x\|^2 = 1\}$ is the level set of $\|x\|^2$. The normal vector on the hypersurface is given by $\hat n_x = \nabla\|x\|^2 = 2x$, and
+$$
+\hat n_x \cdot V(x) = 2 x \cdot V(x) = 0
+$$
 we have shown that $V(x)$ is always tangent to the hypersphere $S^{2n+1}$. Also, if $V(x) = 0$, then
 $$
-V(x) = (x^2, -x^1, \dots, x^{2n+2}, -x^{2n+1}) = 0 \implies x^i = 0 \ \forall i
+V(x) = (x^2, -x^1, \dots, x^{2n+2}, -x^{2n+1}) = 0 \implies x^i = 0 \, \forall i
 $$
 the fact that $(0, \dots, 0) \notin S^{2n+1}$ make $V(x)$ been no where vanishing.
+
+For the even dimensional cases, suppose $\exists V(x) \in \Gamma^\infty(TS^{2n})$ is a nonvanishing vector field on $S^{2n}$, take $U(x) = {V(x) \over \|V(x)\|}$, since $V(x)$ no-where vanishing, $U(x)$ is well-defined and globally smooth on $S^{2n}$. Then, consider the following construction: $\forall s \in [0, 1]:$
+$$
+F(x, s) = x \cos(\pi s) + U(x) \sin(\pi s)
+$$
+which is a continuous map on $S^{2n}$ such that $F(x, 0) = x$ and $F(x, 1) = -x$. With this continuous path, it is sufficient to considet the 2-dimensional subspace $P_x = \mathrm{Span}\{x, U(x)\}$ and associate each point on the path $F(x, -)$ to a matrix in $O(2)$ by considering the matrix rotate $F(x, s)$ back to $x$:
+$$
+R_x(s) = \begin{pmatrix}
+  \cos(\pi s) & -\sin(\pi s)\\
+  \sin(\pi s) & \cos(\pi s)
+\end{pmatrix}
+$$
+Thus, by $R_x: [0, 1] \to O(2)$, we construct a path in $O(2)$ connected $I_2$ and $-I_2$, which leads to contradiction since $I_2$ and $-I_2$ are in different connected component in $O(2)$. Thus, there is no no-where vanishing vector field on $S^{2n}$. $\square$
