@@ -13,6 +13,13 @@ The throughline is operational: powerful constructions are those characterized b
 
 The content about category theory is mainly based on the *Introduction to Algebra* by Prof. Wen-Wei Li in PKU.
 
+$$
+\newcommand{\Hom}{\mathrm{Hom}}
+\newcommand{\Obj}{\mathrm{Obj}}
+\newcommand{\Vect}{\mathbf{Vect}}
+\newcommand{\IP}[2]{\langle #1, #2 \rangle}
+$$
+
 Preliminaries: Categories by Need, not Creed
 ---
 
@@ -22,11 +29,10 @@ Mathematicians developed the category theory mainly to discribe the widly existe
 
 1. The objext in the category, $\mathrm{Obj}(\mathcal{C})$.
 2. The morphism in the category, $\mathrm{Mor}(\mathcal{C})$, with a pair of map $s, t: \mathrm{Mor}(\mathcal{C}) \to \mathcal{C}$ wich specify the source and target of the morphism, which $\forall X, Y \in \mathrm{Obj}(\mathcal{C})$, we denote $\mathrm{Hom}_{\mathcal{C}}(X, Y) := s^{-1}(X) \cap t^{-1}(Y)$ which represents all morphism from $X$ to $Y$, $\forall f \in \mathrm{Hom}_{\mathcal{C}}(X, Y)$ we write $X \xrightarrow{f}Y$.
-3. $\forall X \in \mathrel{Obj}(\mathcal{C}): \exists \mathrm{id}_{X} \in \mathrm{Hom}_{\mathcal{C}}(X,X)$ known as the identity morphism on $X$.
+3. $\forall X \in \mathrm{Obj}(\mathcal{C}): \exists \mathrm{id}_{X} \in \mathrm{Hom}_{\mathcal{C}}(X,X)$ known as the identity morphism on $X$.
 4. $\forall X, Y, Z \in \mathrm{Obj}(\mathcal{C})$, the composite map of morphisms is given by $\circ: \mathrm{Hom}_{\mathcal{C}}(X, Y) \times \mathrm{Hom}_{\mathcal{C}}(Y, Z) \to \mathrm{Hom}_{\mathcal{C}}(Y, Z)$
 
-**Remark**. We often use commutative diagrams to represent the composition of morphisms, since $\forall f \in \mathrm{Hom}_{\mathcal{C}}(X, Y)$, it can be also denote as $f: X \to Y$ or $X \xrightarrow{f} Y$, we can also represent the morphism in "arrows". The following diagram is just $g \circ f = h$:
-
+**Remark**. We often use commutative diagrams to represent the composition of morphisms, since $\forall f \in \mathrm{Hom}_{\mathcal{C}}(X, Y)$, it can be also denote as $f: X \to Y$ or $X \xrightarrow{f} Y$, we can also represent the morphism in "arrows". The diagram
 <div style="display:flex; justify-content:center; margin:1.5em 0;">
   <script type="text/tikz">
     \Large
@@ -36,8 +42,7 @@ Mathematicians developed the category theory mainly to discribe the widly existe
     \end{tikzcd}
   </script>
 </div>
-
-
+refers to the fact that $h = g \circ f: X \to Z$.
 
 Vector Space and their Dual Spaces
 ---
