@@ -17,7 +17,17 @@
         ['\\[', '\\]']
       ],
       processEscapes: true,
-      processEnvironments: true
+      processEnvironments: true,
+      macros: {
+        Hom: '\\operatorname{Hom}',
+        Mor: '\\mathrm{Mor}',
+        Obj: '\\mathrm{Obj}',
+        Vect: '\\mathbf{Vect}',
+        IP: ['\\langle #1, #2 \\rangle', 2],
+        diff: '\\mathrm{d}',
+        e: '\\mathrm{e}',
+        im: '\\mathrm{i}'
+      }
     }
   };
 </script>
