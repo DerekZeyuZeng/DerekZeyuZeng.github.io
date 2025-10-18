@@ -9,9 +9,9 @@ tags:
   - Tensor Analysis
 ---
 **Introduction**. We recast familiar linear algebra in a map-centric language. Objects are determined by the morphisms they admit; duals arise from the functor $\Hom_k(-, k)$; tensor products are specified by a universal property rather than coordinates. Passing from fields to rings widens linearity to modules, and monoidal (closed) categories abstract the algebra of $\otimes$ and the unit—best seen via string diagrams.\
-The throughline is operational: powerful constructions are those characterized by how maps into or out of them behave. Each section starts from a concrete tension—duals in infinite dimension, “bilinear vs linear,” and change of scalars—and resolves it with a clean abstraction—universal properties, adjunctions, and internal Homs. By the end you will comfortably trade bilinear data for linear data $\Hom(U \otimes V, W) \cong \mathrm{Bil}(U \times V, W)$, recognize $\mathbf{Vect}_k$ as a symmetric closed monoidal category, and use adjunctions to explain why extension of scalars $S \otimes_R -$ behaves exactly the way your linear intuition expects.
+The throughline is operational: powerful constructions are those characterized by how maps into or out of them behave. Each section starts from a concrete tension—duals in infinite dimension, “bilinear vs linear,” and change of scalars—and resolves it with a clean abstraction—universal properties, adjunctions, and internal Homs. By the end you will comfortably trade bilinear data for linear data $\Hom(U \otimes V, W) \cong \mathrm{Bil}(U \times V, W)$, recognize $\Vect_k$ as a symmetric closed monoidal category, and use adjunctions to explain why extension of scalars $S \otimes_R -$ behaves exactly the way your linear intuition expects.
 
-The content about category theory is mainly based on the *Introduction to Algebra* by Prof. Wen-Wei Li in PKU.
+The content about category theory is mainly follows on the *Introduction to Algebra* (In Chinese, 代数学引论) by Prof. Wen-Wei Li (李文威) in PKU. The tikz-cd commutative diagrams are not compiled with colors suitable for dark themes; for best readability, please view this paper in light mode.
 
 Preliminaries: Categories by Need, not Creed
 ---
@@ -22,11 +22,12 @@ Mathematicians developed the category theory mainly to discribe the widly existe
 
 1. The objext in the category, $\Obj(\mathcal{C})$.
 2. The morphism in the category, $\Mor(\mathcal{C})$, with a pair of map $s, t: \Mor(\mathcal{C}) \to \mathcal{C}$ wich specify the source and target of the morphism, which $\forall X, Y \in \Obj(\mathcal{C})$, we denote $\Hom_{\mathcal{C}}(X, Y) := s^{-1}(X) \cap t^{-1}(Y)$ which represents all morphism from $X$ to $Y$, $\forall f \in \Hom_{\mathcal{C}}(X, Y)$ we write $X \xrightarrow{f}Y$.
-3. $\forall X \in \Obj(\mathcal{C}): \exists \id_{X} \in \Hom_{\mathcal{C}}(X,X)$ known as the identity morphism on $X$.
-4. $\forall X, Y, Z \in \Obj(\mathcal{C})$, the composite map of morphisms is given by $\circ: \Hom_{\mathcal{C}}(X, Y) \times \Hom_{\mathcal{C}}(Y, Z) \to \Hom_{\mathcal{C}}(Y, Z)$
+3. $\forall X, Y, Z \in \Obj(\mathcal{C})$, the composite map of morphisms is given by $\circ: \Hom_{\mathcal{C}}(X, Y) \times \Hom_{\mathcal{C}}(Y, Z) \to \Hom_{\mathcal{C}}(Y, Z)$ which follows that
+   - Associtivity: $\forall f, g, h \in \Mor(\mathcal{C})$, $(f \circ g) \circ h = f \circ (g \circ h)$ if they both well-defined.
+   - Identity: $\forall X, Y \in \Obj(\mathcal{C}): \forall f \in \Hom_\mathcal{C}(X, Y): \exists \id_X, \id_Y \in \Hom_\mathcal{C}(X,X), \Hom_\mathcal{C}(Y,Y)$ named identity morphism on $X$ and $Y$ such that $\id_Y \circ f = f \circ \id_Y$.
 
-**Remark**. We often use commutative diagrams to represent the composition of morphisms, since $\forall f \in \Hom_{\mathcal{C}}(X, Y)$, it can be also denote as $f: X \to Y$ or $X \xrightarrow{f} Y$, we can also represent the morphism in "arrows". The diagram
-<div style="display:flex; justify-content:center; margin:1.5em 0;">
+**Remark**. 
+We often use commutative diagrams to represent the composition of morphisms, since $\forall f \in \Hom_{\mathcal{C}}(X, Y)$, it can be also denote as $f: X \to Y$ or $X \xrightarrow{f} Y$, we can also represent the morphism in "arrows". The diagram <div style="display:flex; justify-content:center; margin:1.5em 0;">
   <script type="text/tikz">
     \Large
     \begin{tikzcd}[row sep=3em, column sep=4em]
@@ -34,8 +35,7 @@ Mathematicians developed the category theory mainly to discribe the widly existe
       & Z
     \end{tikzcd}
   </script>
-</div>
-refers to the fact that $h = g \circ f: X \to Z$.
+</div> refers to the fact that $h = g \circ f: X \to Z$.
 
 Vector Space and their Dual Spaces
 ---
