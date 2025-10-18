@@ -27,12 +27,15 @@ Mathematicians developed the category theory mainly to discribe the widly existe
 
 **Remark**. We often use commutative diagrams to represent the composition of morphisms, since $\forall f \in \mathrm{Hom}_{\mathcal{C}}(X, Y)$, it can be also denote as $f: X \to Y$ or $X \xrightarrow{f} Y$, we can also represent the morphism in "arrows". The following diagram is just $g \circ f = h$:
 
-<script type="text/tikz">
-  \begin{tikzcd}
-    X \arrow[r, "f"] \arrow[rd, "h"] & Y \arrow[d, "g"] \\
-    & Z
-  \end{tikzcd}
-</script>
+<div style="display:flex; justify-content:center; margin:1.5em 0;">
+  <script type="text/tikz">
+    \Large
+    \begin{tikzcd}[row sep=3em, column sep=4em]
+      X \arrow[r, "f"] \arrow[rd, "h"] & Y \arrow[d, "g"] \\
+      & Z
+    \end{tikzcd}
+  </script>
+</div>
 
 
 
