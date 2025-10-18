@@ -14,6 +14,7 @@ This site is a place where I share my research, talks & presentations, personal 
 Feel free to explore other sections for more details, and reach out via the contact links in the sidebar.
 
 ![宁拙毋巧，宁朴毋华 —— C. N. Yang](/images/CNYang.png)
+Favor substance over polish; plainness over flourish. (宁拙毋巧，宁朴毋华) —— C. N. Yang
 
 Some Useful Links
 ----
