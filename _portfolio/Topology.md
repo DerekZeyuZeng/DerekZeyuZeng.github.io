@@ -1,6 +1,6 @@
 ---
 title: "Notes in General Topology"
-excerpt: "My personal note of Math 535 Fall 2025 in UIUC"
+excerpt: "My personal note of Math 535 Fall 2025 in UIUC, teached by Prof. Yi Wang."
 collection: portfolio
 ---
 

@@ -17,7 +17,7 @@ The content about category theory is mainly follows on the *Methods of algebra, 
 Preliminaries: Categories by Need, not Creed
 ---
 
-Mathematicians developed the category theory mainly to discribe the widly existed binary relationsip in mathematics, and use "functor" to connect different sructures to generate duality between field. It is originally discovered to formalize the algebraic topology. The widly use concept of "natural", "canonical" can also be properly explained in the language of category.
+Mathematicians developed the category theory mainly to describe the widly existed binary relationsip in mathematics, and use "functor" to connect different sructures to generate duality between field. It is originally discovered to formalize the algebraic topology. The widly use concept of "natural", "canonical" can also be properly explained in the language of category.
 
 **Def**. A category $\mathcal{C}$ consists the following data:
 
@@ -43,8 +43,6 @@ Mathematicians developed the category theory mainly to discribe the widly existe
 
   refers to the fact that $h = g \circ f: X \to Z$.
 - $\forall f \in \Hom_\mathcal{C}(X,Y)$, if $\exists g \in \Hom_\mathcal{C}(Y,X): g \circ f = \id_X, \ f \circ g = \id_Y$, we say that $f$ is an isomorphism between $X$ and $Y$. Then set of all isomorphism between $X$ and $Y$ is $\mathrm{Isom}_\mathcal{C}(X, Y)$. In particular, the automorphism is defined to be $\Aut_\mathcal{C}(X) := \mathrm{Isom}_\mathcal{C}(X,X)$.
-
-The 
 
 Vector Space and their Dual Spaces
 ---
