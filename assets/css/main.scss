@@ -48,3 +48,15 @@ mjx-container[jax="CHTML"][display="true"] {
   margin: 1.5em 0;
   text-align: center;
 }
+
+/* Center and scale TikZJax diagrams */
+.tikz-diagram {
+  display: flex;
+  justify-content: center;
+  margin: 2.5rem auto;
+  font-size: 1.15em;
+}
+
+.tikz-diagram > * {
+  display: inline-block;
+}
