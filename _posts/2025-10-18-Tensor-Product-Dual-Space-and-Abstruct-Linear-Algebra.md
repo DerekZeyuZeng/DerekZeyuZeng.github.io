@@ -11,7 +11,7 @@ tags:
 **Introduction**. We recast familiar linear algebra in a map-centric language. Objects are determined by the morphisms they admit; duals arise from the functor $\Hom_k(-, k)$; tensor products are specified by a universal property rather than coordinates. Passing from fields to rings widens linearity to modules, and monoidal (closed) categories abstract the algebra of $\otimes$ and the unit—best seen via string diagrams.\
 The throughline is operational: powerful constructions are those characterized by how maps into or out of them behave. Each section starts from a concrete tension—duals in infinite dimension, “bilinear vs linear,” and change of scalars—and resolves it with a clean abstraction—universal properties, adjunctions, and internal Homs. By the end you will comfortably trade bilinear data for linear data $\Hom(U \otimes V, W) \cong \mathrm{Bil}(U \times V, W)$, recognize $\Vect_k$ as a symmetric closed monoidal category, and use adjunctions to explain why extension of scalars $S \otimes_R -$ behaves exactly the way your linear intuition expects.
 
-The content about category theory is mainly follows on the *Introduction to Algebra* (In Chinese, 代数学引论) by Prof. Wen-Wei Li (李文威) in PKU. The tikz-cd commutative diagrams are not compiled with colors suitable for dark themes; for best readability, please view this paper in light mode.
+The content about category theory is mainly follows on the *Methods of algebra* (In Chinese, 代数学方法) by Prof. Wen-Wei Li (李文威) in PKU. The tikz-cd commutative diagrams are not compiled with colors suitable for dark themes; for best readability, please view this paper in light mode.
 
 Preliminaries: Categories by Need, not Creed
 ---
