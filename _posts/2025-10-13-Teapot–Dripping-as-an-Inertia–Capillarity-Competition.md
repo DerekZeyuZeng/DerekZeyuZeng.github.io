@@ -2,6 +2,7 @@
 title: 'Teapot–Dripping as an Inertia–Capillarity Competition'
 date: 2025-10-13
 permalink: /posts/2025/10/Teapot–Dripping-as-an-Inertia–Capillarity-Competition/
+bibtexurl: '/files/bibtexTeapot.bib'
 tags:
   - Physics
   - Fluid Mechanics
