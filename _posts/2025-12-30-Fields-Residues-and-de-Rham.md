@@ -21,11 +21,14 @@ Notation and Conventions, Preliminaries
 - The Laplace–Beltrami operator in general is given by $\Delta:=\mathrm d\delta+\delta\mathrm d$. In the 0-form (function), the two-dimensional Euclidean case has $\Delta f=\partial_x^2f+\partial_y^2f$ (positive sign convention).
 - Unit Convention: For simplicity, the absorption constant $\varepsilon_0=\mu_0=1$. Changing the units simply adds a constant factor to the right side of the equation and does not affect the geometry.
 
-The Maxwell's Equations
+Tangent Bundle and Differential Forms on Manifolds
 ---
 
-From “Conservation Laws = Closedness” to “Flux = Homological Invariance”
----
+**Def** (Tangent Bundle).
+
+**Def** (Cotangent Bundle and Differential Forms).
+
+**Def** (Hodge Star).
 
 **Def** (Gradient).
 
@@ -39,6 +42,12 @@ From “Conservation Laws = Closedness” to “Flux = Homological Invariance”
 
 **Theorem** (Laplace–Beltrami Operator in Exterior Direvative and Coderivative).
 
+The Maxwell's Equations
+---
+
+From “Conservation Laws = Closedness” to “Flux = Homological Invariance”
+---
+
 Cohomology of Conservation Laws and Electric Charge
 ---
 
@@ -47,3 +56,12 @@ Down to 2D: Electrostatics, Angular Functions, and Hodge Stars
 
 From 2D Electrodynamics to Complex Analysis
 ---
+
+References (Optional Further Reading)
+---
+
+- F. W. Hehl & Y. Obukhov, Foundations of Classical Electrodynamics, Birkhäuser.
+- T. Frankel, The Geometry of Physics, Chs. 2–4 (Differential forms and physics).
+- M. Spivak, Calculus on Manifolds (Stokes' theorem and de Rham's theory).
+- L. Hörmander, The Analysis of Linear Partial Differential Operators I (Distribution and fundamental solutions).
+- H. Cartan, Differential Forms (Classic and short formalism).
