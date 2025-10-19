@@ -11,6 +11,8 @@ published: Yes
 ---
 **Goal**. Starting from the most basic electrodynamics and Maxwell's equations, differential forms and Hodge stars are introduced using actual physical quantities, thus naturally leading to de Rham theory; then, considering the 2-dimensional electrodynamics, angular functions and logarithmic potentials are explained using cohomological/distributed differential forms, and cohomological proofs and explicit calculations of conclusions such as the residue theorem and the principle of discriminability are given.
 
+**Prerequisite**. Basice Riemannian geometry, there is an review of basic geometry on Riemannian manifold, but the definition of manifolds, Riemannian metric, and Levi-Civita connection.
+
 Notation and Conventions, Preliminaries
 ---
 
@@ -57,11 +59,11 @@ Down to 2D: Electrostatics, Angular Functions, and Hodge Stars
 From 2D Electrodynamics to Complex Analysis
 ---
 
-References (Optional Further Reading)
+References
 ---
 
-- F. W. Hehl & Y. Obukhov, Foundations of Classical Electrodynamics, Birkhäuser.
-- T. Frankel, The Geometry of Physics, Chs. 2–4 (Differential forms and physics).
-- M. Spivak, Calculus on Manifolds (Stokes' theorem and de Rham's theory).
-- L. Hörmander, The Analysis of Linear Partial Differential Operators I (Distribution and fundamental solutions).
-- H. Cartan, Differential Forms (Classic and short formalism).
+1. F. W. Hehl & Y. Obukhov, Foundations of Classical Electrodynamics, Birkhäuser.
+2. T. Frankel, The Geometry of Physics, Chs. 2–4 (Differential forms and physics).
+3. M. Spivak, Calculus on Manifolds (Stokes' theorem and de Rham's theory).
+4. L. Hörmander, The Analysis of Linear Partial Differential Operators I (Distribution and fundamental solutions).
+5. H. Cartan, Differential Forms (Classic and short formalism).
