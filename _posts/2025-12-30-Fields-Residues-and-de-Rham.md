@@ -23,14 +23,31 @@ Notation and Conventions, Preliminaries
 - The Laplace–Beltrami operator in general is given by $\Delta:=\mathrm d\delta+\delta\mathrm d$. In the 0-form (function), the two-dimensional Euclidean case has $\Delta f=\partial_x^2f+\partial_y^2f$ (positive sign convention).
 - Unit Convention: For simplicity, the absorption constant $\varepsilon_0=\mu_0=1$. Changing the units simply adds a constant factor to the right side of the equation and does not affect the geometry.
 
-Tangent Bundle and Differential Forms on Manifolds
+Review: Tangent Bundle and Differential Forms on Manifolds
 ---
 
-**Def** (Tangent Bundle).
+**Def** (Tangent Bundle). The tangent bundle on the smooth manifold $M$ is simplly a vector bundle $(TM, M, \pi)$ with total space
+$$
+TM = \coprod_{p \in M} T_pM := \big\{ v_p \mid \forall p \in M: v_p \in T_pM \big\}
+$$
+With the base space $M$ and projection $\pi: TM \to M$ such that $\forall v_p \in TM: \pi(v_p) = p \in M$.
 
-**Def** (Cotangent Bundle and Differential Forms).
+**Def** (Cotangent Bundle and Differential Forms). The cotangent bundle on the smooth manifold $M$ is the dual vector bundle $(T^*M, M, \pi)$ with total space
+$$
+T^*M = \coprod_{p \in M} T_p^*M := \big\{ \omega_p \mid \forall p \in M: v_p \in T_p^*M \big\}
+$$
+With the base space $M$ and projection $\pi: TM \to M$ such that $\forall \omega_p \in T^*M: \pi(\omega_p) = p \in M$. A differential 1-form on $M$ is given by 
+$$
+\Omega^1(M) := \Gamma(T^*M), \quad \forall \omega \in \Omega^1(M): \omega = \sum_{i = 1}^n \omega_i \diff x^i
+$$
+Where $\{\diff x^i\}_{i = 1}^n$ is given to be the bases of cotangent space on each point. The differential $k$-forms is given by 
+$$
+\Omega^k(M) = \Gamma(\Lambda^k T^*M) = \mathrm{Span}\left\{\bigwedge_{i = 1}^k\mathrm{d} x^{\sigma(i)} \mid \sigma \in S_k\right\}
+$$
 
-**Def** (Hodge Star).
+**Def** (Exterier Derivatives).
+
+**Def** (Hodge Star). The Hodge star operator on the $n$ dimensional smooth manifold defineds the isomorphism $*: \Omega^{k}(M) \to \Omega^{m - k}(M)$.
 
 **Def** (Gradient).
 
