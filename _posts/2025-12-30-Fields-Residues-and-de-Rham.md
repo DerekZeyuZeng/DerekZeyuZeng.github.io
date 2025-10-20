@@ -30,7 +30,7 @@ Review: Tangent Bundle and Differential Forms on Manifolds
 $$
 TM = \coprod_{p \in M} T_pM := \big\{ v_p \mid \forall p \in M: v_p \in T_pM \big\}
 $$
-With the base space $M$ and projection $\pi: TM \to M$ such that $\forall v_p \in TM: \pi(v_p) = p \in M$.
+With the base manifold $M$ and projection $\pi: TM \to M$ such that $\forall v_p \in TM: \pi(v_p) = p \in M$.
 
 **Def** (Cotangent Bundle and Differential Forms). The cotangent bundle on the smooth manifold $M$ is the dual vector bundle $(T^*M, M, \pi)$ with total space
 $$
