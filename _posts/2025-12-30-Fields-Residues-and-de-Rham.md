@@ -42,7 +42,7 @@ $$
 $$
 Where $\{\diff x^i\}_{i = 1}^n$ is given to be the bases of cotangent space on each point. The differential $k$-forms is given by 
 $$
-\Omega^k(M) = \Gamma(\Lambda^k T^*M) = \mathrm{Span}\left\{\bigwedge_{i = 1}^k\mathrm{d} x^{\sigma(i)} \mid \sigma \in S_k\right\}
+\Omega^k(M) = \Gamma(\Lambda^k T^*M) = \mathrm{Span}\Big\{\bigwedge_{i = 1}^k\mathrm{d} x^{\sigma(i)} \mid \sigma \in S_k\Big\}
 $$
 
 **Def** (Exterier Derivatives).
