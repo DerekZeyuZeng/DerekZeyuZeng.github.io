@@ -69,6 +69,12 @@ Service and leadership
 
 - N/A
 
+Honors
+---
+
+- UIUC James Scholar (Grainger College of Engneering and LAS Collage)
+- 2025 Ralph O. Simmons Undergraduate Research Scholarship
+
 <p><a href="{{ 'files/CV_Zeyu_Zeng.pdf' | relative_url }}" download>Download PDF</a></p>
 <object data="{{ 'files/CV_Zeyu_Zeng.pdf' | relative_url }}" type="application/pdf" width="100%" height="100%">
 
