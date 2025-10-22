@@ -23,6 +23,9 @@ Notation and Conventions, Preliminaries
 - The Laplace–Beltrami operator in general is given by $\Delta:=\mathrm d\delta+\delta\mathrm d$. In the 0-form (function), the two-dimensional Euclidean case has $\Delta f=\partial_x^2f+\partial_y^2f$ (positive sign convention).
 - Unit Convention: For simplicity, the absorption constant $\varepsilon_0=\mu_0=1$. Changing the units simply adds a constant factor to the right side of the equation and does not affect the geometry.
 
+A Breif Reivew of Differential Geometry
+---
+
 The Maxwell's Equations
 ---
 
