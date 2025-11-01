@@ -26,6 +26,8 @@ Notation and Conventions, Preliminaries
 A Breif Reivew of Differential Geometry
 ---
 
+In this part, we are simplly list some definition and important concepts in differential geometry as an review.
+
 The Maxwell's Equations
 ---
 
