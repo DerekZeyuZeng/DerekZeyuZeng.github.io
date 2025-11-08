@@ -11,7 +11,7 @@ tags:
 **Status labels guide navigation**:
 
 - **[UnS]** unsolved,
-- **[Ex]** Small exercise/interesting HW problem.
+- **[Ex]** Small exercise/interesting HW problem with answer.
 
 A Linear Algebra Practice (2025-10-14)
 ---
