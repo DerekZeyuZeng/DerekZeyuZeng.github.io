@@ -10,11 +10,8 @@ tags:
 
 **Status labels guide navigation**:
 
-- **[Open]** unsolved,
-- **[WIP]** in progress,
-- **[Solved]** with a brief proof/idea,
+- **[UnS]** unsolved,
 - **[Ex]** Small exercise/interesting HW problem.
-- **[Note]** Personal thoughts, literature, or folklore.
 
 A Linear Algebra Practice (2025-10-14)
 ---
@@ -39,22 +36,21 @@ $$
 $$
 B(AB)^{k+1} = B(AB)^k(AB) = (BA)^kB(AB) = (BA)^{k+1} B
 $$
-And the second identity is analogous. $\square$
+And the second identity is analogous. $\quad\square$
 
 *Lemma 2 (matching nonzero Jordan structure).* For any $\lambda\neq 0$, the generalized eigenspaces of $AB$ and $BA$ at $\lambda$ have the same dimension and the same Jordan block sizes; equivalently, $J_{\mathrm{nz}}(AB)\sim J_{\mathrm{nz}}(BA)$. \
 *Proof.* By Lemma 1, for every $t\ge1$,
-
 $$
 (BA-\lambda I)^t\,B=B\,(AB-\lambda I)^t
 $$
-Hence $B:\ker(AB-\lambda I)^t\longrightarrow \ker(BA - \lambda I)^t$ is an isomorphism (its inverse is induced by $A$). This carries Jordan chains to Jordan chains without changing their lengths, so block sizes match. $\square$
+Hence $B:\ker(AB-\lambda I)^t\longrightarrow \ker(BA - \lambda I)^t$ is an isomorphism (its inverse is induced by $A$). This carries Jordan chains to Jordan chains without changing their lengths, so block sizes match. $\quad\square$
 
 *Lemma 3 (zero blocks vanish after the $n$-th power).* If $J_m(0)$ is a size-$m$ Jordan block at the eigenvalue $0$, then
 $$
 \big(J_m(0)\big)^n = 0_{m\times m} \qquad (\text{since }m\le n).
 $$
 
-*Proof.* $J_m(0)$ is nilpotent of index $m$, and $n\ge m$. $\square$
+*Proof.* $J_m(0)$ is nilpotent of index $m$, and $n\ge m$. $\quad\square$
 
 *Combine.* For a nonzero eigenvalue block $J_r(\lambda)=\lambda(I+N)$, $N^r=0,\ \lambda\neq0$, one has $J_r(\lambda)^n=\lambda^n(I+N)^n$, which is still a single Jordan block of size $r$ (only the eigenvalue changes to $\lambda^n$ ). By Lemma 2,
 $$
@@ -64,14 +60,14 @@ On the other hand, $AB$ and $BA$ have the same multiset of **nonzero** eigenvalu
 $$
 \big(J(AB)\big)^n = \big(J_{\mathrm{nz}}(AB)\big)^n\oplus 0_{m\times m} \sim \big(J_{\mathrm{nz}}(BA)\big)^n\oplus 0_{m\times m} = \big(J(BA)\big)^n
 $$
-whence $ (AB)^n \sim (BA)^n$, which completes the proof. $\square$
+whence $ (AB)^n \sim (BA)^n$, which completes the proof. $\quad\square$
 
 **Remarks**. More generally, for any $k$ not smaller than the largest size of a Jordan block of $AB$ (equivalently of $BA$) at $0$, one has $(AB)^k\sim (BA)^k$; in particular, $k = n$ always works. If either $A$ or $B$ is invertible, then $AB\sim BA$ without taking powers.
 
 The Hairy Ball Theorem (2025-10-18)
 ---
 
-**[Note]** Prove that there is no nowhere vanishing vector fields on $TS^{2n}$, and thus $TS^{2n}$ is not a trivial bundle. Also show that the statement is not true on $TS^{2n+1}$.
+**[Ex]** Prove that there is no nowhere vanishing vector fields on $TS^{2n}$, and thus $TS^{2n}$ is not a trivial bundle. Also show that the statement is not true on $TS^{2n+1}$.
 
 **Proof** (Via antipodal map). We embedded $S^{2n+1}$ in $\mathbb{R}^{2n+2}$.
 
@@ -104,4 +100,4 @@ R_x(s) = \begin{pmatrix}
   \sin(\pi s) & \cos(\pi s)
 \end{pmatrix}
 $$
-Thus, by $R_x: [0, 1] \to O(2)$, we construct a path in $O(2)$ connected $I_2$ and $-I_2$, which leads to contradiction since $I_2$ and $-I_2$ are in different connected component in $O(2)$. Thus, there is no no-where vanishing vector field on $S^{2n}$. $\square$
+Thus, by $R_x: [0, 1] \to O(2)$, we construct a path in $O(2)$ connected $I_2$ and $-I_2$, which leads to contradiction since $I_2$ and $-I_2$ are in different connected component in $O(2)$. Thus, there is no no-where vanishing vector field on $S^{2n}$. $\quad\square$
