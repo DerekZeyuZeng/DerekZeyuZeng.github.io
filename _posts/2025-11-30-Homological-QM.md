@@ -9,9 +9,9 @@ tags:
   - Field Theory
 published: No
 ---
+This blog post is to record my recent thoughts on axiomatic quantum mechanics and some ideas for defining a homological theory behind quantum mechanics.
 
-
-Potetnial Homological Approach to Quantum Mechanics.
+Potetnial Homological Approach to Quantum Mechanics
 ---
 
-**[Note]** This note is to record my 
+The following axioms, known as von Neumann-Dirac Axioms of quantum mechanics, rigorously define quantum mechanics.
