@@ -12,6 +12,7 @@ tags:
 
 - **[UnS]** unsolved,
 - **[Ex]** Small exercise/interesting HW problem with answer.
+- **[Notes]** Some tips/tricks that amazed me.
 
 A Linear Algebra Practice (2025-10-14)
 ---

@@ -26,7 +26,16 @@ Notation and Conventions, Preliminaries
 A Breif Reivew of Differential Geometry
 ---
 
-In this part, we are simplly list some definition and important concepts in differential geometry as an review.
+In this section we simply list several definitions and key concepts in differential geometry as a brief review. We begin with the definition of a topological manifold.
+
+A (topological) $n$-**manifold** is a Hausdorff, second‑countable topological space $(M,\mathcal{O}_M)$ such that there exists an open cover $\{U_\alpha\}_{\alpha\in A}$ of $M$ and homeomorphisms $\varphi_\alpha: U_\alpha \to V_\alpha \subseteq \mathbb{R}^n$. A pair $(U_\alpha,\varphi_\alpha)$ is called a **chart**, and a collection of charts whose domains cover $M$ is an **atlas**. The integer $n$ is the dimension of $M$.
+
+In this article, we claim that there is a smooth structure, i.e., there is a maximum (does not contained in any other atlas) atlas $\mathcal A = \{(U_\alpha, \varphi_\alpha)\}$ such that $\forall (U_\alpha, \varphi_\alpha), (U_\beta, \varphi_\beta) \in \mathcal A$, either $U_\alpha \cap U_\beta = \emptyset$ or $\varphi_\alpha \circ \varphi_\beta^{-1}$ is a diffeomorphism.
+
+The calculus on manifolds is highly rely on the tangent space to understand the tangent space, one can illustrate the tangent space in two equivalence ways: In the following definition, without other explaination, we take $I_\epsilon = (- \epsilon, \epsilon)$ for some $\epsilon \in [0, +\infty)$
+
+1. The equivlance class of curves: Let $\Gamma_p := \{\gamma \in C^\infty(I_\epsilon, M) \mid \gamma(0) = p \in M\}$ be the space that
+2. The derivation on smooth functions (or function germs):
 
 The Maxwell's Equations
 ---
