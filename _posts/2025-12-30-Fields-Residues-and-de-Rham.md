@@ -7,7 +7,7 @@ tags:
   - Geometry and Topology
   - Physics
   - Field Theory
-published: Yes
+published: No
 ---
 **Goal**. Starting from the most basic electrodynamics and Maxwell's equations, differential forms and Hodge stars are introduced using actual physical quantities, thus naturally leading to de Rham theory; then, considering the 2-dimensional electrodynamics, angular functions and logarithmic potentials are explained using cohomological/distributed differential forms, and cohomological proofs and explicit calculations of conclusions such as the residue theorem and the principle of discriminability are given.
 
@@ -34,7 +34,7 @@ In this article, we claim that there is a smooth structure, i.e., there is a max
 
 The calculus on manifolds is highly rely on the tangent space to understand the tangent space, one can illustrate the tangent space in two equivalence ways: In the following definition, without other explaination, we take $I_\epsilon = (- \epsilon, \epsilon)$ for some $\epsilon \in [0, +\infty)$
 
-1. The equivlance class of curves: Let $\Gamma_p := \{\gamma \in C^\infty(I_\epsilon, M) \mid \gamma(0) = p \in M\}$ be the space that
+1. The equivlance class of curves: Let $\Gamma_p := \{\gamma \in C^\infty(I_\epsilon, M) \mid \gamma(0) = p \in M\}$ be the space of curves that
 2. The derivation on smooth functions (or function germs):
 
 The Maxwell's Equations
