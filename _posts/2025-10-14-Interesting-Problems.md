@@ -106,6 +106,6 @@ Thus, by $R_x: [0, 1] \to O(2)$, we construct a path in $O(2)$ connected $I_2$ a
 The Open Mapping Theorem in Complex Analysis (2025-12-1)
 ---
 
-**[Ex]** Let $U \subseteq \C$ be a domain, if $f: U \to C$ is holomorphic and non-canstant, then $f$ is an open map.
+**[Ex]** Let $U \subseteq \mathbb{C}$ be a domain, if complex valued function $f: U \to \mathbb{C}$ is holomorphic and non-canstant, then $f$ is an open map.
 
 **Proof** (Via the Property of Submersion).
