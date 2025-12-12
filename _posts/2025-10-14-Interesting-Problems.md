@@ -103,7 +103,7 @@ R_x(s) = \begin{pmatrix}
 $$
 Thus, by $R_x: [0, 1] \to O(2)$, we construct a path in $O(2)$ connected $I_2$ and $-I_2$, which leads to contradiction since $I_2$ and $-I_2$ are in different connected component in $O(2)$. Thus, there is no no-where vanishing vector field on $S^{2n}$. $\quad\square$
 
-The Open Mapping Theorem in Complex Analysis (2025-12-1)
+A Simple Proof of the Open Mapping Theorem (2025-12-1)
 ---
 
 **[Ex]** Let $U \subseteq \mathbb{C}$ be a domain, if complex valued function $f: U \to \mathbb{C}$ is holomorphic and non-canstant, then $f$ is an open map.
