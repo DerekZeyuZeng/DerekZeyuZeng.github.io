@@ -1,5 +1,6 @@
 ---
 title: "Note on the Central Extension of Klein 4-Group"
+excerpt: "A simple note on central extension and group cohomology."
 collection: portfolio
 published: Yes
 ---
