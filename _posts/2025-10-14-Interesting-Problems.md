@@ -108,4 +108,4 @@ A Simple Proof of the Open Mapping Theorem (2025-12-1)
 
 **[Ex]** Let $U \subseteq \mathbb{C}$ be a domain, if complex valued function $f: U \to \mathbb{C}$ is holomorphic and non-canstant, then $f$ is an open map.
 
-**Proof** (Via the Property of Submersion).
+**Proof** (Via the Property of Submersion). By Cauchy-Riemann Equation
