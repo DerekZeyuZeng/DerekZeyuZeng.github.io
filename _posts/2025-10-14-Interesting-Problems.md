@@ -108,4 +108,10 @@ A Simple Proof of the Open Mapping Theorem (2025-12-1)
 
 **[Ex]** Let $U \subseteq \mathbb{C}$ be a domain, if complex valued function $f: U \to \mathbb{C}$ is holomorphic and non-canstant, then $f$ is an open map.
 
-**Proof** (Via the Property of Submersion). By Cauchy-Riemann Equation
+**Proof** (Via the Property of Submersion). By Cauchy-Riemann Equation, the holomorphicness of function $f: U \to \mathbb{C}$ is equivalent to the compatibility of the Jacobian and the constant complex structure $J$ on $\mathbb{C}$ (or, $\mathbb{R}^2$, as a real manifold)
+$$
+J \circ Df = Df \circ J, \quad J = \begin{pmatrix}
+  & -1 \\ 1 &
+\end{pmatrix}
+$$
+and implies the fact that $f$ has constant rank. Since $\dim_\mathbb{C} \mathbb{C} = 1$, the complex rank of the function $f$ can be either $0$ or $1$. Given $f$ is non-constant, $\mathrm{rank}_\mathbb{C} f = 1$ and thus, $f$ is a submersion, and thus, is an open map. $\quad \square$

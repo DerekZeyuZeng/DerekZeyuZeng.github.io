@@ -1,6 +1,5 @@
 ---
-title: "Derivation of Conformally Flat Metric for Generalized
-Schwarzschild-like Solutions"
+title: "Derivation of Conformally Flat Metric for Generalized Schwarzschild-like Solutions"
 collection: talks
 type: "Poster Presentation"
 permalink: /talks/IsotropicCoordinate
