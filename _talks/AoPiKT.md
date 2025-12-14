@@ -1,5 +1,5 @@
 ---
-title: "Arithematic of Polynomial of Knots Theory"
+title: "Arithematic of Polynomial in Knots Theory"
 collection: talks
 type: "Poster Presentation"
 permalink: /talks/ArithematicPolynomialKnotsTheory
