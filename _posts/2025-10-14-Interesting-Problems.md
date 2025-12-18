@@ -103,34 +103,6 @@ R_x(s) = \begin{pmatrix}
 $$
 Thus, by $R_x: [0, 1] \to O(2)$, we construct a path in $O(2)$ connected $I_2$ and $-I_2$, which leads to contradiction since $I_2$ and $-I_2$ are in different connected component in $O(2)$. Thus, there is no no-where vanishing vector field on $S^{2n}$. $\quad\square$
 
-# A Simple Proof of the Open Mapping Theorem (2025-12-1)
-
----
-
-**[Ex]** Let $U \subseteq \mathbb{C}$ be a domain. If a complex-valued function $f: U \to \mathbb{C}$ is holomorphic and non-constant, then $f$ is an open map.
-
-**Proof** (Via the Property of Submersion). Let $f: U \to \mathbb{C}$ be holomorphic, write
-\[
-f(z) = u(x,y) + \mathrm{i}v(x,y), \qquad z=x+\mathrm{i}y,
-\]
-where $u,v:U\to\mathbb{R}$ are smooth. The Cauchy–Riemann equations are
-\[
-u_x = v_y, \qquad u_y = -v_x.
-\]
-If we regard $f$ as a smooth map $f=(u,v):U\subset\mathbb{R}^2\to\mathbb{R}^2$, then the Cauchy–Riemann equations are equivalent to the commutation relation
-\[
-Df \cdot J = J \cdot Df, 
-\qquad 
-J := \begin{pmatrix}
-0 & 1\\
--1 & 0
-\end{pmatrix}.
-\]
-
-The following is a linear algebra lemma.
-
-*Lemma 1.* If $A \in M_2(\mathbb{R})$ satisfies $AJ = JA$, then $\mathrm{rank}\,A \in \{0,2\}$.
-
 A Simple Proof of the Open Mapping Theorem (2025-12-1)
 ---
 
