@@ -188,4 +188,3 @@ $$
 i.e. $w\in f(D)\subset f(U)$.
 
 Thus $B(w_0,m)\subset f(U)$, so $w_0$ is an interior point of $f(U)$. Since $z_0$ was arbitrary, $f(U)$ is open, hence $f$ is an open map. $\quad \square$
-
