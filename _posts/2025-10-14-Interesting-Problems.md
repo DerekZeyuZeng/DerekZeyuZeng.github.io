@@ -103,9 +103,93 @@ R_x(s) = \begin{pmatrix}
 $$
 Thus, by $R_x: [0, 1] \to O(2)$, we construct a path in $O(2)$ connected $I_2$ and $-I_2$, which leads to contradiction since $I_2$ and $-I_2$ are in different connected component in $O(2)$. Thus, there is no no-where vanishing vector field on $S^{2n}$. $\quad\square$
 
+# A Simple Proof of the Open Mapping Theorem (2025-12-1)
+
+---
+
+**[Ex]** Let $U \subseteq \mathbb{C}$ be a domain. If a complex-valued function $f: U \to \mathbb{C}$ is holomorphic and non-constant, then $f$ is an open map.
+
+**Proof** (Via the Property of Submersion). Let $f: U \to \mathbb{C}$ be holomorphic, write
+\[
+f(z) = u(x,y) + \mathrm{i}v(x,y), \qquad z=x+\mathrm{i}y,
+\]
+where $u,v:U\to\mathbb{R}$ are smooth. The Cauchy–Riemann equations are
+\[
+u_x = v_y, \qquad u_y = -v_x.
+\]
+If we regard $f$ as a smooth map $f=(u,v):U\subset\mathbb{R}^2\to\mathbb{R}^2$, then the Cauchy–Riemann equations are equivalent to the commutation relation
+\[
+Df \cdot J = J \cdot Df, 
+\qquad 
+J := \begin{pmatrix}
+0 & 1\\
+-1 & 0
+\end{pmatrix}.
+\]
+
+The following is a linear algebra lemma.
+
+*Lemma 1.* If $A \in M_2(\mathbb{R})$ satisfies $AJ = JA$, then $\mathrm{rank}\,A \in \{0,2\}$.
+
 A Simple Proof of the Open Mapping Theorem (2025-12-1)
 ---
 
-**[Ex]** Let $U \subseteq \mathbb{C}$ be a domain, if complex valued function $f: U \to \mathbb{C}$ is holomorphic and non-canstant, then $f$ is an open map.
+**[Ex]** Let $U \subseteq \mathbb{C}$ be a domain. If a complex-valued function $f:U\to\mathbb{C}$ is holomorphic and non-constant, then $f$ is an open map.
 
-**Proof** (Via the Property of Submersion). By Cauchy-Riemann Equation
+**Proof** (A Topological Proof via Winding Number / Argument Principle). Fix $z_0\in U$ and set
+$$
+w_0 := f(z_0).
+$$
+It suffices to show that $w_0$ is an interior point of $f(U)$.
+
+Define $g(z):=f(z)-w_0$, which is holomorphic and not identically zero. Hence the zeros of $g$ are isolated. Therefore, we can choose $r>0$ such that the closed disk
+$$
+\overline{D}:=\overline{D(z_0,r)}\subset U
+$$
+and
+$$
+g(z)\neq 0 \quad \text{for all } z\in \partial D.
+$$
+By compactness of $\partial D$ and continuity of $|g|$, the minimum
+$$
+m:=\min_{z\in\partial D}|g(z)|>0
+$$
+exists and is positive.
+
+Now let $w\in\mathbb{C}$ satisfy $|w-w_0|<m$. Then for every $z\in\partial D$,
+$$
+|f(z)-w| \ge |f(z)-w_0|-|w-w_0| =|g(z)|-|w-w_0|
+\ge m-|w-w_0| > 0
+$$
+so $f(z)\neq w$ on $\partial D$. Consequently, the closed curve $f(\partial D)$ avoids $w$, and the winding number
+$$
+\operatorname{wind}(f(\partial D),w)
+$$
+is well-defined. Moreover, as $w$ varies in the disk $B(w_0,m)$, the integer $\operatorname{wind}(f(\partial D),w)$ is constant (winding number is a homotopy invariant as long as the point stays off the curve). Hence there exists an integer $N$ such that
+$$
+\operatorname{wind} (f(\partial D),w) = N
+\quad \text{for all } w\in B(w_0,m)
+$$
+
+We now invoke the Argument Principle in the holomorphic (no-pole) case: for each $w\in B(w_0,m)$,
+$$
+\operatorname{wind}(f(\partial D),w) = \frac{1}{2\pi i}\int_{\partial D}\frac{f'(z)}{f(z)-w}\,dz = \#\{z\in D:\ f(z)=w\}
+$$
+counted with multiplicity.
+
+In particular, for $w=w_0$ the equation $f(z)=w_0$ has at least one solution in $D$ (namely $z_0$), so
+$$
+N=\operatorname{wind}(f(\partial D),w_0)\ge 1.
+$$
+Therefore, for every $w\in B(w_0,m)$ we have $\operatorname{wind}(f(\partial D),w)=N\ge 1$, which forces
+$$
+\#\{z\in D:\ f(z)=w\}\ge 1,
+$$
+i.e. $w\in f(D)\subset f(U)$.
+
+Thus
+$$
+B(w_0,m)\subset f(U),
+$$
+so $w_0$ is an interior point of $f(U)$. Since $z_0$ was arbitrary, $f(U)$ is open, hence $f$ is an open map. $\quad \square$
+
