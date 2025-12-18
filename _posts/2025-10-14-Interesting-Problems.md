@@ -110,7 +110,7 @@ A Simple Proof of the Open Mapping Theorem (2025-12-1)
 
 **Proof** (A Topological Proof via Winding Number / Argument Principle). Fix $z_0\in U$ and set
 $$
-w_0 := f(z_0).
+w_0 := f(z_0)
 $$
 It suffices to show that $w_0$ is an interior point of $f(U)$.
 
@@ -120,7 +120,7 @@ $$
 $$
 and
 $$
-g(z)\neq 0 \quad \text{for all } z\in \partial D.
+g(z)\neq 0 \quad \text{for all } z\in \partial D
 $$
 By compactness of $\partial D$ and continuity of $|g|$, the minimum
 $$
@@ -151,11 +151,11 @@ counted with multiplicity.
 
 In particular, for $w=w_0$ the equation $f(z)=w_0$ has at least one solution in $D$ (namely $z_0$), so
 $$
-N=\operatorname{wind}(f(\partial D),w_0)\ge 1.
+N=\operatorname{wind}(f(\partial D),w_0)\ge 1
 $$
 Therefore, for every $w\in B(w_0,m)$ we have $\operatorname{wind}(f(\partial D),w)=N\ge 1$, which forces
 $$
-\#\{z\in D:\ f(z)=w\}\ge 1,
+\#\{z\in D:\ f(z)=w\}\ge 1
 $$
 i.e. $w\in f(D)\subset f(U)$.
 
