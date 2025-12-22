@@ -22,6 +22,6 @@ And here is an exanple uses the group cohomology to classify the central extensi
 
 The second note will be about my efforts on discribing the Lie group cohomology in a "local + global obstruction" way, i.e. we have a short exact sequence
 $$
-1 \longrightarrow \operatorname{Hom}\big(\pi_1(G), U(1))\big) \longrightarrow H^2\big(G, U(1)\big) \longrightarrow H^2(\mathfrak{g}, \mathbb{R}) \longrightarrow 1
+1 \longrightarrow \operatorname{Hom}\big(\pi_1(G), U(1)\big) \longrightarrow H^2\big(G, U(1)\big) \longrightarrow H^2(\mathfrak{g}, \mathbb{R}) \longrightarrow 1
 $$
 This part is incomplete yet and will be updated to the webpasge soon.
