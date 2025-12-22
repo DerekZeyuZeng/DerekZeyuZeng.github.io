@@ -1,6 +1,6 @@
 ---
 title: "Amid the Cloud-Sea: Notes in Geometry and Topology (Incomplete)"
-excerpt: "My self-study note of various geometry and topology."
+excerpt: "My self-study note of various topics in geometry and topology."
 collection: portfolio
 published: Yes
 ---
