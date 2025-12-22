@@ -12,7 +12,7 @@ In the following series of notes, I records some idea about trhe projective repr
   <p>PDF preview unavailable. <a href="{{ '/files/GroupCoh-1.pdf' | relative_url }}">Open</a>.</p>
 </object>
 
-And here is an exanple that uses the group cohomology to classify the central extension:
+And here is an exanple uses the group cohomology to classify the central extension:
 
 - [Note on the Central Extension of Klein 4-Group](/files/Q8_and_D4.pdf)
 
