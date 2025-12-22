@@ -21,14 +21,7 @@ And here is an exanple that uses the group cohomology to classify the central ex
 </object>
 
 The second note will be about my efforts on discribing the Lie group cohomology in a "local + global obstruction" way, i.e. we have a short exact sequence
-
-  <div style="display:flex; justify-content:center; margin:1.5em 0;">
-    <script type="text/tikz">
-      \Large
-      \begin{tikzcd}[row sep=3em, column sep=4em]
-        1 \ar[r] & \operatorname{Hom}\big(\pi_1(G), U(1))\big) \ar[r] & H^2\big(G, U(1)\big) \ar[r] & H^2(\mathfrak{g}, \mathbb{R}) \ar[r] & 1
-      \end{tikzcd}
-    </script>
-  </div>
-
+$$
+1 \longrightarrow \operatorname{Hom}\big(\pi_1(G), U(1))\big) \longrightarrow H^2\big(G, U(1)\big) \longrightarrow H^2(\mathfrak{g}, \mathbb{R}) \longrightarrow 1
+$$
 This part is incomplete yet and will be updated to the webpasge soon.
