@@ -1,5 +1,5 @@
 ---
-title: 'Answer to Selected Problems on Introduction to Smooth manifolds by John M. Lee'
+title: 'Answer to Selected Problems in Introduction to Smooth Manifolds by John M. Lee'
 date: 2026-01-19
 permalink: /posts/2026/01/Problem-Lee/
 tags:
