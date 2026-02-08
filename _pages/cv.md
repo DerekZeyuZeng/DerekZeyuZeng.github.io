@@ -10,7 +10,7 @@ Education
 
 - Undergraduate Student in Mathematics & Physics, University of Illinois Urbana–Champaign, 2024–present
 
-Work experience
+Working experience
 ------
 
 - N/A
