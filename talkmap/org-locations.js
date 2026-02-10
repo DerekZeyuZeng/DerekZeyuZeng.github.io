@@ -10,6 +10,11 @@ var addressPoints = [
     -88.207301
   ],
   [
+    "From 2D TQFT to Gromov-Witten Theory<br />Final Presentation, Mathematics Inspired by Quantum Field Theory; Online",
+    43.5904719,
+    3.8595132
+  ],
+  [
     "Gauge Theory of Shallow Water<br />SJTU International Summer School on Physics (ISSP) 2025 in Tsung-Dao Lee Institute; Shanghai, China",
     31.2312707,
     121.4700152
