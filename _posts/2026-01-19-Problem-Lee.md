@@ -1,5 +1,5 @@
 ---
-title: 'Answer to Selected Problems in Introduction to Smooth Manifolds by John M. Lee'
+title: 'Answer to Selected Problems of Geometry & Topology'
 date: 2026-01-19
 permalink: /posts/2026/01/Problem-Lee/
 tags:
@@ -7,9 +7,9 @@ tags:
   - Geometry & Topology
   - Living Post
 ---
-This is my answer for some selected problem in the book *Introduction to Smooth Manifolds* by Professor John M. Lee, as a preperation to the further study of Geometry and Topology.
+This is my answer for some selected problem in several textbooks of geometry and topology, as a preperation to the further study of Geometry and Topology.
 
-Problem 1-6
+Lee, *Introduction to Smooth Manifolds*, Problem 1-6
 ---
 
 Show that if $M$ is a smooth manifold with a smooth structure $\mathcal A$, then there are uncountably many non-compactable smooth structures on $M$.
