@@ -9,6 +9,7 @@ date: 2025-04-24
 location: "Urbana, IL, USA"
 ---
 We present a unified coordinate transformation that renders a wide class of static, spherically symmetric spacetimes conformally flat. This framework recovers explicit isotropic-coordinate forms for the Schwarzschild and Reissner–Nordström metrics, derives elliptic-integral solutions for Kottler spacetimes, and outlines extensions to Kiselev-type fluids. The closed-form expressions streamline the generation of clean initial data and simplify boundary and matching conditions in 3 + 1 numerical relativity, bridging near-horizon to cosmological scales.
+
 <p><a href="{{ 'files/Isotropic_Coordinate_Poster.pdf' | relative_url }}" download>Download PDF</a></p>
 
 Starting from the general form of a spherical symmetric (Schwarzschild-like) metric:
