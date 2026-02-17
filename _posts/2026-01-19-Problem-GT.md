@@ -1,7 +1,7 @@
 ---
 title: 'Answer to Selected Problems of Geometry & Topology'
 date: 2026-01-19
-permalink: /posts/2026/01/Problem-Lee/
+permalink: /posts/2026/01/Problem-GT/
 tags:
   - Math&Physics Problems
   - Geometry & Topology
@@ -9,10 +9,10 @@ tags:
 ---
 This is my answer for some selected problem in several textbooks of geometry and topology, as a preperation to the further study of Geometry and Topology.
 
-Lee, *Introduction to Smooth Manifolds*, Problem 1-6
+Lee, *Introduction to Smooth Manifolds*
 ---
 
-Show that if $M$ is a smooth manifold with a smooth structure $\mathcal A$, then there are uncountably many non-compactable smooth structures on $M$.
+**1-6**. Show that if $M$ is a smooth manifold with a smooth structure $\mathcal A$, then there are uncountably many non-compactable smooth structures on $M$.
 
 *Proof.* We shall construct uncountably many noncompactable smooth structures based on $\mathcal A$. Take the chart $(U,\varphi) \in \mathcal A$ such that $\varphi(U) = B^n$ and $\varphi(p)=0$ for some $p\in U$.
 
@@ -61,3 +61,36 @@ $$
 \varphi_s \circ \varphi_t^{-1} = F_s \circ \varphi \circ \varphi^{-1} \circ F_{1/t} = F_{s/t}
 $$
 is not a diffeomorphism unless $s = t$. Thus, by the uncountablity of $[0,1)$, $\mathcal A_s$ gives a familty of uncountably many non=compactible smooth atlas, and each of the atlas gives a smooth structure on $M$. $\qquad \square$
+
+Milnor, *Topology from Differentiable Viewpoints*
+---
+
+**1**. Let $M, N, P$ be oriented, closed, smooth manifolds, $f: M \to N$ and $g: N \to P$ be smooth maps. Show that for smooth maps $f: M \to N$ and $g: N \to P$, the Brouwer degree satisfies $\deg(g \circ f) = \deg g \cdot \deg f$.
+
+*Proof*. Recall that the definition of Brouwer degree in Milnor's book is given by define the sign of the pushforward $f_{*,x}$ as $\mathrm{sgn} f_{*,x} = 1$ if $f_{*,x}$ is orientation preserving and $\mathrm{sgn} f_{*,x} = -1$ if $f_{*,x}$ is orientation reversing. Then for any regular value $y \in N$
+$$
+\deg(f; y):= \sum_{x \in f^{-1}(y)} \mathrm{sgn}(f_{*,x})
+$$
+This degree does not depends on the choice of regular value.
+
+Then, by Sard's theorem, we know that since both $f$ and $g$ are smooth, the critical value of $\mathrm{Crit}(f)$, $\mathrm{Crit}(g)$, and $\mathrm{Crit}(g \circ f)$ has measure-zero. Thus, the set $g(\mathrm{Crit}(g))$,
+$$
+S = P \setminus \big( \mathrm{Cirt}(g) \cup \mathrm{Crit}(g \circ f) \cup g(\mathrm{Circ}(f)) \big) \ \text{measure zero.}
+$$
+Thus, we shall pick $p \in S$ such that $p$ is regular value of both $g$ and $g \circ f$, ${g^{-1}}(p) \cap \mathrm{Crit}(f) = \emptyset$. Note that with the choice of framing $\beta:=\{e_1, \dots, e_n\}$ on $T_xM$ and $\tilde \beta:=\{\tilde e_1, \dots, \tilde e_n\}$, then the sign of the linear map is just
+$$
+\mathrm{sgn}(f_{*,x}) = \mathrm{sgn}(\det [f_{*,x}]_{\beta_1}^{\beta_2})
+$$
+where the section $\mathrm{sgn}$ is just the sign of a real number. Since the differential/pushforward is functorial, $(g\circ f)_{*,x} = g_{*,f(x)}\circ f_{*,x}$ and the property of determinant gives
+$$
+\mathrm{sgn}(g \circ f)_{*,x} = \mathrm{sgn}\big(\det[(g \circ f)_{*,x}]\big) = \mathrm{sgn}(\det[g_{*,f(x)}] \det[f_{*,x}]) = \mathrm{sgn}(g_{*,f(x)}) \mathrm{sgn}(f_{*,x})
+$$
+So the Brouwer degree is given by
+$$
+\deg(g \circ f;p) = \sum_{x \in (g\circ f)^{-1}(p)} \mathrm{sgn}(g_{*,f(x)})\cdot \mathrm{sgn}(f_{*,x})
+$$
+We claim that this is equal to $\deg f \cdot \deg g$ since the equation above is just
+$$
+\deg(g\circ f) = \sum_{y \in g^{-1}(p)} \mathrm{sgn}(g_{*, y}) \cdot \sum_{x \in f^{-1}(y)} \mathrm{sgn}(f_{*,x}) = \deg(g) \cdot \deg(f)
+$$
+Which completes the proof. $\qquad \square$
