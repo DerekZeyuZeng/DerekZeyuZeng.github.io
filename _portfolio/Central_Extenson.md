@@ -14,7 +14,7 @@ In the following series of notes, I records some idea about trhe projective repr
 
 And here is an exanple uses the group cohomology to classify the central extension:
 
-- [Note on the Central Extension of Klein 4-Group](/files/Q8_and_D4.pdf)
+- [Note on the Central Extension of Klein 4-Group](/files/Q8_and_D8.pdf)
 
 <object data="{{ 'files/Q8_and_D8.pdf' | relative_url }}" type="application/pdf" width="100%" height="100%">
   <p>PDF preview unavailable. <a href="{{ 'files/Q8_and_D8.pdf' | relative_url }}">Open</a>.</p>

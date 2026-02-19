@@ -94,3 +94,37 @@ $$
 \deg(g\circ f) = \sum_{y \in g^{-1}(p)} \mathrm{sgn}(g_{*, y}) \cdot \sum_{x \in f^{-1}(y)} \mathrm{sgn}(f_{*,x}) = \deg(g) \cdot \deg(f)
 $$
 Which completes the proof. $\qquad \square$
+
+**2**. Show that every complex polynomial of degree $n$ gives rise to a smooth map from the Gauss sphere $S^2$ to itself of degree $n$.
+
+*Proof*. Recall that the degree is homotopy invariant. It is enough to show that $p \in \mathbb{C}[z]$ with $\mathrm{deg}(p) = n$ is homotopic to $z^n$, and $\mathrm{deg}(z^n) = n$. We first define the extended polynomial on Gaussian sphere $S^2 \cong \widehat{\mathbb{C}} = \mathbb{C} \cup \{\infty\}$ as
+$$
+\tilde{p}(z) =
+\begin{cases}
+  p(z), & z \in \mathbb{C}\\
+  \infty, & z = \infty
+\end{cases}
+, \quad p(z) = z^n + a_{n-1}z^{n-1} + \cdots + a_1z + a_0
+$$
+Then consider the homotopy $h: \widehat{\mathbb{C}}\times [0,1] \to \widehat{\mathbb{C}}$ defined by
+$$
+h(x, t):=
+\begin{cases}
+  p_t(z), & z \in \mathbb{C}\\
+  \infty, & z = \infty
+\end{cases}
+, \quad p_t(z):= z^n + t \big(a_{n-1}z^{n-1} + \cdots + a_1z + a_0\big)
+$$
+We may check that this is a continuous homotopy by check the continuity near $\infty$ (since $p_t(z) \in \mathbb{C}[z]$ is known to be continuous on $\mathbb{C}$). Consider the limit $z \to \infty$
+$$
+p_t(z) = z^n\left[1 +  t\Big({a_{n-1}\over z} + \cdots + {a_1 \over z^{n-1}} + {a_0 \over z^n}\Big)\right] \longrightarrow \infty \quad \forall t \in [0,1]
+$$
+Thus, forall sequence $z_n \to \infty$ we have $p_t(z_n) \to \infty$, which shows $p_t$ is an continuous homotopy on $\widehat{\mathbb{C}}$. Since $h: \tilde p(z) \simeq z^n$, as we mentioned previously, $\mathrm{det}(\tilde p) = \mathrm{deg}(z^n)$. Finally, we compute the degree of $z^n$. Take any regular value of $z^n$, for example $1 \in \mathbb{C}$, then
+$$
+z^n = 1 \implies z \in \{\zeta_k = \mathrm e^{2\pi ik/n} \mid k = 0, \dots, n-1\}
+$$
+and the derivative is given by $(z^n)' = nz^{n-1} \neq 0$ if $z \neq 0$. Thus,
+$$
+\mathrm{deg}(z^n) = \sum_{k = 1}^n \mathrm{sgn}(nz^{n-1}|_{\zeta_k}) = n
+$$
+which complete the proof. $\qquad \square$
