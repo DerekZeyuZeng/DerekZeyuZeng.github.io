@@ -70,10 +70,10 @@ Let $E:= \mathbb{R}^2/\sim$ with the equivalence class defined by $(x,y) \sim (x
 
 <div class="tikz-diagram">
   <script type="text/tikz">
-    \begin{tikzcd}
+    $$\begin{tikzcd}
       \ar[d,"\mathrm{proj}_1"] \mathbb{R}^2 \ar[r, "q"] & E \ar[d, "\pi", \dashed]\\
       \mathbb{R} \ar[r, "\epsilon"] & S^1
-    \end{tikzcd}
+    \end{tikzcd}$$
   </script>
 </div>
 
