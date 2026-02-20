@@ -62,6 +62,21 @@ $$
 $$
 is not a diffeomorphism unless $s = t$. Thus, by the uncountablity of $[0,1)$, $\mathcal A_s$ gives a familty of uncountably many non=compactible smooth atlas, and each of the atlas gives a smooth structure on $M$. $\qquad \square$
 
+**10-1**. Let $E \to S^1$ be the Möbius bundle on $S^1$.
+
+Let $E:= \mathbb{R}^2/\sim$ with the equivalence class defined by $(x,y) \sim (x', y')$ if and only if $(x', y') = \big(x+n, (-1)^ny\big)$ for some $n \in \mathbb{Z}$, and $q: \R^2 \to E$ be quotient map.
+
+**Defn**. Let $\epsilon: \R \to S^1$ be the covering map defined by $\epsilon(x):= \mathrm{e}^{2\pi i x}$, the projection of Möbius bundle is given by $\pi \circ q := \epsilon \circ \mathrm{proj}_1$. In other words, the following diagram commutes:
+
+<div class="tikz-diagram">
+  <script type="text/tikz">
+    \begin{tikzcd}
+      \ar[d,"\mathrm{proj}_1"] \mathbb{R}^2 \ar[r, "q"] & E \ar[d, "\pi", \dashed]\\
+      \mathbb{R} \ar[r, "\epsilon"] & S^1
+    \end{tikzcd}
+  </script>
+</div>
+
 Milnor, *Topology from Differentiable Viewpoints*
 ---
 
