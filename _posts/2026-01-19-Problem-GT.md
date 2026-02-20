@@ -9,6 +9,8 @@ tags:
 ---
 This is my answer for some selected problem in several textbooks of geometry and topology, as a preperation to the further study of Geometry and Topology.
 
+***
+
 Lee, *Introduction to Smooth Manifolds*
 ---
 
@@ -62,11 +64,22 @@ $$
 $$
 is not a diffeomorphism unless $s = t$. Thus, by the uncountablity of $[0,1)$, $\mathcal A_s$ gives a familty of uncountably many non=compactible smooth atlas, and each of the atlas gives a smooth structure on $M$. $\qquad \square$
 
+***
+
 **10-1**. Let $E \to S^1$ be the Möbius bundle on $S^1$.
 
 Let $E:= \mathbb{R}^2/\sim$ with the equivalence class defined by $(x,y) \sim (x', y')$ if and only if $(x', y') = \big(x+n, (-1)^ny\big)$ for some $n \in \mathbb{Z}$, and $q: \R^2 \to E$ be quotient map.
 
 **Defn**. Let $\epsilon: \R \to S^1$ be the covering map defined by $\epsilon(x):= \mathrm{e}^{2\pi i x}$, the projection of Möbius bundle is given by $\pi \circ q := \epsilon \circ \mathrm{proj}_1$.
+
+Show that:
+(a) Show that $E$ has a unique smooth structure such that the quotient map $q: \R^2 \to E$ is a smooth covering map.
+(b) Show that $\pi: E \to S^1$ is a smooth rank-1 covering map.
+(c) Show that it is not a trivial bundle.
+
+**Proof**.
+
+***
 
 Milnor, *Topology from Differentiable Viewpoints*
 ---
@@ -100,6 +113,8 @@ $$
 \deg(g\circ f) = \sum_{y \in g^{-1}(p)} \mathrm{sgn}(g_{*, y}) \cdot \sum_{x \in f^{-1}(y)} \mathrm{sgn}(f_{*,x}) = \deg(g) \cdot \deg(f)
 $$
 Which completes the proof. $\qquad \square$
+
+***
 
 **2**. Show that every complex polynomial of degree $n$ gives rise to a smooth map from the Gauss sphere $S^2$ to itself of degree $n$.
 
