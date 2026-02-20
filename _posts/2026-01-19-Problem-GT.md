@@ -70,7 +70,7 @@ is not a diffeomorphism unless $s = t$. Thus, by the uncountablity of $[0,1)$, $
 
 Let $E:= \mathbb{R}^2/\sim$ with the equivalence class defined by $(x,y) \sim (x', y')$ if and only if $(x', y') = \big(x+n, (-1)^ny\big)$ for some $n \in \mathbb{Z}$, and $q: \R^2 \to E$ be quotient map.
 
-**Defn**. Let $\epsilon: \R \to S^1$ be the covering map defined by $\epsilon(x):= \mathrm{e}^{2\pi i x}$, the projection of Möbius bundle is given by $\pi \circ q := \epsilon \circ \mathrm{proj}_1$.
+**Defn**. Let $\epsilon: \R \to S^1$ be the covering map defined by $\epsilon(x):= \mathrm{e}^{2\pi i x}$, the projection of Möbius bundle is given by $\pi \circ q = \epsilon \circ \mathrm{proj}_1$.
 
 Show that:
 (a) Show that $E$ has a unique smooth structure such that the quotient map $q: \R^2 \to E$ is a smooth covering map.
