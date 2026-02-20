@@ -71,8 +71,8 @@ Let $E:= \mathbb{R}^2/\sim$ with the equivalence class defined by $(x,y) \sim (x
 <div class="tikz-diagram">
   <script type="text/tikz">
     \begin{tikzcd}
-      \mathrm{R}^2 \arrow[d,"\mathrm{proj}_1"] \arrow[r, "q"] & E \arrow[d, "\pi", dashed]\\
-      \mathrm{R} \arrow[r, "\epsilon"] & \mathrm{S}^1
+      \mathbb{R}^2 \arrow[d,"\mathbb{proj}_1"'] \arrow[r, "q"] & E \arrow[d, "\pi", dashed]\\
+      \mathbb{R} \arrow[r, "\epsilon"] & S^1
     \end{tikzcd}
   </script>
 </div>
