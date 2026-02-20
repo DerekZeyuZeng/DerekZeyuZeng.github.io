@@ -14,7 +14,7 @@ This is my answer for some selected problem in several textbooks of geometry and
 Lee, *Introduction to Smooth Manifolds*
 ---
 
-**1-6**. Show that if $M$ is a smooth manifold with a smooth structure $\mathcal A$, then there are uncountably many non-compactable smooth structures on $M$.
+**Problem 1-6**. Show that if $M$ is a smooth manifold with a smooth structure $\mathcal A$, then there are uncountably many non-compactable smooth structures on $M$.
 
 *Proof.* We shall construct uncountably many noncompactable smooth structures based on $\mathcal A$. Take the chart $(U,\varphi) \in \mathcal A$ such that $\varphi(U) = B^n$ and $\varphi(p)=0$ for some $p\in U$.
 
@@ -66,7 +66,7 @@ is not a diffeomorphism unless $s = t$. Thus, by the uncountablity of $[0,1)$, $
 
 ***
 
-**10-1**. Let $E \to S^1$ be the Möbius bundle on $S^1$.
+**Problem 10-1**. Let $E \to S^1$ be the Möbius bundle on $S^1$.
 
 Let $E:= \mathbb{R}^2/\sim$ with the equivalence class defined by $(x,y) \sim (x', y')$ if and only if $(x', y') = \big(x+n, (-1)^ny\big)$ for some $n \in \mathbb{Z}$, and $q: \R^2 \to E$ be quotient map.
 
@@ -84,7 +84,7 @@ Show that:
 Milnor, *Topology from Differentiable Viewpoints*
 ---
 
-**1**. Let $M, N, P$ be oriented, closed, smooth manifolds, $f: M \to N$ and $g: N \to P$ be smooth maps. Show that for smooth maps $f: M \to N$ and $g: N \to P$, the Brouwer degree satisfies $\deg(g \circ f) = \deg g \cdot \deg f$.
+**Problem 1**. Let $M, N, P$ be oriented, closed, smooth manifolds, $f: M \to N$ and $g: N \to P$ be smooth maps. Show that for smooth maps $f: M \to N$ and $g: N \to P$, the Brouwer degree satisfies $\deg(g \circ f) = \deg g \cdot \deg f$.
 
 *Proof*. Recall that the definition of Brouwer degree in Milnor's book is given by define the sign of the pushforward $f_{*,x}$ as $\mathrm{sgn} f_{*,x} = 1$ if $f_{*,x}$ is orientation preserving and $\mathrm{sgn} f_{*,x} = -1$ if $f_{*,x}$ is orientation reversing. Then for any regular value $y \in N$
 $$
@@ -116,7 +116,7 @@ Which completes the proof. $\qquad \square$
 
 ***
 
-**2**. Show that every complex polynomial of degree $n$ gives rise to a smooth map from the Gauss sphere $S^2$ to itself of degree $n$.
+**Problem 2**. Show that every complex polynomial of degree $n$ gives rise to a smooth map from the Gauss sphere $S^2$ to itself of degree $n$.
 
 *Proof*. Recall that the degree is homotopy invariant. It is enough to show that $p \in \mathbb{C}[z]$ with $\mathrm{deg}(p) = n$ is homotopic to $z^n$, and $\mathrm{deg}(z^n) = n$. We first define the extended polynomial on Gaussian sphere $S^2 \cong \widehat{\mathbb{C}} = \mathbb{C} \cup \{\infty\}$ as
 $$
