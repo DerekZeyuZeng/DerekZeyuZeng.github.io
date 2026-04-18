@@ -25,7 +25,7 @@ author:
   # Biographic information
   avatar           : "profile.png"
   name             : "Zeyu (Derek) Zeng"
-  pronouns         : "he/him" # example: "she/her"  
+  #pronouns         : "he/him" # example: "she/her"  
   bio              : "UIUC undergraduate studying Mathematics & Physics. Interested in geometry, topology, and mathematical physics; especially symplectic topology."
   location         : "Urbana, IL, USA"
   employer         : "University of Illinois Urbana-Champaign"
