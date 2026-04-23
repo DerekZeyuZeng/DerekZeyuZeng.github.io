@@ -1,5 +1,5 @@
 ---
-title: "Notes in Gromov-Witten Theory and Cohomological Field Theory"
+title: "Notes on Gromov-Witten Theory and Cohomological Field Theory"
 excerpt: "The term paper for Mathematics Insqired by Quantum Field Theory (Field Institute Shared Graduate Course, winter 2026)."
 collection: portfolio
 published: Yes
