@@ -1,6 +1,7 @@
 ---
 title: "A Topological Proof of the Fundamental Theorem of Algebra"
 excerpt: "The proof of fundamental theorem of algebra via fundamental group."
+date: 12/6/2025
 collection: portfolio
 published: Yes
 ---

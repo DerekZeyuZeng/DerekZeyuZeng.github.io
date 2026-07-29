@@ -2,7 +2,7 @@
 title: "Notes on the Central Extension and Group Cohomology"
 excerpt: "A series of my personal study note on central extension and group cohomology."
 collection: portfolio
-published: Yes
+published: No
 ---
 In the following series of notes, I records some idea about trhe projective representation and group cohomology. The question begin with my self-study of quantum field theory. In the first note, I have discussed Weinberg's approach in *The Quantum Theory of Fields*. Vol. 1, and the most general approach that classify the central extension using 2-cocycles in the second group cohomology group $H^2(G)$
 

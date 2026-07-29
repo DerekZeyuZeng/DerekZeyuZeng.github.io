@@ -13,7 +13,7 @@ Here is the hand written note that is written during the seminar.
 
 And there is also a typed note written by $\LaTeX$ (currently incomplete):
 
-- [Type note](/files/CGB_typed.pdf)
+- [Typed note](/files/CGB_typed.pdf)
 
 <object data="{{ '/files/CGB_typed.pdf' | relative_url }}" type="application/pdf" width="100%" height="100%">
   <p>PDF preview unavailable. <a href="{{ '/files/CGB_typed.pdf' | relative_url }}">Open</a>.</p>
