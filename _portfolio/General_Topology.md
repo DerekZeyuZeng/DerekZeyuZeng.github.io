@@ -2,6 +2,7 @@
 title: "Notes in General Topology"
 excerpt: "My personal note of Math 535 Fall 2025 in UIUC, teached by Dr. Yi Wang."
 collection: portfolio
+date: 24/12/2025
 published: Yes
 ---
 

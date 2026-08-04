@@ -2,6 +2,7 @@
 title: "Notes on DIfferential Topology and Pointrygin-Thom Construction"
 excerpt: "The reading note for Spring 2026 reading course on differential topology."
 collection: portfolio
+date: 22/5/2026
 published: Yes
 ---
 
