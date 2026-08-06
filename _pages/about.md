@@ -12,7 +12,7 @@ Favor substance over polish; plainness over flourish. (宁拙毋巧，宁朴毋�
 
 Hello! My name is Derek Zeng, and I am an undergraduate student at the University of Illinois at Urbana–Champaign, with a dual degree in Mathematics and Physics. My interests lie in geometry, topology, and mathematical physics—especially the topics related to symplectic geometry and quantum field theory. I also did some work on general physics (fluid dynamics, particle physics, gravity) on high school and first year in college.
 
-This site is a place where I share my research, talks & presentations, personal notes, and projects. I hope these resources can inspire others who are exploring mathematics and physics.
+This site is a place where I share my research, talks and presentations, reading seminars, personal notes, and projects. I hope these resources can inspire others who are exploring mathematics and physics.
 
 Feel free to explore other sections for more details, and reach out via the contact links in the sidebar.
 
