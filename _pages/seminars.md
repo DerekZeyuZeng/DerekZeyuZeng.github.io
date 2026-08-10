@@ -1,4 +1,5 @@
 ---
+layout: archive
 title: "Reading Seminars"
 permalink: /seminars/
 author_profile: true
@@ -22,7 +23,14 @@ Typical Format
 Current and Upcoming Seminars
 -----------------------------
 
+{%- assign visible_seminars = site.seminars | where_exp: "item", "item.published != false" -%}
+{% if visible_seminars.size > 0 %}
+{% for post in visible_seminars reversed %}
+  {% include archive-single.html %}
+{% endfor %}
+{% else %}
 There is no seminar currently scheduled. New reading cycles and meeting details will be posted on this page when they are confirmed.
+{% endif %}
 
 Participation
 -------------
