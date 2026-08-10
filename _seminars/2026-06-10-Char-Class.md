@@ -18,11 +18,9 @@ Here is the current working note for the seminar:
 
 [Open the PDF directly]({{ '/files/Char_Calss.pdf' | relative_url }}) for a full preview.
 
-If your browser supports in-page preview, the PDF can also be opened in a new tab from the link above.
-
 Two side stories were also discussed along the way:
 
 - The CGB theorem, with related notes available in [CGB note]({{ 'files/CGB_typed.pdf' | relative_url }}).
-- The Birkhoff-Grothendieck theorem, with related notes available in [CGB note]({{ 'files/CGB_typed.pdf' | relative_url }}).
+- The Birkhoff-Grothendieck theorem (Note in peperation).
 
 These side topics will be expanded and updated on this page as the notes develop.
