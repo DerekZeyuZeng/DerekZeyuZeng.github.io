@@ -8,7 +8,7 @@ author_profile: true
 published: true
 ---
 
-This page records the materials and discussion notes from our informal summer 2026 reading seminar on characteristic classes.
+This page records the materials and discussion notes from our informal summer 2026 reading seminar on characteristic classes. The topic we discussed including the definition of vector and principal bundles, the classifying spaces, and definition of a varitiy of characteristic classes.
 
 The main focus of the seminar was the book *Characteristic Classes* by J. Milnor and J. Stashef. We also consulted parts of D. Freed's lecture notes [Bordisms: Old and New](https://people.math.harvard.edu/~dafr/M392C-2012/index.html) as supplementary background.
 
