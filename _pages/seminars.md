@@ -20,16 +20,20 @@ Typical Format
 - Each meeting emphasizes one central question and leaves a concrete next step.
 - The length, frequency, and prerequisites are announced separately for each cycle.
 
-Current and Upcoming Seminars
------------------------------
+Future and Ongoing Seminars
+---------------------------
 
 {%- assign visible_seminars = site.seminars | where_exp: "item", "item.published != false" -%}
-{% if visible_seminars.size > 0 %}
+{%- assign today = site.time | date: "%Y-%m-%d" -%}
+{%- assign has_ongoing = false -%}
 {% for post in visible_seminars reversed %}
-  {% include archive-single.html %}
+  {% if post.date >= today and (post.end_date == nil or post.end_date >= today) %}
+    {%- assign has_ongoing = true -%}
+    {% include archive-single.html %}
+  {% endif %}
 {% endfor %}
-{% else %}
-There is no seminar currently scheduled. New reading cycles and meeting details will be posted on this page when they are confirmed.
+{% if has_ongoing != true %}
+There is no seminar currently in progress or scheduled for the future.
 {% endif %}
 
 Participation
@@ -41,3 +45,14 @@ Past Seminars and Materials
 ---------------------------
 
 Future entries will record the topic, dates, references, speakers, and any publicly available notes or slides. Related materials may also appear under [Talks and Presentations](/talks/) or [Personal Notes](/portfolio/).
+
+{%- assign has_past = false -%}
+{% for post in visible_seminars reversed %}
+  {% if post.date < today %}
+    {%- assign has_past = true -%}
+    {% include archive-single.html %}
+  {% endif %}
+{% endfor %}
+{% if has_past != true %}
+No completed seminars have been recorded yet.
+{% endif %}
