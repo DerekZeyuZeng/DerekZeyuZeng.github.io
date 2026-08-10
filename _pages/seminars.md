@@ -20,20 +20,22 @@ Typical Format
 - Each meeting emphasizes one central question and leaves a concrete next step.
 - The length, frequency, and prerequisites are announced separately for each cycle.
 
-Future and Ongoing Seminars
----------------------------
+Upcoming and Ongoing Seminars
+-----------------------------
 
 {%- assign visible_seminars = site.seminars | where_exp: "item", "item.published != false" -%}
 {%- assign today = site.time | date: "%Y-%m-%d" -%}
-{%- assign has_ongoing = false -%}
+{%- assign has_upcoming = false -%}
 {% for post in visible_seminars reversed %}
-  {% if post.date >= today and (post.end_date == nil or post.end_date >= today) %}
-    {%- assign has_ongoing = true -%}
+  {%- assign post_start = post.date | date: "%Y-%m-%d" -%}
+  {%- assign post_end = post.end_date | default: post_start | date: "%Y-%m-%d" -%}
+  {% if post_start >= today or post_start <= today and post_end >= today %}
+    {%- assign has_upcoming = true -%}
     {% include archive-single.html %}
   {% endif %}
 {% endfor %}
-{% if has_ongoing != true %}
-There is no seminar currently in progress or scheduled for the future.
+{% if has_upcoming != true %}
+No upcoming or ongoing seminars are currently listed.
 {% endif %}
 
 Participation
@@ -48,7 +50,9 @@ Future entries will record the topic, dates, references, speakers, and any publi
 
 {%- assign has_past = false -%}
 {% for post in visible_seminars reversed %}
-  {% if post.date < today %}
+  {%- assign post_start = post.date | date: "%Y-%m-%d" -%}
+  {%- assign post_end = post.end_date | default: post_start | date: "%Y-%m-%d" -%}
+  {% if post_start < today and post_end < today %}
     {%- assign has_past = true -%}
     {% include archive-single.html %}
   {% endif %}

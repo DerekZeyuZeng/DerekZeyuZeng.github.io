@@ -8,13 +8,19 @@ author_profile: true
 published: true
 ---
 
-This is the record of meterials in our unofficial disucssion cycle on Summer 2026 on Characteristic Classes.
+This page records the materials and discussion notes from our informal summer 2026 reading seminar on characteristic classes.
 
-The seminar is mainly based on the book *Characteristic
-Classes* by J. Milnor and J. Stashef. We also use parts of D. Freed's lecture note [Bordisms: Old and New](https://people.math.harvard.edu/~dafr/M392C-2012/index.html) as a reference.
+The main focus of the seminar was the book *Characteristic Classes* by J. Milnor and J. Stashef. We also consulted parts of D. Freed's lecture notes [Bordisms: Old and New](https://people.math.harvard.edu/~dafr/M392C-2012/index.html) as supplementary background.
 
-Here is the incomplete [PDF Note](files/Char_Calss.pdf)
+The seminar was intended as a slow, discussion-driven reading cycle. We worked through definitions, examples, and key constructions together, with an emphasis on understanding the geometric meaning behind the algebraic machinery.
 
-<object data="{{ 'files/Char_Calss.pdf' | relative_url }}" type="application/pdf" width="100%" height="100%">
-  <p>PDF preview unavailable. <a href="{{ 'files/Char_Calss.pdf' | relative_url }}">Open</a>.</p>
-</object>
+Here is the current working note for the seminar: [PDF Note]({{ 'files/Char_Calss.pdf' | relative_url }}).
+
+If your browser cannot display the PDF inline, you can open it directly here: [Open PDF]({{ 'files/Char_Calss.pdf' | relative_url }}).
+
+Two side stories were also discussed along the way:
+
+- The CGB theorem, with related notes available in [CGB note]({{ 'files/CGB_typed.pdf' | relative_url }}).
+- The Birkhoff-Grothendieck theorem, with related notes available in [CGB note]({{ 'files/CGB_typed.pdf' | relative_url }}).
+
+These side topics will be expanded and updated on this page as the notes develop.
