@@ -14,9 +14,11 @@ The main focus of the seminar was the book *Characteristic Classes* by J. Milnor
 
 The seminar was intended as a slow, discussion-driven reading cycle. We worked through definitions, examples, and key constructions together, with an emphasis on understanding the geometric meaning behind the algebraic machinery.
 
-Here is the current working note for the seminar: [PDF Note]({{ 'files/Char_Calss.pdf' | relative_url }}).
+Here is the current working note for the seminar:
 
-If your browser cannot display the PDF inline, you can open it directly here: [Open PDF]({{ 'files/Char_Calss.pdf' | relative_url }}).
+[Open the PDF directly]({{ '/files/Char_Calss.pdf' | relative_url }}) for a full preview.
+
+If your browser supports in-page preview, the PDF can also be opened in a new tab from the link above.
 
 Two side stories were also discussed along the way:
 
