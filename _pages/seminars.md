@@ -43,6 +43,8 @@ Participation
 
 Students and other interested readers are welcome to get in touch. When contacting me, please include your mathematical background, the topic that interests you, and whether you would be willing to present part of the material. My contact information appears in the sidebar.
 
+**Current Participants:**
+
 Past Seminars and Materials
 ---------------------------
 
