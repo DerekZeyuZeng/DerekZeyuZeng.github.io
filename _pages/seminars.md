@@ -45,6 +45,9 @@ Students and other interested readers are welcome to get in touch. When contacti
 
 **Current Participants:**
 
+- Derek Zeyu Zeng (曾泽昱, Myself), University of Illinois Urbana-Champaign
+- Siyuan Wei (韦思远), Peking University
+
 Past Seminars and Materials
 ---------------------------
 
