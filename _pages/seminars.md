@@ -45,14 +45,14 @@ Students and other interested readers are welcome to get in touch. When contacti
 
 **Current and Past Participants:**
 
-- Derek Zeyu Zeng (曾泽昱, Myself), University of Illinois Urbana-Champaign， Organizer
+- Derek Zeyu Zeng (曾泽昱, Myself), University of Illinois Urbana-Champaign, the Organizer
 - Siyuan Wei (韦思远), Peking University
 - Tony Tunan Zhuang (庄图南),  University of Illinois Urbana-Champaign
 
 Past Seminars and Materials
 ---------------------------
 
-Future entries will record the topic, dates, references, speakers, and any publicly available notes or slides. Related materials may also appear under [Talks and Presentations](/talks/) or [Personal Notes](/portfolio/).
+The following entries will record the topic, dates, references, speakers, and any publicly available notes or slides. Related materials may also appear under [Talks and Presentations](/talks/) or [Personal Notes](/portfolio/).
 
 {%- assign has_past = false -%}
 {% for post in visible_seminars reversed %}
