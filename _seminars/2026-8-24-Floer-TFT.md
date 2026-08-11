@@ -1,5 +1,5 @@
 ---
-title: "2026 Fall Reading: Floer Field Theories"
+title: "2026 Fall Reading: Bordism and Floer Field Theories"
 collection: seminars
 permalink: /seminars/26fa/
 date: 2026-08-24
@@ -8,15 +8,17 @@ author_profile: true
 published: true
 ---
 
-This is the homepage for our upcoming informal fall 2026 reading seminar. The topic is Topological Field Theory relatied to Floer Theory.
+This page serves as the homepage for our upcoming informal fall 2026 reading seminar on bordism and Floer field theories. The main theme is to explore how ideas from bordism and topological field theory connect to the geometric and algebraic structures that appear in Floer theory.
 
-The main reference is TBD.
+The main reference is still being finalized, but the seminar will focus on developing the relevant background and working through the core concepts together.
 
-The seminar was intended as a discussion-driven reading cycle. We worked through definitions, examples, and key constructions together, with an emphasis on understanding the geometrical and topological meaning behind the algebraic machinery.
+The seminar was intended as a slow, discussion-driven reading cycle. We worked through definitions, examples, and key constructions together, with an emphasis on understanding the geometric and topological meaning behind the algebraic machinery.
 
-Here is the current working note for the seminar: N/A
+Here is the current working note for the seminar:
 
-Some side stories were also discussed to enrich our understanding of the topics:
+- A working note will be added here as the seminar develops.
+
+Some side stories were also discussed along the way:
 
 - TBD
 
