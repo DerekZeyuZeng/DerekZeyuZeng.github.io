@@ -1,5 +1,5 @@
 ---
-title: "2026 Fall Reading"
+title: "2026 Fall Reading: Floer Field Theories"
 collection: seminars
 permalink: /seminars/26fa/
 date: 2026-08-24
@@ -8,7 +8,7 @@ author_profile: true
 published: true
 ---
 
-This is the homepage for our upcoming informal fall 2026 reading seminar. The topic is not determained yet.
+This is the homepage for our upcoming informal fall 2026 reading seminar. The topic is Topological Field Theory relatied to Floer Theory.
 
 The main reference is TBD.
 
