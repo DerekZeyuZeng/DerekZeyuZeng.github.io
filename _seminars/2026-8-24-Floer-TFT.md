@@ -22,6 +22,10 @@ The schedule is organized around a single guiding theme:
 
 Each meeting will focus on a small collection of definitions, one principal theorem or construction, and at least one concrete example. The schedule may be adjusted according to the backgrounds and interests of the participants.
 
+**Prerequisites.** Participants should be comfortable with basic smooth manifold theory and algebraic topology, including vector bundles, orientations, transversality, homology and cohomology, CW complexes, and elementary homotopy theory. Familiarity with basic category theory—categories, functors, natural transformations, tensor products, and universal properties—is also expected. Prior exposure to Morse theory, symplectic geometry, spectra, or Floer theory will be helpful but is not required for the first half of the seminar. Additional background needed for the later topics, including J-holomorphic curves, Fredholm theory, stable homotopy theory, and higher categories, will be introduced selectively. The aim of the advanced readings is to understand their principal constructions and structural ideas rather than all analytic or higher-categorical foundations.
+
+Weeks 1–5 constitute the common core; Weeks 6–12 are progressively more advanced and may be adjusted according to the participants’ backgrounds.
+
 ### Week 1 — Classical bordism and Pontryagin–Thom
 
 - **Theme:** Bordism groups, framed manifolds, and the relation between geometric bordisms and stable homotopy.
