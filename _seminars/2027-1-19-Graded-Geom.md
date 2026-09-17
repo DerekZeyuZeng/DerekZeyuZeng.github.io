@@ -1,9 +1,9 @@
 ---
-title: "2026 Fall Reading: Bordism and Floer Field Theories"
+title: "2027 Spring Reading: Graded and Derived Differential Geometry"
 collection: seminars
-permalink: /seminars/26fa/
-date: 2026-08-24
-end_date: 2026-12-10
+permalink: /seminars/27sp/
+date: 2027-01-20
+end_date: 2027-05-16
 author_profile: true
 published: true
 ---
