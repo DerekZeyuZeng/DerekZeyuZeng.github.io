@@ -2,6 +2,7 @@
 title: "Notes on Chern-Gauss-Bonnet Theorem"
 excerpt: "Note for a series of informal reading seminars on 2026 Summer and Fall."
 collection: portfolio
+date: 27/6/2026
 published: Yes
 ---
 

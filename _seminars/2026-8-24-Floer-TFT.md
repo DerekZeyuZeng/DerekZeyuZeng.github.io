@@ -44,7 +44,6 @@ Weeks 1–5 constitute the common core; Weeks 6–12 are progressively more adva
 - **References:**
   - [Dan Freed, Lecture 6-8](https://people.math.harvard.edu/~dafr/M392C-2012/index.html)
 
-
 ### Week 5 — Tangential structures and Thom spectra
 
 - **Theme:** Tangential structures, Thom spaces, and the passage from bordism groups to spectrum-level organization.
