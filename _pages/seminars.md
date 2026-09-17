@@ -45,7 +45,7 @@ Students and other interested readers are welcome to get in touch. When contacti
 
 **Current and Past Participants:**
 
-- Derek Zeyu Zeng (曾泽昱, Myself), University of Illinois Urbana-Champaign, the Organizer
+- Derek Zeyu Zeng (曾泽昱, Myself), University of Illinois Urbana-Champaign, the organizer
 - Siyuan Wei (韦思远), Peking University
 - Tony Tunan Zhuang (庄图南),  University of Illinois Urbana-Champaign
 - Yinjun Shen (申应君), Peking University
