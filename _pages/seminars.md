@@ -5,7 +5,7 @@ permalink: /seminars/
 author_profile: true
 ---
 
-I occasionally organize informal reading seminars in geometry, topology, and mathematical physics. These seminars are topic-driven rather than scheduled on a fixed weekly basis: a new cycle begins when there is a focused question, suitable reading material, and a small group of interested participants.
+I occasionally organize informal reading seminars in geometry, topology, and mathematical physics. These seminars are topic-driven rather than scheduled on a fixed weekly basis: a new cycle begins when there is a focused question, suitable reading material, and a small group of interested participants. The seminar can be wither in Einglish or in Chinese, depends on the particapents.
 
 Purpose
 -------
