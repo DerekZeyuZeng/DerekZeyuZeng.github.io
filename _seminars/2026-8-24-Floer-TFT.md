@@ -35,7 +35,7 @@ Weeks 1–5 constitute the common core; Weeks 6–12 are progressively more adva
 ### Week 3 — Stabelization of Pontryagin-Thom Isomorphism
 
 - **Theme:** Stabel version of Pontryagin-Thom construction and stable homotopy. Some aspectsd about classifying spaces, characteristic classes, and Thom isomorphisms.
-- - **References:**
+- **References:**
   - [Dan Freed, Lecture 2-5](https://people.math.harvard.edu/~dafr/M392C-2012/index.html)
 
 ### Week 4 — Classifying spaces
