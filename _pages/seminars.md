@@ -53,7 +53,7 @@ Students and other interested readers are welcome to get in touch. When contacti
 Past Seminars and Materials
 ---------------------------
 
-The following entries will record the topic, dates, references, speakers, and any publicly available notes or slides. Related materials may also appear under [Talks and Presentations](/talks/) or [Personal Notes](/portfolio/).
+The following entries will record the topic, dates, references, speakers, and any publicly available notes or slides. Related materials may also appear under [Talks and Presentations](/talks/) or [Writings]({{ '/writings/' | relative_url }}).
 
 {%- assign has_past = false -%}
 {% for post in visible_seminars reversed %}

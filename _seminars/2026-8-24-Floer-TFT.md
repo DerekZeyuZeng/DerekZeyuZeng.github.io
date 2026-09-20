@@ -132,7 +132,8 @@ Weeks 1–5 constitute the common core; Weeks 6–12 are progressively more adva
 
 Here is the current working note for the seminar:
 
-- A working note will be added here as the seminar develops.
+- [Notes on Bordism and Floer Field Theories (PDF)]({{ '/files/Bordism-Floer.pdf' | relative_url }})
+- [View the note in Writings]({{ '/writings/bordism-floer/' | relative_url }})
 
 Some side stories were also discussed along the way:
 
