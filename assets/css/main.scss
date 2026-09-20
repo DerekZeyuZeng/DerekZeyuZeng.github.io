@@ -60,3 +60,35 @@ mjx-container[jax="CHTML"][display="true"] {
 .tikz-diagram > * {
   display: inline-block;
 }
+
+/* Homepage Springer GTM quiz result */
+.gtm-result {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.25em;
+  margin-bottom: 1.5em;
+}
+
+.gtm-result__cover {
+  flex: 0 0 120px;
+  width: 120px;
+  height: auto;
+}
+
+.gtm-result__text {
+  min-width: 0;
+
+  p:last-child {
+    margin-bottom: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .gtm-result {
+    flex-direction: column;
+  }
+
+  .gtm-result__cover {
+    flex-basis: auto;
+  }
+}

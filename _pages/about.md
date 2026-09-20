@@ -26,3 +26,15 @@ Some Useful Links
 - [SageMath](https://www.sagemath.org/) and an web interface [SageMathCell](https://sagecell.sagemath.org/)
 - [Kerodon](https://kerodon.net/), a nice literature about infinity categories.
 - [The Stacks Project](https://stacks.math.columbia.edu/)
+
+Just for Fun
+----
+
+<div class="gtm-result">
+  <img class="gtm-result__cover" src="https://math.jhu.edu/~savitt/GTM/wash.jpg" alt="Cover of Lawrence C. Washington's Introduction to Cyclotomic Fields" width="120" height="191" loading="lazy">
+  <div class="gtm-result__text">
+    <p>If I were a Springer Graduate Text in Mathematics, I would be Lawrence C. Washington’s <a href="https://math.jhu.edu/~savitt/GTM/wash.html"><strong><em>Introduction to Cyclotomic Fields</em></strong></a>.</p>
+    <p>A journey through cyclotomic fields, from class numbers and cyclotomic units to <i>p</i>-adic <i>L</i>-functions, Fermat’s Last Theorem, and Iwasawa theory—with plenty of exercises along the way.</p>
+    <p>Which Springer GTM would <em>you</em> be? <a href="https://math.jhu.edu/~savitt/GTM.html">Take the test.</a></p>
+  </div>
+</div>
