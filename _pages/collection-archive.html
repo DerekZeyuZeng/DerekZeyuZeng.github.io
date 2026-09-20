@@ -16,7 +16,11 @@ author_profile: true
       {% capture written_label %}{{ label }}{% endcapture %}
     {% endif %}
   {% endunless %}
-  {% for post in collection.docs %}
+  {% assign collection_posts = collection.docs %}
+  {% if collection.label == "portfolio" or collection.label == "researches" or collection.label == "talks" %}
+    {% assign collection_posts = collection_posts | where_exp: "post", "post.published != false" | sort: "date", "first" | reverse %}
+  {% endif %}
+  {% for post in collection_posts %}
     {% unless collection.output == false or collection.label == "posts" %}
       {% include archive-single.html %}
     {% endunless %}

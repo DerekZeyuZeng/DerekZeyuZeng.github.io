@@ -11,7 +11,7 @@ author_profile: true
 
 {% endif %}
 
-{%- assign visible_talks = site.talks | where_exp: "post", "post.published != false" -%}
-{% for post in visible_talks reversed %}
+{%- assign sorted_talks = site.talks | where_exp: "post", "post.published != false" | sort: "date", "first" | reverse -%}
+{% for post in sorted_talks %}
   {% include archive-single-talk.html %}
 {% endfor %}

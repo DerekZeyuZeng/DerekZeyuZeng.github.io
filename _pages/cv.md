@@ -23,8 +23,9 @@ Researches
 ------
 
 {% if site.researches %}
+{% assign sorted_researches = site.researches | where_exp: "post", "post.published != false" | sort: "date", "first" | reverse %}
 <ul>
-  {% for post in site.researches reversed %}
+  {% for post in sorted_researches %}
     {% include archive-single-cv.html %}
   {% endfor %}
 </ul>
@@ -36,8 +37,9 @@ Talks
 ------
 
 {% if site.talks %}
+{% assign sorted_talks = site.talks | where_exp: "post", "post.published != false" | sort: "date", "first" | reverse %}
 <ul>
-  {% for post in site.talks reversed %}
+  {% for post in sorted_talks %}
     {% include archive-single-talk-cv.html  %}
   {% endfor %}
 </ul>
