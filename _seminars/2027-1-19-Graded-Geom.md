@@ -51,7 +51,7 @@ The following is a tentative four-week reading plan. The pace and selection of m
 
 ## Further Directions
 
-If time permits, we will close with a brief overview of cyclic cohomology (Chapter 3) and the Connes–Chern character (Chapter 4). These provide directions for a later reading cycle; the four-week core is the algebraic description of spaces, bundles, and quotients.
+If time permits, we will close with a brief overview of the Connes–Chern character (Chapter 4). These provide directions for a later reading cycle; the four-week core is the algebraic description of spaces, bundles, and quotients.
 
 ## Working Notes
 
