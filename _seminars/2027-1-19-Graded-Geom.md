@@ -26,6 +26,11 @@ The following dictionary gives a starting point in smooth geometry. Here $M$ and
 
 Pullback reverses the direction of maps and preserves the unit and the real algebra structure. For a closed embedded submanifold, restriction identifies $C^\infty(S)$ with the quotient $C^\infty(M)/I(S)$; arbitrary ideals need not arise from submanifolds. The last row is the smooth Serre–Swan correspondence. These examples suggest how to formulate geometric questions in algebraic terms even when the algebra is noncommutative.
 
+## Origanizers and Participants
+
+- Derek Zeyu Zeng (曾泽昱, Myself), University of Illinois Urbana-Champaign, co-organizer
+- Shuai Hao (郝帅),  University of Illinois Urbana-Champaign, co-organizer
+
 ## Main Reference
 
 - Masoud Khalkhali, [*Basic Noncommutative Geometry*, second edition](https://ems.press/books/elm/225), EMS Series of Lectures in Mathematics, 2013.
