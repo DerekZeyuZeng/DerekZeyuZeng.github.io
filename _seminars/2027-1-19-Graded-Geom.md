@@ -14,7 +14,7 @@ The reading group will run from December 21, 2026, to January 17, 2027. We will 
 
 Our goal is to understand the duality between geometry and algebra from an algebraic perspective. In particular, we will study how spaces, maps, and geometric structures can be described through algebras of functions, ideals, derivations, and modules, and how these descriptions motivate their noncommutative counterparts.
 
-The following dictionary gives a starting point in smooth geometry. Here $$M$$ and $$N$$ are compact smooth manifolds, $$C^\infty(M)$$ denotes the algebra of real-valued smooth functions, and all vector bundles are smooth real vector bundles of finite rank.
+The following dictionary gives a starting point in smooth geometry. Here $M$ and $N$ are compact smooth manifolds, $C^\infty(M)$ denotes the algebra of real-valued smooth functions, and all vector bundles are smooth real vector bundles of finite rank.
 
 | Geometry | Algebra |
 | --- | --- |
