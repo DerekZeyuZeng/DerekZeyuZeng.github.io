@@ -46,9 +46,8 @@ The following is a tentative four-week reading plan. The pace and selection of m
 
 ### Week 1
 
-- **Reading:**
-- **Focus:**
-- **Examples:**
+- **Reading Materials:**
+- **Topics:**
 
 ## Further Directions
 
