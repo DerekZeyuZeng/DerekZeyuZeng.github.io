@@ -10,7 +10,7 @@ published: true
 
 This page serves as the homepage for our informal winter 2026-2027 reading group on noncommutative geometry, following Masoud Khalkhali's *Basic Noncommutative Geometry*.
 
-The reading group will run from December 21, 2026, to January 17, 2027. We will work through selected parts of Chapters 1 and 2, with an emphasis on concrete examples and the geometric meaning of the algebraic constructions.
+The reading group will run from December 21, 2026, to January 17, 2027. We will work through selected parts of Chapters 1, 2, and 3.
 
 Our goal is to understand the duality between geometry and algebra from an algebraic perspective. In particular, we will study how spaces, maps, and geometric structures can be described through algebras of functions, ideals, derivations, and modules, and how these descriptions motivate their noncommutative counterparts.
 
