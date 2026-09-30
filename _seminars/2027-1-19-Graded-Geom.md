@@ -18,13 +18,13 @@ The following dictionary gives a starting point in smooth geometry. Here $M$ and
 
 | Geometry | Algebra |
 | --- | --- |
-| Manifold $$M$$ | Its function algebra $$C^\infty(M)$$, a unital commutative $$\mathbb{R}$$-algebra |
-| Smooth map $$f\colon M\to N$$ | Pullback homomorphism $$f^*\colon C^\infty(N)\to C^\infty(M)$$, given by $$f^*(g)=g\circ f$$ |
-| Closed embedded submanifold $$S\subseteq M$$ | Its vanishing ideal $$I(S)=\lbrace a\in C^\infty(M):a\vert_S=0\rbrace$$ |
-| Smooth vector field $$X\in\Gamma(TM)$$ | $$\mathbb{R}$$-linear derivation $$D_X\in\operatorname{Der}_{\mathbb{R}}(C^\infty(M))$$, given by $$D_X(a)=X(a)$$ |
-| Vector bundle $$E\to M$$ | Finitely generated projective $$C^\infty(M)$$-module $$\Gamma(E)$$ of smooth sections |
+| Manifold $M$ | Its function algebra $C^\infty(M)$, a unital commutative $\mathbb{R}$-algebra |
+| Smooth map $f\colon M\to N$ | Pullback homomorphism $f^*\colon C^\infty(N)\to C^\infty(M)$, given by $f^*(g)=g\circ f$ |
+| Closed embedded submanifold $S\subseteq M$ | Its vanishing ideal $I(S)=\lbrace a\in C^\infty(M):a\vert_S=0\rbrace$ |
+| Smooth vector field $X\in\Gamma(TM)$ | $\mathbb{R}$-linear derivation $D_X\in\operatorname{Der}_{\mathbb{R}}(C^\infty(M))$, given by $D_X(a)=X(a)$ |
+| Vector bundle $E\to M$ | Finitely generated projective $C^\infty(M)$-module $\Gamma(E)$ of smooth sections |
 
-Pullback reverses the direction of maps and preserves the unit and the real algebra structure. For a closed embedded submanifold, restriction identifies $$C^\infty(S)$$ with the quotient $$C^\infty(M)/I(S)$$; arbitrary ideals need not arise from submanifolds. The last row is the smooth Serre–Swan correspondence. These examples suggest how to formulate geometric questions in algebraic terms even when the algebra is noncommutative.
+Pullback reverses the direction of maps and preserves the unit and the real algebra structure. For a closed embedded submanifold, restriction identifies $C^\infty(S)$ with the quotient $C^\infty(M)/I(S)$; arbitrary ideals need not arise from submanifolds. The last row is the smooth Serre–Swan correspondence. These examples suggest how to formulate geometric questions in algebraic terms even when the algebra is noncommutative.
 
 ## Main Reference
 
