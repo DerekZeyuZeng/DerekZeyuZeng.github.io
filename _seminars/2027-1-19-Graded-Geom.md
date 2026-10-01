@@ -29,7 +29,7 @@ Pullback reverses the direction of maps and preserves the unit and the real alge
 ## Origanizers and Participants
 
 - Derek Zeyu Zeng (曾泽昱, Myself), University of Illinois Urbana-Champaign, co-organizer
-- Shuai Hao (郝帅),  University of Illinois Urbana-Champaign, co-organizer
+- Andy Shuai Hao (郝帅),  University of Illinois Urbana-Champaign, co-organizer
 
 ## Main Reference
 
