@@ -8,9 +8,9 @@ author_profile: true
 published: true
 ---
 
-This page serves as the homepage for our upcoming informal fall 2026 reading seminar on bordism and Floer field theories. The main theme is to explore how ideas from bordism and topological field theory connect to the geometric and algebraic structures that appear in Floer theory.
+This page serves as the homepage for our informal fall 2026 reading seminar on bordism and Floer field theories. The main theme is to explore how ideas from bordism and topological field theory connect to the geometric and algebraic structures that appear in Floer theory.
 
-The seminar will run from August 24 to December 10, 2026, and will be organized as a slow, discussion-driven reading cycle. We will work through definitions, examples, and key constructions together, with an emphasis on understanding the geometric and topological meaning behind the algebraic machinery.
+The seminar runs from August 24 to December 10, 2026, and is organized as a slow, discussion-driven reading cycle. We work through definitions, examples, and key constructions together, with an emphasis on understanding the geometric and topological meaning behind the algebraic machinery.
 
 The current plan is to begin with the basic language of cobordism, then move toward the functorial viewpoint of topological field theories, and finally connect these ideas to Floer-theoretic and related geometric constructions.
 
@@ -28,28 +28,28 @@ Weeks 1–5 constitute the common core; Weeks 6–12 are progressively more adva
 
 ### Week 1 & 2 — Classical bordism and Pontryagin–Thom
 
-- **Theme:** Bordism groups, framed manifolds, unstable Pontryagin-Thom construction and the relation between geometric bordisms and stable homotopy.
+- **Theme:** Bordism groups, framed manifolds, the unstable Pontryagin–Thom construction, and the relation between geometric bordisms and stable homotopy.
 - **References:**
   - [Dan Freed, *Bordism: Old and New*, Lectures 1–3](https://people.math.harvard.edu/~dafr/M392C-2012/index.html)
 
-### Week 3 — Stabelization of Pontryagin-Thom Isomorphism
+### Week 3 — Stabilization of the Pontryagin–Thom Isomorphism
 
-- **Theme:** Stabel version of Pontryagin-Thom construction and stable homotopy. Some aspectsd about classifying spaces, characteristic classes, and Thom isomorphisms.
+- **Theme:** Stable version of the Pontryagin–Thom construction and stable homotopy. Some aspects of classifying spaces, characteristic classes, and Thom isomorphisms.
 - **References:**
-  - [Dan Freed, Lecture 2-5](https://people.math.harvard.edu/~dafr/M392C-2012/index.html)
+  - [Dan Freed, Lectures 2–5](https://people.math.harvard.edu/~dafr/M392C-2012/index.html)
 
 ### Week 4 — Classifying spaces
 
 - **Theme:** Grassmannian and classifying spaces.
 - **References:**
-  - [Dan Freed, Lecture 6-8](https://people.math.harvard.edu/~dafr/M392C-2012/index.html)
+  - [Dan Freed, Lectures 6–8](https://people.math.harvard.edu/~dafr/M392C-2012/index.html)
 
-### Week 5 — More Stabel Homotopy Theory
+### Week 5 — More Stable Homotopy Theory
 
 - **Theme:** Suspension and loop spaces, spectra and their homotopy groups, level/stable equivalences of spectra, and cofibrant replacement.
 - **References:**
-  - [David Barnes and Constanze Roitzheim, Fundations of Stabel Homotopy Theory](https://www.cambridge.org/core/books/foundations-of-stable-homotopy-theory/791C9C413A83AD7094E055E5E818D33B)
-  - [Dan Freed, Lecture 4-5](https://people.math.harvard.edu/~dafr/M392C-2012/index.html)
+  - [David Barnes and Constanze Roitzheim, Foundations of Stable Homotopy Theory](https://www.cambridge.org/core/books/foundations-of-stable-homotopy-theory/791C9C413A83AD7094E055E5E818D33B)
+  - [Dan Freed, Lectures 4–5](https://people.math.harvard.edu/~dafr/M392C-2012/index.html)
   - [Dan Freed, Lecture 10: Thom Spectra and X-Bordism](https://people.math.harvard.edu/~dafr/M392C-2012/Notes/lecture10.pdf)
 
 ### Week 6 — Tangential structures and Thom spectra
