@@ -26,45 +26,44 @@ Each meeting will focus on a small collection of definitions, one principal theo
 
 Weeks 1–5 constitute the common core; Weeks 6–12 are progressively more advanced and may be adjusted according to the participants’ backgrounds.
 
-### Week 1 & 2 — Classical bordism and Pontryagin–Thom
+### Week 1 & 2 (Aug. 22 & 29) — Classical bordism and Pontryagin–Thom
 
 - **Theme:** Bordism groups, framed manifolds, the unstable Pontryagin–Thom construction, and the relation between geometric bordisms and stable homotopy.
 - **References:**
   - [Dan Freed, *Bordism: Old and New*, Lectures 1–3](https://people.math.harvard.edu/~dafr/M392C-2012/index.html)
 
-### Week 3 — Stabilization of the Pontryagin–Thom Isomorphism
+### Week 3 (Sep. 5) — Stabilization of the Pontryagin–Thom Isomorphism
 
 - **Theme:** Stable version of the Pontryagin–Thom construction and stable homotopy. Some aspects of classifying spaces, characteristic classes, and Thom isomorphisms.
 - **References:**
   - [Dan Freed, Lectures 2–5](https://people.math.harvard.edu/~dafr/M392C-2012/index.html)
 
-### Week 4 — Classifying spaces
+### Week 4 (Sep. 12) — Classifying spaces
 
 - **Theme:** Grassmannian and classifying spaces.
 - **References:**
   - [Dan Freed, Lectures 6–8](https://people.math.harvard.edu/~dafr/M392C-2012/index.html)
 
-### Week 5 — More Stable Homotopy Theory
+### Week 5 (Sep. 19) — More Stable Homotopy Theory
 
 - **Theme:** Suspension and loop spaces, spectra and their homotopy groups, level/stable equivalences of spectra, and cofibrant replacement.
 - **References:**
   - [David Barnes and Constanze Roitzheim, Foundations of Stable Homotopy Theory](https://www.cambridge.org/core/books/foundations-of-stable-homotopy-theory/791C9C413A83AD7094E055E5E818D33B)
-  - [Dan Freed, Lectures 4–5](https://people.math.harvard.edu/~dafr/M392C-2012/index.html)
+  - [Dan Freed, Lectures 4 & 5](https://people.math.harvard.edu/~dafr/M392C-2012/index.html)
   - [Dan Freed, Lecture 10: Thom Spectra and X-Bordism](https://people.math.harvard.edu/~dafr/M392C-2012/Notes/lecture10.pdf)
 
-### Week 6 — Tangential structures and Thom spectra
+### Week 6 (Oct. 3) — Pontryagin–Thom via Thom spectra
 
-- **Theme:** Tangential structures, Thom spaces, and the passage from bordism groups to spectrum-level organization.
+- **Theme:** Thom spaces, and the passage from bordism groups to spectrum-level organization.
 - **References:**
-  - [Dan Freed, Lecture 9: Tangential Structures](https://people.math.harvard.edu/~dafr/M392C-2012/Notes/lecture9.pdf)
   - [Dan Freed, Lecture 10: Thom Spectra and X-Bordism](https://people.math.harvard.edu/~dafr/M392C-2012/Notes/lecture10.pdf)
-  - [Dan Freed, Lecture 14: Bordism Categories](https://people.math.harvard.edu/~dafr/M392C-2012/Notes/lecture14.pdf)
 
-### Week 7 — Atiyah–Segal axioms and TQFT
+### Week 7 — Tangential Structure and Atiyah–Segal axioms and TQFT
 
 - **Theme:** Symmetric monoidal categories, gluing, and the functorial description of topological field theories.
 - **References:**
   - [Michael Atiyah, *Topological Quantum Field Theories*](https://www.numdam.org/item/10.1007/BF02698547.pdf)
+  - [Dan Freed, Lecture 9 & 10](https://people.math.harvard.edu/~dafr/M392C-2012/Notes)
   - [Dan Freed, *Lectures on Topological Quantum Field Theory*](https://web.ma.utexas.edu/users/dafr/OldTQFTLectures.pdf)
 
 ### Week 8 — Duality and one-dimensional TQFTs
