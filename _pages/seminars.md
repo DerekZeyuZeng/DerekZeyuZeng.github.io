@@ -5,7 +5,7 @@ permalink: /seminars/
 author_profile: true
 ---
 
-I occasionally organize informal reading seminars in geometry, topology, and mathematical physics. These seminars are topic-driven rather than scheduled on a fixed weekly basis: a new cycle begins when there is a focused question, suitable reading material, and a small group of interested participants. The seminar can be wither in Einglish or in Chinese, depends on the particapents.
+I occasionally organize informal reading seminars in geometry, topology, and mathematical physics. These seminars are topic-driven rather than scheduled on a fixed weekly basis: a new cycle begins when there is a focused question, suitable reading material, and a small group of interested participants. The seminar can be either in English or in Chinese, depending on the participants.
 
 Purpose
 -------
@@ -45,9 +45,9 @@ Students and other interested readers are welcome to get in touch. When contacti
 
 **Current and Past Participants:**
 
-- Derek Zeyu Zeng (曾泽昱, Myself), University of Illinois Urbana-Champaign, the organizer
+- Derek Zeyu Zeng (曾泽昱, myself), University of Illinois Urbana-Champaign, the organizer
 - Siyuan Wei (韦思远), Peking University
-- Tony Tunan ZHuang (庄图南), University of Illinois Urbana-Champaign
+- Tony Tunan Zhuang (庄图南), University of Illinois Urbana-Champaign
 - Shuai Hao (郝帅), University of Illinois Urbana-Champaign
 - Yinjun Shen (申应君), Peking University
 
