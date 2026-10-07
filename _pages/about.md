@@ -27,8 +27,10 @@ Some Useful Links
 - [Kerodon](https://kerodon.net/), a nice literature about infinity categories.
 - [The Stacks Project](https://stacks.math.columbia.edu/)
 
-Just for Fun
+Miscellaneous
 ----
+
+### Just for Fun
 
 <div class="gtm-result">
   <img class="gtm-result__cover" src="https://math.jhu.edu/~savitt/GTM/wash.jpg" alt="Cover of Lawrence C. Washington's Introduction to Cyclotomic Fields" width="120" height="191" loading="lazy">
@@ -39,10 +41,7 @@ Just for Fun
   </div>
 </div>
 
-Miscellaneous
-----
-
-## Morse theory on a torus
+### Morse theory on a torus
 
 Compare the negative gradient flows of two height functions, using the induced Euclidean metric. The naive height $h_0=z$ is Morse, but its gradient flow is **not Morse–Smale**: two trajectories connect the upper saddle $p_3$ to the lower saddle $p_2$. Along them, $W^u(p_3)$ and $W^s(p_2)$ share the same tangent line, so their intersection is not transverse.
 
