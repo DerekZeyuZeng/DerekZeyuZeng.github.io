@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Morse theory on a torus — Derek Zeng</title>
+  <style>
+    * { box-sizing: border-box; }
+    body { margin: 0; color: #24313b; background: #fff; font: 14px/1.5 system-ui, -apple-system, sans-serif; }
+    main { max-width: 1100px; margin: auto; padding: 20px 22px; }
+    header { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; }
+    h1 { font: 600 25px/1.2 Georgia, serif; margin: 0 0 5px; }
+    .subtitle { margin: 0; color: #65717b; font-size: 12px; }
+    button, select { font: inherit; color: inherit; }
+    button { cursor: pointer; background: #fff; border: 1px solid #ccd2d7; border-radius: 5px; padding: 7px 12px; }
+    button:hover { background: #f2f5f7; }
+    button:focus-visible, select:focus-visible, a:focus-visible { outline: 3px solid #548ab4; outline-offset: 3px; }
+    .view-controls { display: flex; gap: 4px; }
+    .view-controls button { font-size: 12px; white-space: nowrap; padding: 6px 8px; }
+    .controls { display: flex; flex-wrap: wrap; align-items: end; gap: 14px; padding-top: 17px; }
+    .control-label { display: block; font-size: 11px; color: #64717c; margin-bottom: 4px; }
+    select { padding: 8px 26px 8px 9px; background: #fff; border: 1px solid #ccd2d7; border-radius: 5px; }
+    .modes { display: flex; gap: 5px; }
+    button[aria-pressed="true"][data-mode="s"] { color: #1b568a; border-color: #2267a5; background: #edf5fb; }
+    button[aria-pressed="true"][data-mode="u"] { color: #a43d2d; border-color: #bd4937; background: #fcf0ec; }
+    .plot-wrap { height: clamp(350px, 53vh, 560px); min-height: 350px; min-width: 0; overflow: hidden; position: relative; }
+    .plot-wrap > div, #morse-plot { width: 100%; height: 100%; }
+    .hint { margin: -5px 0 12px; text-align: center; color: #73808b; font-size: 11px; }
+    .legend { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: 11px; color: #65717b; margin-bottom: 12px; }
+    .swatch { display: inline-block; width: 13px; height: 3px; margin-right: 5px; vertical-align: middle; background: #39434d; }
+    .swatch.red { background: #bd4937; } .swatch.blue { background: #2267a5; }
+    .readout { border-top: 1px solid #e2e7eb; padding-top: 12px; }
+    .readout-top { display: flex; justify-content: space-between; gap: 10px; align-items: center; }
+    #manifold { margin: 0; font: 600 20px/1.4 Georgia, serif; }
+    #dimension { color: #52616d; font-size: 12px; background: #f1f4f6; border-radius: 4px; padding: 3px 8px; white-space: nowrap; }
+    #description { margin: 6px 0; }
+    #exclusion { margin: 0; color: #65717b; font-size: 12px; }
+    details { margin-top: 14px; border-top: 1px solid #e2e7eb; padding-top: 10px; font-size: 12px; }
+    summary { cursor: pointer; color: #52616d; }
+    details p { margin: 8px 0; }
+    .formula { font-family: Georgia, serif; }
+    a { color: #2267a5; }
+    #load-error { padding: 16px; background: #f7f3eb; border-radius: 5px; }
+    @media (max-width: 500px) {
+      main { padding: 16px 13px; } h1 { font-size: 21px; }
+      .controls { gap: 10px; } .modes button { padding: 7px 9px; }
+      .plot-wrap { height: 360px; } .readout-top { align-items: baseline; }
+    }
+  </style>
+</head>
+<body>
+<main>
+  <header><div><h1>Morse theory on a torus</h1><p class="subtitle">Height function · induced metric · negative gradient flow</p></div><div class="view-controls"><button id="zoom-in" type="button" aria-label="Zoom in">+</button><button id="zoom-out" type="button" aria-label="Zoom out">−</button><button id="reset" type="button">Reset</button></div></header>
+  <div class="controls">
+    <label><span class="control-label">Critical point</span><select id="point">
+      <option value="p4">p₄ · maximum · index 2</option>
+      <option value="p3">p₃ · upper saddle · index 1</option>
+      <option value="p2">p₂ · lower saddle · index 1</option>
+      <option value="p1">p₁ · minimum · index 0</option>
+    </select></label>
+    <div><span class="control-label">Manifold</span><div class="modes" role="group" aria-label="Manifold type">
+      <button type="button" data-mode="s" aria-pressed="false">Wˢ · stable</button>
+      <button type="button" data-mode="u" aria-pressed="true">Wᵘ · unstable</button>
+    </div></div>
+    <label><input id="flows" type="checkbox" checked> Flow lines</label>
+    <label><input id="xray" type="checkbox"> See through</label>
+  </div>
+  <div class="plot-wrap"><!-- PLOT --></div>
+  <p id="load-error" hidden>The 3D renderer could not load. Check your connection, or read the mathematical description below.</p>
+  <noscript><p>JavaScript is required for the interactive view. The mathematical model and dimension rule are given below.</p></noscript>
+  <p class="hint">Drag to rotate · use + / − to zoom · colored geometry is the selected manifold</p>
+  <div class="legend"><span><i class="swatch red"></i>Unstable</span><span><i class="swatch blue"></i>Stable</span><span><i class="swatch"></i>Excluded curves in a 2D view</span></div>
+  <section class="readout" aria-live="polite">
+    <div class="readout-top"><h2 id="manifold">Wᵘ(p₄)</h2><span id="dimension">Dimension 2 · surface</span></div>
+    <p id="description">An open two-dimensional cell on the torus. Every point in this region converges to p₄ as time tends to −∞.</p>
+    <p id="exclusion">The inner equator and the lower meridian are excluded. The gaps are widened slightly to make these exclusions visible.</p>
+  </section>
+  <details>
+    <summary>Mathematical model and conventions</summary>
+    <p class="formula">X(u,v) = ((R + r cos v) cos u, r sin v, (R + r cos v) sin u), with R = 2, r = 0.68 and u,v ∈ ℝ/2πℤ.</p>
+    <p class="formula">f = z, &nbsp; g = (R + r cos v)² du² + r² dv².<br>Negative gradient flow: u̇ = −cos u / (R + r cos v), &nbsp; v̇ = sin v sin u / r.</p>
+    <p>Wˢ(p) consists of points converging to p as t → +∞; Wᵘ(p) uses t → −∞. Thus dim Wᵘ(p) = index(p), and dim Wˢ(p) = 2 − index(p). Every manifold includes its own critical point.</p>
+    <p>The <strong>inner equator</strong> is v = π. The <strong>upper meridian</strong> is u = π/2, and the <strong>lower meridian</strong> is u = 3π/2. The dark curves shown in a 2D view are excluded from the highlighted open cell. For curves and points, the pale torus is only a reference surface. The optional see-through view reveals curves on the back; transparency can introduce rendering artifacts.</p>
+    <p><strong>This pair is not Morse–Smale.</strong> The two inner-equator trajectories connect p₃ to p₂. Along them Wᵘ(p₃) and Wˢ(p₂) coincide and do not meet transversely. A Morse function alone does not imply a Morse–Smale gradient flow.</p>
+    <p>Curve endpoints and excluded curves are drawn with small gaps for visibility. Lines are lifted slightly off the surface so they remain visible. Highlighted geometry represents the manifold itself, not its closure. The thin flow lines are numerical samples; the stable and unstable manifolds use the exact descriptions above.</p>
+    <p><a href="../../scripts/morse_torus/generate.py">Python generator</a> · <a href="../../scripts/morse_torus/README.md">Model and regeneration notes</a></p>
+  </details>
+</main>
+<script>
+const model = /* MODEL */;
+const gd = document.getElementById('morse-plot');
+const descriptions = {
+  p4u: ['surface', 'An open two-dimensional cell on the torus. Every point in this region converges to p₄ as time tends to −∞.', 'The inner equator and the lower meridian are excluded. The gaps are widened slightly to make these exclusions visible.'],
+  p4s: ['point', 'Only p₄ itself converges to the maximum in forward time.', 'Wˢ(p₄) = {p₄}. The pale torus is a reference surface.'],
+  p3s: ['curve', 'The upper meridian with p₄ removed. Its two branches flow from p₄ toward p₃.', 'p₃ is included; p₄ is a limiting point and is excluded. This manifold is diffeomorphic to ℝ.'],
+  p3u: ['curve', 'The inner equator with p₂ removed. Its two branches flow from p₃ toward p₂.', 'p₃ is included; p₂ is excluded. Adding p₂ would give the closure, not Wᵘ(p₃) itself.'],
+  p2s: ['curve', 'The inner equator with p₃ removed. Its two branches flow from p₃ toward p₂.', 'p₂ is included; p₃ is excluded. Adding p₃ would give the closure, not Wˢ(p₂) itself.'],
+  p2u: ['curve', 'The lower meridian with p₁ removed. Its two branches flow from p₂ toward p₁.', 'p₂ is included; p₁ is a limiting point and is excluded. This manifold is diffeomorphic to ℝ.'],
+  p1s: ['surface', 'An open two-dimensional cell on the torus. Every point in this region converges to p₁ as time tends to +∞.', 'The inner equator and the upper meridian are excluded. The gaps are widened slightly to make these exclusions visible.'],
+  p1u: ['point', 'Only p₁ itself converges to the minimum in backward time.', 'Wᵘ(p₁) = {p₁}. The pale torus is a reference surface.']
+};
+let mode = 'u';
+const subscript = {p1:'p₁',p2:'p₂',p3:'p₃',p4:'p₄'};
+function update() {
+  const point = document.getElementById('point').value;
+  const p = model.points[point], key = point + mode;
+  const dim = mode === 'u' ? p.index : 2 - p.index;
+  const color = mode === 'u' ? '#bd4937' : '#2267a5';
+  document.querySelectorAll('[data-mode]').forEach(b => b.setAttribute('aria-pressed', String(b.dataset.mode === mode)));
+  document.getElementById('manifold').textContent = (mode === 'u' ? 'Wᵘ(' : 'Wˢ(') + subscript[point] + ')';
+  document.getElementById('manifold').style.color = color;
+  document.getElementById('dimension').textContent = 'Dimension ' + dim + ' · ' + descriptions[key][0];
+  document.getElementById('description').textContent = descriptions[key][1];
+  document.getElementById('exclusion').textContent = descriptions[key][2];
+  if (!window.Plotly || !gd.data) return;
+  const visible = new Set([...model.groups.points, ...model.groups.selected, ...model.groups[key]]);
+  if (dim !== 2) model.groups.base.forEach(i => visible.add(i));
+  if (document.getElementById('flows').checked) model.groups.flows.forEach(i => visible.add(i));
+  Plotly.restyle(gd, {visible: gd.data.map((_,i) => visible.has(i))});
+  const surfaces = [...model.groups.base, ...model.groups[key]].filter(i => gd.data[i].type === 'surface');
+  Plotly.restyle(gd, {opacity:document.getElementById('xray').checked ? .25 : 1}, surfaces);
+  Plotly.restyle(gd, {x:[[p.xyz[0]]],y:[[p.xyz[1]]],z:[[p.xyz[2]]],'marker.color':color}, model.groups.selected);
+}
+document.getElementById('point').addEventListener('change', update);
+document.getElementById('flows').addEventListener('change', update);
+document.getElementById('xray').addEventListener('change', update);
+document.querySelectorAll('[data-mode]').forEach(b => b.addEventListener('click', () => { mode = b.dataset.mode; update(); }));
+document.getElementById('reset').addEventListener('click', () => { if(window.Plotly) Plotly.relayout(gd, {'scene.camera':model.camera}); });
+function zoom(factor) {
+  if (!window.Plotly || !gd._fullLayout) return;
+  const camera = JSON.parse(JSON.stringify(gd._fullLayout.scene.camera));
+  for (const axis of ['x','y','z']) camera.eye[axis] *= factor;
+  Plotly.relayout(gd, {'scene.camera':camera});
+}
+document.getElementById('zoom-in').addEventListener('click', () => zoom(.82));
+document.getElementById('zoom-out').addEventListener('click', () => zoom(1/.82));
+if (!window.Plotly) document.getElementById('load-error').hidden = false;
+window.addEventListener('load', update);
+if (window.ResizeObserver) new ResizeObserver(() => {
+  if (window.Plotly && gd.data) Plotly.Plots.resize(gd);
+}).observe(document.querySelector('.plot-wrap'));
+</script>
+</body>
+</html>

@@ -16,6 +16,17 @@ This site is a place where I share my research, talks and presentations, reading
 
 Feel free to explore other sections for more details, and reach out via the contact links in the sidebar.
 
+Miscellaneous
+----
+
+### Morse theory on a torus
+
+An interactive view of negative gradient flow on an upright torus. Select a critical point to explore its stable and unstable manifolds, and rotate the surface to see how the trajectories fit together.
+
+<iframe src="{{ '/assets/interactive/morse-torus.html' | relative_url }}" title="Interactive Morse theory on a torus: stable and unstable manifolds" loading="lazy" style="display: block; width: 100%; height: 850px; border: 1px solid #e2e5e8; border-radius: 8px;" allow="fullscreen"></iframe>
+
+[Open the full-size visualization]({{ '/assets/interactive/morse-torus.html' | relative_url }}) · [Python source]({{ '/scripts/morse_torus/generate.py' | relative_url }})
+
 Some Useful Links
 ----
 
