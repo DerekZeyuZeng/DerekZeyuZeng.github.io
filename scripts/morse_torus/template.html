@@ -3,142 +3,366 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Morse theory on a torus — Derek Zeng</title>
+  <title>Morse and Morse–Smale heights on a torus — Derek Zeng</title>
   <style>
     * { box-sizing: border-box; }
-    body { margin: 0; color: #24313b; background: #fff; font: 14px/1.5 system-ui, -apple-system, sans-serif; }
-    main { max-width: 1100px; margin: auto; padding: 20px 22px; }
-    header { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; }
-    h1 { font: 600 25px/1.2 Georgia, serif; margin: 0 0 5px; }
-    .subtitle { margin: 0; color: #65717b; font-size: 12px; }
-    button, select { font: inherit; color: inherit; }
-    button { cursor: pointer; background: #fff; border: 1px solid #ccd2d7; border-radius: 5px; padding: 7px 12px; }
-    button:hover { background: #f2f5f7; }
-    button:focus-visible, select:focus-visible, a:focus-visible { outline: 3px solid #548ab4; outline-offset: 3px; }
-    .view-controls { display: flex; gap: 4px; }
-    .view-controls button { font-size: 12px; white-space: nowrap; padding: 6px 8px; }
-    .controls { display: flex; flex-wrap: wrap; align-items: end; gap: 14px; padding-top: 17px; }
-    .control-label { display: block; font-size: 11px; color: #64717c; margin-bottom: 4px; }
-    select { padding: 8px 26px 8px 9px; background: #fff; border: 1px solid #ccd2d7; border-radius: 5px; }
+    body { margin: 0; color: #293a43; background: #fff; font: 14px/1.55 system-ui, -apple-system, sans-serif; }
+    main { max-width: 1100px; margin: auto; padding: 22px 24px; }
+    header { display: flex; align-items: center; justify-content: space-between; gap: 14px; }
+    h1 { font: 500 26px/1.2 Georgia, serif; margin: 0 0 6px; color: #213b40; }
+    .subtitle { margin: 0; color: #738087; font-size: 12px; }
+    button, select, input { font: inherit; color: inherit; }
+    button { cursor: pointer; background: #fff; border: 1px solid #ced8db; border-radius: 6px; padding: 7px 12px; }
+    button:hover:enabled { background: #f2f6f5; }
+    button:disabled, select:disabled { opacity: .45; cursor: default; }
+    button:focus-visible, select:focus-visible, input:focus-visible, summary:focus-visible, a:focus-visible { outline: 3px solid #548ab4; outline-offset: 3px; }
+    input { accent-color: #456e72; vertical-align: -1px; }
+    .view-controls { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 5px; }
+    .view-controls button { font-size: 12px; white-space: nowrap; padding: 6px 9px; }
+    .introduction { max-width: 850px; margin: 15px 0 0; color: #52636b; font-size: 13px; }
+    .introduction strong { font-weight: 600; color: #293f45; }
+    .model-controls { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 22px; margin-top: 17px; padding: 13px 15px; background: #f2f6f4; border: 1px solid #e1e9e5; border-radius: 8px; }
+    .model-controls label:first-child { display: flex; align-items: center; gap: 10px; }
+    .model-controls .control-label { margin: 0; }
+    .controls { display: flex; flex-wrap: wrap; align-items: end; gap: 12px 17px; padding: 14px 1px 4px; }
+    .control-label { display: block; font-size: 11px; color: #697b83; margin-bottom: 4px; }
+    select { max-width: 100%; padding: 8px 26px 8px 9px; background: #fff; border: 1px solid #ced8db; border-radius: 6px; }
+    #height-model { font-weight: 500; }
     .modes { display: flex; gap: 5px; }
-    button[aria-pressed="true"][data-mode="s"] { color: #1b568a; border-color: #2267a5; background: #edf5fb; }
-    button[aria-pressed="true"][data-mode="u"] { color: #a43d2d; border-color: #bd4937; background: #fcf0ec; }
-    .plot-wrap { height: clamp(350px, 53vh, 560px); min-height: 350px; min-width: 0; overflow: hidden; position: relative; }
-    .plot-wrap > div, #morse-plot { width: 100%; height: 100%; }
-    .hint { margin: -5px 0 12px; text-align: center; color: #73808b; font-size: 11px; }
-    .legend { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: 11px; color: #65717b; margin-bottom: 12px; }
-    .swatch { display: inline-block; width: 13px; height: 3px; margin-right: 5px; vertical-align: middle; background: #39434d; }
-    .swatch.red { background: #bd4937; } .swatch.blue { background: #2267a5; }
-    .readout { border-top: 1px solid #e2e7eb; padding-top: 12px; }
+    button[aria-pressed="true"][data-mode="s"] { color: #1b568a; border-color: #477eaa; background: #edf5fb; }
+    button[aria-pressed="true"][data-mode="u"] { color: #a43d2d; border-color: #bf7264; background: #fcf0ec; }
+    .plot-wrap { height: clamp(360px, 53vh, 550px); min-height: 360px; min-width: 0; overflow: hidden; position: relative; margin-top: 3px; border-radius: 8px; }
+    #morse-plot { width: 100%; height: 100%; }
+    .hint { margin: -2px 0 12px; text-align: center; color: #7b8b91; font-size: 11px; }
+    .legend { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: 11px; color: #657980; margin-bottom: 14px; }
+    .swatch { display: inline-block; width: 17px; height: 3px; margin-right: 5px; vertical-align: middle; background: #39434d; }
+    .swatch.red { background: #bd4937; }
+    .swatch.blue { background: repeating-linear-gradient(90deg, #2267a5 0 5px, transparent 5px 8px); }
+    .swatch.u3 { background: #007f5f; }
+    .swatch.s3 { background: #78aa22; }
+    .swatch.s2 { background: #d3299d; }
+    .swatch.u2 { background: #6941c6; }
+    .swatch.flow { height: 2px; background: linear-gradient(90deg, #758b64 0 33%, #b69966 33% 66%, #8a79a0 66%); }
+    .readout { border-top: 1px solid #dfe8e6; padding-top: 13px; }
     .readout-top { display: flex; justify-content: space-between; gap: 10px; align-items: center; }
-    #manifold { margin: 0; font: 600 20px/1.4 Georgia, serif; }
-    #dimension { color: #52616d; font-size: 12px; background: #f1f4f6; border-radius: 4px; padding: 3px 8px; white-space: nowrap; }
-    #description { margin: 6px 0; }
-    #exclusion { margin: 0; color: #65717b; font-size: 12px; }
-    details { margin-top: 14px; border-top: 1px solid #e2e7eb; padding-top: 10px; font-size: 12px; }
-    summary { cursor: pointer; color: #52616d; }
-    details p { margin: 8px 0; }
-    .formula { font-family: Georgia, serif; }
+    #manifold { margin: 0; font: 500 21px/1.4 Georgia, serif; }
+    #dimension { color: #526b68; font-size: 11px; background: #f0f5f2; border-radius: 4px; padding: 4px 8px; white-space: nowrap; }
+    #description { margin: 7px 0; }
+    #exclusion { margin: 0; color: #697c83; font-size: 12px; }
+    .why { margin-top: 17px; padding: 12px 15px; border-left: 3px solid #92aaa1; background: #f7f9f6; font-size: 12px; }
+    .why h2 { margin: 0 0 4px; font: 600 14px/1.5 system-ui, -apple-system, sans-serif; }
+    .why p { margin: 0; }
+    details { margin-top: 15px; border-top: 1px solid #e0e8e6; padding-top: 11px; font-size: 12px; }
+    summary { cursor: pointer; color: #526b71; }
+    details p { margin: 10px 0; }
+    details h3 { font-size: 13px; margin: 15px 0 4px; }
+    .formula { font-family: Georgia, serif; overflow-wrap: anywhere; }
+    .equation { display: block; margin: 8px 0; padding: 9px 12px; background: #f6f8f7; border-radius: 4px; line-height: 1.8; }
+    .critical-points { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 4px 18px; margin: 8px 0; }
     a { color: #2267a5; }
     #load-error { padding: 16px; background: #f7f3eb; border-radius: 5px; }
-    @media (max-width: 500px) {
-      main { padding: 16px 13px; } h1 { font-size: 21px; }
-      .controls { gap: 10px; } .modes button { padding: 7px 9px; }
-      .plot-wrap { height: 360px; } .readout-top { align-items: baseline; }
+    @media (max-width: 600px) {
+      main { padding: 17px 13px; }
+      header { align-items: flex-start; }
+      h1 { font-size: 22px; }
+      .view-controls { gap: 3px; }
+      .view-controls button { padding: 5px 7px; }
+      .model-controls { padding: 11px; gap: 10px; }
+      .model-controls label:first-child { flex-wrap: wrap; gap: 5px 10px; }
+      .controls { gap: 10px; }
+      .modes button { padding: 7px 9px; }
+      .plot-wrap { height: 360px; }
+      .readout-top { align-items: baseline; flex-wrap: wrap; gap: 5px; }
+      #manifold { font-size: 19px; }
+      .critical-points { grid-template-columns: 1fr; }
     }
+    @media (prefers-reduced-motion: reduce) { * { scroll-behavior: auto; } }
   </style>
 </head>
 <body>
 <main>
-  <header><div><h1>Morse theory on a torus</h1><p class="subtitle">Height function · induced metric · negative gradient flow</p></div><div class="view-controls"><button id="zoom-in" type="button" aria-label="Zoom in">+</button><button id="zoom-out" type="button" aria-label="Zoom out">−</button><button id="reset" type="button">Reset</button></div></header>
+  <header>
+    <div><h1>Morse theory on a torus</h1><p class="subtitle">Two heights · one induced metric · negative gradient flow</p></div>
+    <div class="view-controls"><button id="zoom-in" type="button" aria-label="Zoom in">+</button><button id="zoom-out" type="button" aria-label="Zoom out">−</button><button id="reset" type="button" aria-label="Reset to view A">View A</button><button id="view-b" type="button">View B</button></div>
+  </header>
+  <p class="introduction">The upright height <strong>h₀ = z is Morse, but its gradient flow is not Morse–Smale</strong>: two trajectories connect the saddles. Tilting the height to <strong>hε = z + tan(26°)y</strong> removes those connections and gives a Morse–Smale pair with the same induced metric.</p>
+  <div class="model-controls">
+    <label><span class="control-label">Height function</span><select id="height-model">
+      <option value="naive">Upright · h₀ = z</option>
+      <option value="tilted" selected>Tilted · hε = z + tan(26°)y</option>
+    </select></label>
+    <label><span class="control-label">Show</span><select id="view-mode">
+      <option value="saddles">All four saddle manifolds</option>
+      <option value="comparison">Compare Wᵘ(p₃) and Wˢ(p₂)</option>
+      <option value="selected">One stable / unstable manifold</option>
+    </select></label>
+  </div>
   <div class="controls">
-    <label><span class="control-label">Critical point</span><select id="point">
+    <label><span class="control-label">Critical point</span><select id="point" disabled>
       <option value="p4">p₄ · maximum · index 2</option>
       <option value="p3">p₃ · upper saddle · index 1</option>
       <option value="p2">p₂ · lower saddle · index 1</option>
       <option value="p1">p₁ · minimum · index 0</option>
     </select></label>
-    <div><span class="control-label">Manifold</span><div class="modes" role="group" aria-label="Manifold type">
-      <button type="button" data-mode="s" aria-pressed="false">Wˢ · stable</button>
-      <button type="button" data-mode="u" aria-pressed="true">Wᵘ · unstable</button>
+    <div><span class="control-label">Manifold · use the single-manifold view</span><div class="modes" role="group" aria-label="Manifold type">
+      <button type="button" data-mode="s" aria-pressed="false" disabled>Wˢ · stable</button>
+      <button type="button" data-mode="u" aria-pressed="true" disabled>Wᵘ · unstable</button>
     </div></div>
     <label><input id="flows" type="checkbox" checked> Flow lines</label>
-    <label><input id="xray" type="checkbox"> See through</label>
+    <label><input id="surface" type="checkbox" checked> Surface</label>
+    <label><input id="xray" type="checkbox" checked> See through</label>
   </div>
-  <div class="plot-wrap"><!-- PLOT --></div>
-  <p id="load-error" hidden>The 3D renderer could not load. Check your connection, or read the mathematical description below.</p>
-  <noscript><p>JavaScript is required for the interactive view. The mathematical model and dimension rule are given below.</p></noscript>
-  <p class="hint">Drag to rotate · use + / − to zoom · colored geometry is the selected manifold</p>
-  <div class="legend"><span><i class="swatch red"></i>Unstable</span><span><i class="swatch blue"></i>Stable</span><span><i class="swatch"></i>Excluded curves in a 2D view</span></div>
-  <section class="readout" aria-live="polite">
-    <div class="readout-top"><h2 id="manifold">Wᵘ(p₄)</h2><span id="dimension">Dimension 2 · surface</span></div>
-    <p id="description">An open two-dimensional cell on the torus. Every point in this region converges to p₄ as time tends to −∞.</p>
-    <p id="exclusion">The inner equator and the lower meridian are excluded. The gaps are widened slightly to make these exclusions visible.</p>
+  <div class="plot-wrap"><div id="morse-plot" role="img" aria-label="Interactive tilted torus showing the four stable and unstable manifolds of the two saddles" aria-describedby="description exclusion"></div></div>
+  <p id="load-error" role="alert" hidden>The 3D renderer could not load. Check your connection, or read the mathematical explanation below.</p>
+  <noscript><p>JavaScript is required for the interactive view. Both height functions and the proof of the Morse–Smale condition are described below.</p></noscript>
+  <p class="hint">Drag to rotate · use + / − to zoom · changing the camera does not change the height function</p>
+  <div class="legend" id="legend" aria-label="Curve legend">
+    <span><i class="swatch u3"></i>Wᵘ(p₃): p₃ → p₁</span>
+    <span><i class="swatch s3"></i>Wˢ(p₃): p₄ → p₃</span>
+    <span><i class="swatch s2"></i>Wˢ(p₂): p₄ → p₂</span>
+    <span><i class="swatch u2"></i>Wᵘ(p₂): p₂ → p₁</span>
+    <span><i class="swatch flow"></i>Other sampled flow trajectories</span>
+  </div>
+  <section class="readout" aria-live="polite" aria-atomic="true">
+    <div class="readout-top"><h2 id="manifold">The four saddle manifolds</h2><span id="dimension">Morse–Smale</span></div>
+    <p id="description">Four colors distinguish the one-dimensional stable and unstable manifolds of the two saddles. Arrows follow negative gradient flow; all saddle branches connect to an extremum.</p>
+    <p id="exclusion">Each manifold includes its own saddle and excludes other limiting critical points. Crossings in the projected image need not be intersections on the torus.</p>
+  </section>
+  <section class="why" aria-labelledby="why-heading">
+    <h2 id="why-heading">Why the tilt works</h2>
+    <p>For ε = tan(26°), the unstable branches of the upper saddle stay in π &lt; v &lt; 2π and run to the minimum. The stable branches of the lower saddle stay in 0 &lt; v &lt; π and come from the maximum. The two curves are disjoint; no saddle-to-saddle connection remains. On this surface, that is enough for the Morse–Smale condition.</p>
   </section>
   <details>
-    <summary>Mathematical model and conventions</summary>
-    <p class="formula">X(u,v) = ((R + r cos v) cos u, r sin v, (R + r cos v) sin u), with R = 2, r = 0.68 and u,v ∈ ℝ/2πℤ.</p>
-    <p class="formula">f = z, &nbsp; g = (R + r cos v)² du² + r² dv².<br>Negative gradient flow: u̇ = −cos u / (R + r cos v), &nbsp; v̇ = sin v sin u / r.</p>
+    <summary>Mathematical model, proof, and drawing conventions</summary>
+    <h3>The function and the metric</h3>
+    <p class="formula">X(u,v) = ((R + r cos v) cos u, r sin v, (R + r cos v) sin u), with R = 2, r = 0.68 and u,v ∈ ℝ/2πℤ. Write A = R + r cos v.</p>
+    <p class="formula equation">hε = z + εy = A sin u + εr sin v,<br>g = A² du² + r² dv²,<br>u̇ = −cos u / A, &nbsp; v̇ = (sin v sin u − ε cos v) / r.</p>
+    <p>Both models use this same induced metric and the flow of −grad<sub>g</sub> hε. The Morse–Smale condition is a condition on the <strong>function–metric pair</strong>: Wᵘ(p) and Wˢ(q) must intersect transversely for every pair of critical points. Rotating the camera has no effect on that condition.</p>
     <p>Wˢ(p) consists of points converging to p as t → +∞; Wᵘ(p) uses t → −∞. Thus dim Wᵘ(p) = index(p), and dim Wˢ(p) = 2 − index(p). Every manifold includes its own critical point.</p>
-    <p>The <strong>inner equator</strong> is v = π. The <strong>upper meridian</strong> is u = π/2, and the <strong>lower meridian</strong> is u = 3π/2. The dark curves shown in a 2D view are excluded from the highlighted open cell. For curves and points, the pale torus is only a reference surface. The optional see-through view reveals curves on the back; transparency can introduce rendering artifacts.</p>
-    <p><strong>This pair is not Morse–Smale.</strong> The two inner-equator trajectories connect p₃ to p₂. Along them Wᵘ(p₃) and Wˢ(p₂) coincide and do not meet transversely. A Morse function alone does not imply a Morse–Smale gradient flow.</p>
-    <p>Curve endpoints and excluded curves are drawn with small gaps for visibility. Lines are lifted slightly off the surface so they remain visible. Highlighted geometry represents the manifold itself, not its closure. The thin flow lines are numerical samples; the stable and unstable manifolds use the exact descriptions above.</p>
+    <p>Put α = arctan ε. For ε = 0 and ε = tan(26°), the four critical points are nondegenerate:</p>
+    <div class="critical-points formula">
+      <span>p₄ = (π/2, α), maximum, index 2;</span>
+      <span>p₃ = (π/2, π + α), upper saddle, index 1;</span>
+      <span>p₂ = (3π/2, π − α), lower saddle, index 1;</span>
+      <span>p₁ = (3π/2, 2π − α), minimum, index 0.</span>
+    </div>
+    <p>These are (u,v) coordinates modulo 2π. At a critical point the Hessian has zero mixed entry, h<sub>uu</sub> = −A sin u and h<sub>vv</sub> = −r(cos v sin u + ε sin v). Its two diagonal entries are nonzero and give the indicated indices. The critical heights are R + r√(1 + ε²), R − r√(1 + ε²), −R + r√(1 + ε²), and −R − r√(1 + ε²), in that order for the two values of ε shown.</p>
+    <h3>Why the upright height fails</h3>
+    <p>For ε = 0, the inner equator v = π is invariant. Its two open arcs between p₃ and p₂ are trajectories from p₃ to p₂. In fact Wᵘ(p₃) = {v = π} ∖ {p₂} and Wˢ(p₂) = {v = π} ∖ {p₃}. Along either connecting arc their one-dimensional tangent spaces coincide. Their sum is a line, not the two-dimensional tangent plane of the torus, so this pair is <strong>not Morse–Smale</strong>.</p>
+    <h3>Why the tilted height satisfies the condition</h3>
+    <p>For ε = tan(26°), v̇ = ε/r &gt; 0 at v = π and v̇ = −ε/r &lt; 0 at v = 2π. Thus the closed band π ≤ v ≤ 2π is forward invariant, with the vector field pointing strictly inward at its boundary. The upper saddle p₃ lies in its interior. Its unstable branches remain in this band, whereas the lower saddle p₂ lies in 0 &lt; v &lt; π. Therefore no trajectory can connect p₃ to p₂.</p>
+    <p>Likewise, 0 ≤ v ≤ π is invariant for the reverse flow and contains the lower saddle p₂. The stable branches of p₂, followed backward, stay in this band. Along every nonconstant forward trajectory, dhε/dt = −‖grad<sub>g</sub> hε‖² &lt; 0. Compactness and the finite set of critical points imply that each branch has a critical point as its limiting endpoint. The critical heights and the two invariant bands force the unstable branches of p₃ to end at p₁, and the stable branches of p₂ to begin at p₄.</p>
+    <p>There are only two saddles. Strict decrease of hε rules out saddle homoclinic trajectories and a connection from p₂ to the higher saddle p₃; the band argument rules out the remaining direction. At each saddle its stable and unstable tangent lines are the complementary eigenspaces of the linearized gradient flow. All other nonempty intersections either involve an open two-dimensional manifold or are the transverse stable/unstable intersection at a critical point. Hence every stable/unstable intersection is transverse: <strong>(hε, g) is Morse–Smale</strong>.</p>
+    <h3>What the picture shows</h3>
+    <p>In the tilted view, the displayed torus is rigidly rotated by α = 26° using (x,y,z) ↦ (x, (y − εz)/√(1 + ε²), (z + εy)/√(1 + ε²)). Displayed vertical height is therefore hε/√(1 + ε²). This rotation preserves the induced metric, and the positive constant factor only rescales flow time.</p>
+    <p>In the four-manifold view, dark green is Wᵘ(p₃), light green is Wˢ(p₃), magenta is Wˢ(p₂), and violet is Wᵘ(p₂). Arrows follow negative gradient flow. In the single-manifold and comparison views, red denotes unstable and blue denotes stable. In comparison mode, dashed blue is drawn over red wherever the upright curves coincide. The thin multicolored curves are sampled flow trajectories: their individual colors distinguish paths and do not specify a stable or unstable manifold. Dark boundaries in a two-dimensional view are excluded from the highlighted open cell. For curves and points, the pale torus is a reference surface.</p>
+    <p>The upright manifolds have the exact descriptions given in the readout. Tilted separatrices, open-cell boundaries, and the thin flow lines are sampled numerically; the proof above is independent of that sampling. Endpoints and excluded boundaries have small visual gaps, and lines are lifted slightly off the surface for visibility. These drawing offsets have no mathematical meaning. Highlighted manifolds include their own critical points and exclude other limiting critical points. The see-through view reveals curves on the back; transparency can introduce rendering artifacts.</p>
+    <p>For the definition and the upright torus example, see <a href="https://umutvg.github.io/lecture-notes-W21.pdf" target="_blank" rel="noopener noreferrer">Morse theory lecture notes, p. 41, Definition 33 and Question 85</a>.</p>
     <p><a href="../../scripts/morse_torus/generate.py">Python generator</a> · <a href="../../scripts/morse_torus/README.md">Model and regeneration notes</a></p>
   </details>
 </main>
+<script src="https://cdn.plot.ly/plotly-3.1.1.min.js"></script>
 <script>
 const model = /* MODEL */;
 const gd = document.getElementById('morse-plot');
-const descriptions = {
-  p4u: ['surface', 'An open two-dimensional cell on the torus. Every point in this region converges to p₄ as time tends to −∞.', 'The inner equator and the lower meridian are excluded. The gaps are widened slightly to make these exclusions visible.'],
-  p4s: ['point', 'Only p₄ itself converges to the maximum in forward time.', 'Wˢ(p₄) = {p₄}. The pale torus is a reference surface.'],
-  p3s: ['curve', 'The upper meridian with p₄ removed. Its two branches flow from p₄ toward p₃.', 'p₃ is included; p₄ is a limiting point and is excluded. This manifold is diffeomorphic to ℝ.'],
-  p3u: ['curve', 'The inner equator with p₂ removed. Its two branches flow from p₃ toward p₂.', 'p₃ is included; p₂ is excluded. Adding p₂ would give the closure, not Wᵘ(p₃) itself.'],
-  p2s: ['curve', 'The inner equator with p₃ removed. Its two branches flow from p₃ toward p₂.', 'p₂ is included; p₃ is excluded. Adding p₃ would give the closure, not Wˢ(p₂) itself.'],
-  p2u: ['curve', 'The lower meridian with p₁ removed. Its two branches flow from p₂ toward p₁.', 'p₂ is included; p₁ is a limiting point and is excluded. This manifold is diffeomorphic to ℝ.'],
-  p1s: ['surface', 'An open two-dimensional cell on the torus. Every point in this region converges to p₁ as time tends to +∞.', 'The inner equator and the upper meridian are excluded. The gaps are widened slightly to make these exclusions visible.'],
-  p1u: ['point', 'Only p₁ itself converges to the minimum in backward time.', 'Wᵘ(p₁) = {p₁}. The pale torus is a reference surface.']
-};
+const pointControl = document.getElementById('point');
+const modelControl = document.getElementById('height-model');
+const viewControl = document.getElementById('view-mode');
+const modeButtons = document.querySelectorAll('[data-mode]');
+const errorMessage = document.getElementById('load-error');
+const plotWrap = document.querySelector('.plot-wrap');
+const subscript = {p1:'p₁', p2:'p₂', p3:'p₃', p4:'p₄'};
 let mode = 'u';
-const subscript = {p1:'p₁',p2:'p₂',p3:'p₃',p4:'p₄'};
-function update() {
-  const point = document.getElementById('point').value;
-  const p = model.points[point], key = point + mode;
-  const dim = mode === 'u' ? p.index : 2 - p.index;
-  const color = mode === 'u' ? '#bd4937' : '#2267a5';
-  document.querySelectorAll('[data-mode]').forEach(b => b.setAttribute('aria-pressed', String(b.dataset.mode === mode)));
-  document.getElementById('manifold').textContent = (mode === 'u' ? 'Wᵘ(' : 'Wˢ(') + subscript[point] + ')';
-  document.getElementById('manifold').style.color = color;
-  document.getElementById('dimension').textContent = 'Dimension ' + dim + ' · ' + descriptions[key][0];
-  document.getElementById('description').textContent = descriptions[key][1];
-  document.getElementById('exclusion').textContent = descriptions[key][2];
-  if (!window.Plotly || !gd.data) return;
-  const visible = new Set([...model.groups.points, ...model.groups.selected, ...model.groups[key]]);
-  if (dim !== 2) model.groups.base.forEach(i => visible.add(i));
-  if (document.getElementById('flows').checked) model.groups.flows.forEach(i => visible.add(i));
-  Plotly.restyle(gd, {visible: gd.data.map((_,i) => visible.has(i))});
-  const surfaces = [...model.groups.base, ...model.groups[key]].filter(i => gd.data[i].type === 'surface');
-  Plotly.restyle(gd, {opacity:document.getElementById('xray').checked ? .25 : 1}, surfaces);
-  Plotly.restyle(gd, {x:[[p.xyz[0]]],y:[[p.xyz[1]]],z:[[p.xyz[2]]],'marker.color':color}, model.groups.selected);
+let camera = JSON.parse(JSON.stringify(model.camera));
+let rendering = false;
+let renderPending = false;
+let cameraListenerAttached = false;
+
+function state() {
+  const variant = model.variants[modelControl.value];
+  const point = pointControl.value;
+  const p = variant.points[point];
+  return {
+    variant, point, p,
+    key: point + mode,
+    view: viewControl.value,
+    compare: viewControl.value === 'comparison',
+    selected: viewControl.value === 'selected',
+    dim: mode === 'u' ? p.index : 2 - p.index,
+    color: mode === 'u' ? '#bd4937' : '#2267a5'
+  };
 }
-document.getElementById('point').addEventListener('change', update);
-document.getElementById('flows').addEventListener('change', update);
-document.getElementById('xray').addEventListener('change', update);
-document.querySelectorAll('[data-mode]').forEach(b => b.addEventListener('click', () => { mode = b.dataset.mode; update(); }));
-document.getElementById('reset').addEventListener('click', () => { if(window.Plotly) Plotly.relayout(gd, {'scene.camera':model.camera}); });
-function zoom(factor) {
+
+function updateReadout(s) {
+  pointControl.disabled = !s.selected;
+  modeButtons.forEach(button => {
+    button.disabled = !s.selected;
+    button.setAttribute('aria-pressed', String(button.dataset.mode === mode));
+  });
+  const heading = document.getElementById('manifold');
+  const dimension = document.getElementById('dimension');
+  const description = document.getElementById('description');
+  const exclusion = document.getElementById('exclusion');
+  const tilted = modelControl.value === 'tilted';
+  if (s.view === 'saddles') {
+    heading.textContent = 'The four saddle manifolds';
+    heading.style.color = '#293f45';
+    dimension.textContent = tilted ? 'Morse–Smale' : 'Not Morse–Smale';
+    description.textContent = tilted
+      ? 'Four colors distinguish the one-dimensional stable and unstable manifolds of the two saddles. Arrows follow negative gradient flow; all saddle branches connect to an extremum.'
+      : 'The dark green unstable branches of p₃ and the dashed magenta stable branches of p₂ coincide along the inner equator. These saddle-to-saddle connections prevent transversality.';
+    exclusion.textContent = 'Each manifold includes its own saddle and excludes other limiting critical points. Crossings in the projected image need not be intersections on the torus.';
+  } else if (s.compare) {
+    heading.textContent = 'Wᵘ(p₃) and Wˢ(p₂)';
+    heading.style.color = '#293f45';
+    dimension.textContent = tilted ? 'Morse–Smale' : 'Not Morse–Smale';
+    description.textContent = tilted
+      ? 'The red unstable branches of p₃ run to the minimum; the dashed blue stable branches of p₂ come from the maximum. They lie in disjoint invariant bands, so the saddle-to-saddle connections disappear.'
+      : 'The red and dashed blue curves overlap along two saddle-to-saddle trajectories on the inner equator. Their tangent lines agree, so their intersection is not transverse.';
+    exclusion.textContent = tilted
+      ? 'p₃ belongs to the red manifold and p₂ to the blue manifold. The limiting maximum and minimum are excluded; small endpoint gaps make this visible.'
+      : 'Each manifold includes its own saddle and excludes the other. The two filled saddle markers belong to different manifolds.';
+  } else {
+    const descriptionParts = s.variant.descriptions[s.key];
+    heading.textContent = (mode === 'u' ? 'Wᵘ(' : 'Wˢ(') + subscript[s.point] + ')';
+    heading.style.color = s.color;
+    dimension.textContent = 'Dimension ' + s.dim + ' · ' + descriptionParts[0];
+    description.textContent = descriptionParts[1];
+    exclusion.textContent = descriptionParts[2];
+  }
+  updateLegend(s, tilted);
+  gd.setAttribute('aria-label', (modelControl.value === 'tilted' ? 'Tilted' : 'Upright')
+    + ' torus showing ' + heading.textContent + '. ' + description.textContent);
+}
+
+function updateLegend(s, tilted) {
+  const entries = s.view === 'saddles'
+    ? [
+      ['u3', 'Wᵘ(p₃): p₃ → ' + (tilted ? 'p₁' : 'p₂')],
+      ['s3', 'Wˢ(p₃): p₄ → p₃'],
+      ['s2', 'Wˢ(p₂): ' + (tilted ? 'p₄' : 'p₃') + ' → p₂'],
+      ['u2', 'Wᵘ(p₂): p₂ → p₁']
+    ]
+    : [['red', 'Unstable manifold'], ['blue', 'Stable manifold' + (s.compare ? ' · dashed' : '')]];
+  if (document.getElementById('flows').checked) entries.push(['flow', 'Other sampled flow trajectories']);
+  if (s.selected && s.dim === 2) entries.push(['', 'Excluded boundaries']);
+  const legend = document.getElementById('legend');
+  legend.replaceChildren(...entries.map(([color, text]) => {
+    const entry = document.createElement('span');
+    const swatch = document.createElement('i');
+    swatch.className = 'swatch ' + color;
+    if (s.view === 'saddles' && !tilted && color === 's2') {
+      swatch.style.background = 'repeating-linear-gradient(90deg, #d3299d 0 5px, transparent 5px 8px)';
+    }
+    if (color === 'blue' && !s.compare) swatch.style.background = '#2267a5';
+    entry.append(swatch, document.createTextNode(text));
+    return entry;
+  }));
+}
+
+function tracesFor(s) {
+  const groups = s.variant.groups;
+  const visible = new Set(groups.points);
+  const mainGroup = s.view === 'saddles' ? groups.saddles : s.compare ? groups.comparison : [...groups[s.key], ...groups.selected];
+  mainGroup.forEach(index => visible.add(index));
+  if ((!s.selected || s.dim < 2) && document.getElementById('surface').checked) groups.base.forEach(index => visible.add(index));
+  if (document.getElementById('flows').checked) groups.flows.forEach(index => visible.add(index));
+  const selected = new Set(groups.selected);
+  return [...visible]
+    .filter(index => document.getElementById('surface').checked || s.variant.data[index].type !== 'surface')
+    .sort((a, b) => a - b).map(index => {
+    const source = s.variant.data[index];
+    const trace = {...source, visible: true, uid: modelControl.value + '-' + index};
+    if (source.marker) trace.marker = {...source.marker};
+    if (source.line) trace.line = {...source.line};
+    if (trace.type === 'surface') trace.opacity = document.getElementById('xray').checked ? .25 : 1;
+    if (s.selected && selected.has(index)) {
+      trace.x = [s.p.xyz[0]];
+      trace.y = [s.p.xyz[1]];
+      trace.z = [s.p.xyz[2]];
+      trace.marker = {...trace.marker, color: s.color};
+    }
+    return trace;
+  });
+}
+
+async function render() {
+  if (!window.Plotly) {
+    errorMessage.hidden = false;
+    plotWrap.hidden = true;
+    return;
+  }
+  renderPending = true;
+  if (rendering) return;
+  rendering = true;
+  try {
+    while (renderPending) {
+      renderPending = false;
+      const s = state();
+      const layout = {
+        ...model.layout,
+        uirevision: 'morse-torus-camera',
+        scene: {...model.layout.scene, camera: JSON.parse(JSON.stringify(camera)), uirevision: 'morse-torus-camera'}
+      };
+      plotWrap.hidden = false;
+      await Plotly.react(gd, tracesFor(s), layout, {displayModeBar: false, responsive: true, scrollZoom: false});
+      errorMessage.hidden = true;
+      if (!cameraListenerAttached) {
+        gd.on('plotly_relayout', event => {
+          if (Object.keys(event).some(key => key.startsWith('scene.camera')) && gd._fullLayout?.scene?.camera) {
+            camera = JSON.parse(JSON.stringify(gd._fullLayout.scene.camera));
+          }
+        });
+        cameraListenerAttached = true;
+      }
+    }
+  } catch (error) {
+    errorMessage.textContent = 'The 3D view could not be rendered. The mathematical explanation below describes both models and their gradient flows.';
+    errorMessage.hidden = false;
+    plotWrap.hidden = true;
+    console.error('Unable to render the Morse torus:', error);
+  } finally {
+    rendering = false;
+  }
+}
+
+function update() {
+  updateReadout(state());
+  void render();
+}
+
+for (const id of ['height-model', 'view-mode', 'point', 'flows', 'surface', 'xray']) {
+  document.getElementById(id).addEventListener('change', update);
+}
+modeButtons.forEach(button => button.addEventListener('click', () => {
+  mode = button.dataset.mode;
+  update();
+}));
+
+async function changeCamera(nextCamera) {
+  camera = JSON.parse(JSON.stringify(nextCamera));
   if (!window.Plotly || !gd._fullLayout) return;
-  const camera = JSON.parse(JSON.stringify(gd._fullLayout.scene.camera));
-  for (const axis of ['x','y','z']) camera.eye[axis] *= factor;
-  Plotly.relayout(gd, {'scene.camera':camera});
+  try {
+    await Plotly.relayout(gd, {'scene.camera': camera});
+  } catch (error) {
+    console.error('Unable to update the torus camera:', error);
+  }
+}
+
+document.getElementById('reset').addEventListener('click', () => changeCamera(model.camera));
+document.getElementById('view-b').addEventListener('click', () => changeCamera({...model.camera, eye: {x: -model.camera.eye.x, y: -model.camera.eye.y, z: model.camera.eye.z}}));
+function zoom(factor) {
+  const nextCamera = JSON.parse(JSON.stringify(camera));
+  for (const axis of ['x', 'y', 'z']) nextCamera.eye[axis] *= factor;
+  void changeCamera(nextCamera);
 }
 document.getElementById('zoom-in').addEventListener('click', () => zoom(.82));
 document.getElementById('zoom-out').addEventListener('click', () => zoom(1/.82));
-if (!window.Plotly) document.getElementById('load-error').hidden = false;
-window.addEventListener('load', update);
+
 if (window.ResizeObserver) new ResizeObserver(() => {
-  if (window.Plotly && gd.data) Plotly.Plots.resize(gd);
-}).observe(document.querySelector('.plot-wrap'));
+  if (window.Plotly && gd.data && !plotWrap.hidden) Plotly.Plots.resize(gd).catch(() => {});
+}).observe(plotWrap);
+update();
 </script>
 </body>
 </html>

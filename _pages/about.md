@@ -16,17 +16,6 @@ This site is a place where I share my research, talks and presentations, reading
 
 Feel free to explore other sections for more details, and reach out via the contact links in the sidebar.
 
-Miscellaneous
-----
-
-### Morse theory on a torus
-
-An interactive view of negative gradient flow on an upright torus. Select a critical point to explore its stable and unstable manifolds, and rotate the surface to see how the trajectories fit together.
-
-<iframe src="{{ '/assets/interactive/morse-torus.html' | relative_url }}" title="Interactive Morse theory on a torus: stable and unstable manifolds" loading="lazy" style="display: block; width: 100%; height: 850px; border: 1px solid #e2e5e8; border-radius: 8px;" allow="fullscreen"></iframe>
-
-[Open the full-size visualization]({{ '/assets/interactive/morse-torus.html' | relative_url }}) · [Python source]({{ '/scripts/morse_torus/generate.py' | relative_url }})
-
 Some Useful Links
 ----
 
@@ -49,3 +38,35 @@ Just for Fun
     <p>Which Springer GTM would <em>you</em> be? <a href="https://math.jhu.edu/~savitt/GTM.html">Take the test.</a></p>
   </div>
 </div>
+
+Miscellaneous
+----
+
+## Morse theory on a torus
+
+Compare the negative gradient flows of two height functions, using the induced Euclidean metric. The naive height $h_0=z$ is Morse, but its gradient flow is **not Morse–Smale**: two trajectories connect the upper saddle $p_3$ to the lower saddle $p_2$. Along them, $W^u(p_3)$ and $W^s(p_2)$ share the same tangent line, so their intersection is not transverse.
+
+Tilting the height direction gives $h_\theta=z+\tan(26^\circ)y$, a **Morse–Smale pair** with the same metric. The saddle connections disappear: the unstable branches of $p_3$ go to the minimum, while the stable branches of $p_2$ come from the maximum. Switch between the two models below, compare all four saddle manifolds, or explore one manifold at a time. The tilted model is displayed as a torus rotated by $26^\circ$, so its chosen height is vertical; the explanation below the plot gives the proof.
+
+<iframe id="morse-torus-frame" src="{{ '/assets/interactive/morse-torus.html' | relative_url }}?v=2" title="Morse and Morse–Smale height flows: upright and tilted torus comparison" loading="lazy" style="display: block; width: 100%; height: 1060px; border: 1px solid #e2e5e8; border-radius: 8px;" allow="fullscreen"></iframe>
+<script>
+(() => {
+  const frame = document.getElementById('morse-torus-frame');
+  let observer;
+  function fitVisualization() {
+    if (observer) observer.disconnect();
+    const main = frame.contentDocument?.querySelector('main');
+    if (!main) return;
+    const resize = () => { frame.style.height = Math.ceil(main.getBoundingClientRect().height + 2) + 'px'; };
+    resize();
+    if (window.ResizeObserver) {
+      observer = new ResizeObserver(resize);
+      observer.observe(main);
+    }
+  }
+  frame.addEventListener('load', fitVisualization);
+  fitVisualization();
+})();
+</script>
+
+[Open the full-size visualization]({{ '/assets/interactive/morse-torus.html' | relative_url }}?v=2) · [Python source]({{ '/scripts/morse_torus/generate.py' | relative_url }})
