@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>From a disk to a strip — Derek Zeng</title>
+  <style>
+    * { box-sizing: border-box; }
+    body { margin: 0; color: #293e43; background: #fff; font: 14px/1.55 system-ui, -apple-system, sans-serif; }
+    main { max-width: 1120px; margin: auto; padding: 22px 24px; }
+    header { display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+    h1 { margin: 0 0 6px; color: #213b40; font: 500 27px/1.2 Georgia, serif; }
+    .subtitle { margin: 0; color: #657a80; font-size: 12px; }
+    .intro { margin: 17px 0 14px; max-width: 850px; color: #526970; font-size: 13px; }
+    button, input, select { font: inherit; color: inherit; }
+    button { padding: 7px 12px; background: #fff; border: 1px solid #cbd8d6; border-radius: 6px; cursor: pointer; }
+    button:hover { background: #edf4f0; }
+    button:focus-visible, input:focus-visible, select:focus-visible, summary:focus-visible, a:focus-visible { outline: 3px solid #548a9b; outline-offset: 3px; }
+    #reset { white-space: nowrap; font-size: 12px; }
+    form { display: flex; flex-wrap: wrap; align-items: end; gap: 13px 18px; padding: 13px 15px; border: 1px solid #dfe9e3; border-radius: 9px; background: #f2f6f3; }
+    fieldset { margin: 0; padding: 0; border: 0; min-width: 0; }
+    legend, .control-label { margin-bottom: 5px; font-size: 11px; color: #5b7478; }
+    .components { display: flex; gap: 8px; }
+    .components label { display: flex; align-items: center; gap: 5px; font-size: 11px; }
+    input[type="number"] { width: 79px; min-width: 0; padding: 6px; border: 1px solid #cbd8d6; border-radius: 5px; background: #fff; }
+    #apply { background: #386d65; color: #fff; border-color: #386d65; }
+    #apply:hover { background: #2e5f58; }
+    .limits { margin: 7px 1px 12px; color: #657a80; font-size: 11px; }
+    .options { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px 22px; margin: 13px 1px; }
+    .angle-control { display: flex; align-items: center; flex-wrap: wrap; gap: 7px 10px; font-size: 12px; }
+    input[type="range"] { width: 150px; accent-color: #43786b; }
+    output { min-width: 31px; font-variant-numeric: tabular-nums; }
+    #normalize { font-size: 11px; padding: 5px 8px; }
+    .mode-label { display: flex; align-items: center; gap: 7px; font-size: 12px; }
+    select { max-width: 100%; padding: 6px 8px; background: #fff; border: 1px solid #cbd8d6; border-radius: 5px; }
+    .panels { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 16px; }
+    figure { min-width: 0; margin: 0; border: 1px solid #dde6e1; border-radius: 10px; overflow: hidden; background: #fcfdfb; }
+    figcaption { display: flex; justify-content: space-between; align-items: baseline; gap: 10px; padding: 13px 15px 0; }
+    .panel-title { font: 500 20px/1.3 Georgia, serif; }
+    .panel-domain { color: #6a7f83; font: 13px Georgia, serif; }
+    svg { display: block; width: 100%; height: auto; touch-action: pan-y; }
+    svg text { font-family: system-ui, sans-serif; font-size: 11px; fill: #61787d; }
+    svg .marker-label { font: italic 16px Georgia, serif; fill: #274940; paint-order: stroke; stroke: #fff; stroke-width: 4px; stroke-linejoin: round; }
+    svg .end-label { font-size: 11px; paint-order: stroke; stroke: #fcfdfb; stroke-width: 4px; }
+    .panel-note { margin: 0; padding: 0 14px 13px; color: #647a80; font-size: 11px; }
+    .legend { display: flex; flex-wrap: wrap; gap: 8px 20px; margin: 12px 1px; color: #60767a; font-size: 11px; }
+    .swatch { display: inline-block; width: 17px; height: 2px; vertical-align: middle; margin-right: 5px; background: #398e82; }
+    .swatch.amber { background: #b9904e; }
+    .dot { display: inline-block; width: 8px; height: 8px; margin-right: 5px; border-radius: 50%; background: #244e44; }
+    .dot.probe { background: #fff; border: 2px solid #ab7430; width: 10px; height: 10px; }
+    .readout { display: grid; grid-template-columns: 1fr 1fr; gap: 10px 24px; border-top: 1px solid #e0e8e3; padding-top: 12px; }
+    .readout p { margin: 0; }
+    .readout .label { display: block; margin-bottom: 3px; color: #657a80; font-size: 11px; }
+    .value { font: 16px/1.5 Georgia, serif; overflow-wrap: anywhere; }
+    #status { min-height: 18px; margin: 8px 1px 0; color: #637b76; font-size: 12px; }
+    #status.error { color: #9c4335; }
+    .why { margin-top: 14px; padding: 11px 14px; background: #f6f8f3; border-left: 3px solid #9bb3a2; font-size: 12px; }
+    .why strong { font-weight: 600; }
+    details { margin-top: 15px; padding-top: 11px; border-top: 1px solid #e0e8e3; font-size: 12px; }
+    summary { cursor: pointer; color: #4f6d70; }
+    details p { margin: 10px 0; }
+    .formula { padding: 10px 12px; background: #f5f8f5; border-radius: 5px; font: 15px/1.9 Georgia, serif; overflow-wrap: anywhere; }
+    a { color: #286c79; }
+    [hidden] { display: none !important; }
+    @media (max-width: 650px) {
+      main { padding: 17px 13px; }
+      h1 { font-size: 23px; }
+      header { align-items: start; }
+      form { padding: 12px; gap: 12px; }
+      .panels { grid-template-columns: 1fr; gap: 12px; }
+      .readout { grid-template-columns: 1fr; }
+      .options { gap: 12px; }
+      figcaption { padding-top: 12px; }
+    }
+  </style>
+</head>
+<body>
+<main id="disk-strip-app">
+  <header><div><h1>From a disk to a strip</h1><p class="subtitle">A biholomorphic map · two prescribed points · a little freedom to turn</p></div><button id="reset" type="button">Reset</button></header>
+  <p class="intro">Choose <strong>a</strong> in the unit disk and <strong>b</strong> in the horizontal strip. The same colored curves appear on both sides, carried by a biholomorphic map with <strong>F(a) = b</strong>. Move over either picture to follow a point through the map.</p>
+  <form id="point-form" novalidate>
+    <fieldset><legend>Source point a</legend><div class="components"><label>Re <input id="ar" type="number" step="any" value="0" aria-label="Real part of source a"></label><label>Im <input id="ai" type="number" step="any" value="0" aria-label="Imaginary part of source a"></label></div></fieldset>
+    <fieldset><legend>Target point b</legend><div class="components"><label>Re <input id="br" type="number" step="any" min="-3" max="3" value="0" aria-label="Real part of target b"></label><label>Im <input id="bi" type="number" step="any" min="-0.95" max="0.95" value="0" aria-label="Imaginary part of target b"></label></div></fieldset>
+    <button id="apply" type="submit">Apply points</button>
+  </form>
+  <p class="limits" id="control-limits">Drawing controls: |a| ≤ 0.97, |Re b| ≤ 3, |Im b| ≤ 0.95. Every displayed map still takes the entire open disk onto the entire infinite strip.</p>
+  <div class="options">
+    <div class="angle-control"><label for="angle">Derivative angle φ</label><input id="angle" type="range" min="0" max="360" step="1" value="0" aria-describedby="freedom"><output id="angle-value" for="angle">0°</output><button id="normalize" type="button">Make F′(a) positive</button></div>
+    <label class="mode-label" for="click-mode">Click / tap <select id="click-mode"><option value="set">Choose a or b</option><option value="probe">Probe only</option></select></label>
+  </div>
+  <div class="panels">
+    <figure><figcaption><span class="panel-title">The unit disk</span><span class="panel-domain">D = { |z| &lt; 1 }</span></figcaption>
+      <svg id="disk-svg" viewBox="0 0 440 340" role="img" aria-label="Unit disk with a polar grid, prescribed source a, and a linked probe" aria-describedby="disk-note control-limits">
+        <defs><clipPath id="disk-clip"><circle cx="220" cy="168" r="137"/></clipPath></defs>
+        <circle cx="220" cy="168" r="137" fill="#f2f7f3"/>
+        <g stroke="#d9e5de" stroke-width="1"><path d="M73 168H367M220 21V315"/></g>
+        <g id="disk-grid" clip-path="url(#disk-clip)" fill="none"></g>
+        <circle cx="220" cy="168" r="137" fill="none" stroke="#879e97" stroke-width="1.3" stroke-dasharray="4 4"/>
+        <text x="365" y="185">Re z</text><text x="229" y="25">Im z</text><text x="211" y="184">0</text>
+        <g id="disk-ends"></g><g id="disk-marker"></g><g id="disk-probe"></g>
+      </svg><p class="panel-note" id="disk-note">Click inside to choose a. The dashed circle is excluded.</p>
+    </figure>
+    <figure><figcaption><span class="panel-title">The infinite strip</span><span class="panel-domain">S = { |Im w| &lt; 1 }</span></figcaption>
+      <svg id="strip-svg" viewBox="0 0 440 340" role="img" aria-label="Images of the disk grid in the strip between imaginary parts minus one and one" aria-describedby="strip-note control-limits">
+        <defs><clipPath id="strip-clip"><rect x="24" y="119" width="392" height="98"/></clipPath><marker id="infinity-arrow" markerWidth="6" markerHeight="6" refX="3" refY="3" orient="auto-start-reverse"><path d="M0 0L6 3L0 6" fill="none" stroke="#91a49c"/></marker></defs>
+        <rect x="24" y="119" width="392" height="98" fill="#f2f7f3"/>
+        <g id="strip-axis"></g><g id="strip-grid" clip-path="url(#strip-clip)" fill="none"></g>
+        <g stroke="#879e97" stroke-width="1.2" stroke-dasharray="4 4"><path d="M24 119H416M24 217H416"/></g>
+        <path d="M35 85H405" stroke="#bdc9c3" stroke-width="1" marker-start="url(#infinity-arrow)" marker-end="url(#infinity-arrow)"/>
+        <text x="220" y="70" text-anchor="middle">continues infinitely in both directions</text>
+        <text x="24" y="109">Im w = 1</text><text x="24" y="234">Im w = −1</text>
+        <g id="strip-marker" clip-path="url(#strip-clip)"></g><g id="strip-probe" clip-path="url(#strip-clip)"></g>
+        <text id="viewport-label" x="220" y="290" text-anchor="middle">A window on the strip; equal scale on both axes</text>
+      </svg><p class="panel-note" id="strip-note">Click between the dashed lines to choose b. The view follows Re b.</p>
+    </figure>
+  </div>
+  <div class="legend" aria-label="Grid and point legend"><span><i class="swatch"></i>Concentric circles</span><span><i class="swatch amber"></i>Radial lines</span><span><i class="dot"></i>Prescribed a ↦ b</span><span><i class="dot probe"></i>Linked probe</span></div>
+  <section class="readout" aria-label="Map and probe values">
+    <p><span class="label">Prescribed point and derivative</span><span id="map-value" class="value">F(0) = 0; F′(0) = 4/π</span></p>
+    <p><span class="label">Linked probe · move over either picture</span><span id="probe-value" class="value">z ↦ F(z)</span></p>
+  </section>
+  <p id="status" role="status" aria-live="polite">The map is ready. Choose points or turn the derivative angle.</p>
+  <p class="why" id="freedom"><strong>One point leaves one real degree of freedom.</strong> The angle φ is arg F′(a). Turning it changes the map while keeping F(a) = b. Requiring F′(a) to be positive real fixes this remaining freedom and determines a unique map.</p>
+  <details>
+    <summary>The formula and why it works</summary>
+    <p>For a = b = 0 and φ = 0, the familiar map is F₀(z) = (2/π) Log((1 + z)/(1 − z)). For arbitrary prescribed points, put η = π Im(b)/2 and use this chain:</p>
+    <div class="formula">ψ<sub>a</sub>(z) = (z − a)/(1 − āz), &nbsp; q = e<sup>i(η + φ)</sup>ψ<sub>a</sub>(z),<br>C = (1 + q)/(1 − q), &nbsp; H = cos(η) C + i sin(η),<br><strong>F(z) = Re(b) + (2/π) Log H.</strong></div>
+    <p>The disk automorphism ψ<sub>a</sub> sends a to 0. Rotation keeps the disk fixed, the Cayley transform sends it onto the right half-plane, and cos(η) &gt; 0 makes H another automorphism of that half-plane. The principal Log has −π/2 &lt; Im Log H &lt; π/2 there. Multiplication by 2/π and real translation therefore give exactly |Im F| &lt; 1.</p>
+    <p>At z = a, H = e<sup>iη</sup>, so F(a) = b and F′(a) = [4 cos(η)/(π(1 − |a|²))] e<sup>iφ</sup>. Every step is biholomorphic; this is a bijection with a holomorphic inverse, not just a deformation of a drawing.</p>
+    <p>The two marked boundary points lead to Re F → −∞ and +∞. The rest of the boundary approaches Im F = ±1. None of those boundary points belongs to the domain. Colored curves are sampled images under the exact formula; all coordinates use an equal horizontal and vertical scale within each panel. A small outer portion of the disk grid is omitted for legibility, and the strip view is clipped to Re(b) ± 4.</p>
+    <p>To invert the map, put E = exp(π(w − Re(b))/2), C = (E − i sin η)/cos η, q = (C − 1)/(C + 1), and ζ = e<sup>−i(η + φ)</sup>q. Then z = (a + ζ)/(1 + āζ).</p>
+    <p>For the point-and-positive-derivative normalization in the Riemann mapping theorem, see <a href="https://people.math.harvard.edu/~ctm/home/text/class/berkeley/205/95/course/course.pdf" target="_blank" rel="noopener noreferrer">Curtis McMullen’s complex analysis notes, item 40, p. 6</a>.</p>
+    <p><a href="disk-strip.js">JavaScript source and complex arithmetic</a></p>
+  </details>
+  <noscript><p>JavaScript is required to draw and interact with the two grids. The complete formula and explanation are available above.</p></noscript>
+</main>
+<script src="disk-strip.js"></script>
+</body>
+</html>

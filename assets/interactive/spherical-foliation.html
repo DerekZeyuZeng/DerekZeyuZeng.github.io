@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Explore concentric spherical leaves and their singular origin for f(x) = one half the squared Euclidean norm.">
+  <title>A singular foliation of space — Derek Zeng</title>
+  <style>
+    * { box-sizing: border-box; }
+    body { margin: 0; color: #293a43; background: #fff; font: 14px/1.55 system-ui, -apple-system, sans-serif; }
+    main { max-width: 1100px; margin: auto; padding: 22px 24px; }
+    header { display: flex; align-items: center; justify-content: space-between; gap: 14px; }
+    h1 { margin: 0 0 6px; color: #213b40; font: 500 26px/1.2 Georgia, serif; }
+    .subtitle { margin: 0; color: #738087; font-size: 12px; }
+    .introduction { max-width: 800px; margin: 14px 0; color: #52636b; font-size: 13px; }
+    .formula { font-family: Georgia, serif; }
+    button, input { font: inherit; color: inherit; }
+    button { cursor: pointer; padding: 7px 12px; border: 1px solid #ced8db; border-radius: 6px; background: #fff; }
+    button:hover:enabled { background: #eaf2ef; }
+    button:disabled { opacity: .5; cursor: default; }
+    button:focus-visible, input:focus-visible, summary:focus-visible, a:focus-visible { outline: 3px solid #548ab4; outline-offset: 3px; }
+    input { accent-color: #4d9082; }
+    .view-controls { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 5px; }
+    .view-controls button { padding: 6px 9px; font-size: 12px; }
+    .level-controls { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 13px; padding: 13px 15px; border: 1px solid #e1e9e5; border-radius: 8px; background: #f2f6f4; }
+    .level-slider { display: flex; flex: 1 1 245px; min-width: 0; align-items: center; gap: 11px; }
+    .level-slider label { white-space: nowrap; font-weight: 500; }
+    #level { flex: 1; min-width: 80px; width: 100%; }
+    #level-value { width: 72px; padding: 6px 5px 6px 8px; border: 1px solid #ced8db; border-radius: 5px; background: #fff; }
+    #play { color: #306c60; min-width: 118px; }
+    #play[aria-pressed="true"] { border-color: #76a499; background: #e2f0e9; }
+    .options { display: flex; flex-wrap: wrap; gap: 8px 20px; margin: 13px 1px 3px; font-size: 12px; }
+    .options input { vertical-align: -1px; }
+    .plot-wrap { position: relative; height: 400px; min-width: 0; overflow: hidden; border-radius: 8px; }
+    #foliation-plot { height: 100%; width: 100%; }
+    .plot-note { position: absolute; left: 12px; top: 8px; z-index: 1; max-width: calc(100% - 24px); padding: 4px 8px; border-radius: 4px; color: #6d7b80; background: #ffffffdc; font-size: 10px; pointer-events: none; }
+    .hint { margin: 0 0 11px; text-align: center; color: #7b8b91; font-size: 11px; }
+    .legend { display: flex; flex-wrap: wrap; gap: 6px 17px; margin-bottom: 14px; color: #657980; font-size: 11px; }
+    .swatch { display: inline-block; width: 12px; height: 8px; margin-right: 5px; border-radius: 2px; vertical-align: 0; background: #4d9082; }
+    .swatch.origin { height: 8px; width: 8px; border-radius: 50%; background: #bb684d; }
+    .swatch.reference { background: linear-gradient(90deg, #b49770 0 33%, #8883aa 33% 66%, #7d9fb1 66%); }
+    .swatch.gradient { height: 2px; width: 16px; vertical-align: 3px; background: repeating-linear-gradient(90deg, #b07a42 0 5px, transparent 5px 8px); }
+    .readout { border-top: 1px solid #dfe8e6; padding-top: 13px; }
+    .readout-top { display: flex; flex-wrap: wrap; gap: 5px 12px; align-items: center; justify-content: space-between; }
+    h2 { margin: 0; color: #293f45; font: 500 21px/1.4 Georgia, serif; }
+    #dimension { padding: 4px 8px; border-radius: 4px; color: #526b68; background: #f0f5f2; font-size: 11px; white-space: nowrap; }
+    #description { margin: 7px 0; }
+    .caption { margin: 0; color: #697c83; font-size: 12px; }
+    details { margin-top: 16px; padding-top: 11px; border-top: 1px solid #e0e8e6; font-size: 12px; }
+    summary { color: #526b71; cursor: pointer; }
+    details p { margin: 10px 0; }
+    details h3 { margin: 14px 0 4px; font-size: 13px; }
+    .equation { padding: 9px 12px; border-radius: 4px; background: #f6f8f7; line-height: 1.8; overflow-wrap: anywhere; }
+    a { color: #2267a5; }
+    #load-error { padding: 16px; border-radius: 5px; background: #f7f3eb; }
+    .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
+    @media (max-width: 600px) {
+      main { padding: 17px 13px; }
+      header { align-items: flex-start; }
+      h1 { font-size: 22px; }
+      .view-controls { gap: 3px; }
+      .view-controls button { padding: 5px 7px; }
+      .level-controls { padding: 11px; }
+      .level-slider { flex-basis: 100%; }
+      .plot-wrap { height: 340px; }
+      h2 { font-size: 19px; }
+    }
+  </style>
+</head>
+<body>
+<main>
+  <header>
+    <div><h1>A singular foliation of space</h1><p class="subtitle">Concentric spheres · one exceptional point</p></div>
+    <div class="view-controls"><button id="zoom-in" type="button" aria-label="Zoom in">+</button><button id="zoom-out" type="button" aria-label="Zoom out">−</button><button id="reset" type="button">Reset view</button></div>
+  </header>
+  <p class="introduction">For <span class="formula">f(x) = ½(x₁² + x₂² + x₃²)</span>, every positive level is a sphere. Slide toward zero and the selected sphere shrinks to the <strong>singular leaf {0}</strong>.</p>
+  <div class="level-controls">
+    <div class="level-slider"><label for="level">Level c</label><input id="level" type="range" min="0" max="2" step="0.01" value="1" aria-describedby="level-help"><label class="sr-only" for="level-value">Level c, numeric value</label><input id="level-value" type="number" min="0" max="2" step="0.01" value="1.00"></div>
+    <button id="zero" type="button">Go to c = 0</button><button id="play" type="button" aria-pressed="false">▶ Let it breathe</button>
+  </div>
+  <p id="level-help" class="sr-only">Choose a level between zero and two. The sphere has radius the square root of twice c; zero selects a single point.</p>
+  <div class="options">
+    <label><input id="cutaway" type="checkbox" checked> Cutaway</label>
+    <label><input id="all-leaves" type="checkbox" checked> Nested leaves</label>
+    <label><input id="gradient" type="checkbox"> Gradient paths (not leaves)</label>
+  </div>
+  <div class="plot-wrap"><div id="foliation-plot" role="img" aria-label="Interactive 3D concentric spheres with a marked singular point at the origin" aria-describedby="description drawing-note"></div><span id="drawing-note" class="plot-note">A quarter is omitted to reveal the interior; every spherical leaf is complete.</span></div>
+  <p id="load-error" role="alert" hidden>The 3D view could not load. Check your connection and WebGL support. The level and mathematical explanation remain available below.</p>
+  <noscript><p>JavaScript is needed for the interactive view. For c &gt; 0 the leaf is the sphere of radius √(2c); at c = 0 it is the origin.</p></noscript>
+  <p class="hint">Drag to orbit · use + / − to zoom · breathing selects different leaves</p>
+  <div class="legend" aria-label="Plot legend">
+    <span id="selected-legend"><i class="swatch"></i>Selected spherical leaf</span><span><i class="swatch origin"></i>Origin · singular leaf</span><span id="reference-legend"><i class="swatch reference"></i>Other spherical leaves</span><span id="gradient-legend" hidden><i class="swatch gradient"></i>Gradient paths · not leaves</span>
+  </div>
+  <section class="readout">
+    <div class="readout-top"><h2 id="leaf-title">f⁻¹(1.00) = S² of radius √2</h2><span id="dimension">Dimension 2 · regular leaf</span></div>
+    <p id="description">The selected leaf is a sphere centered at the origin. Its radius is √(2c) ≈ 1.414.</p>
+    <p class="caption" id="motion-note">Different spheres are different leaves. The orange point is always the separate zero-dimensional leaf.</p>
+    <p id="status" class="sr-only" aria-live="polite" aria-atomic="true"></p>
+  </section>
+  <details>
+    <summary>Why this is a singular foliation</summary>
+    <h3>The leaves</h3>
+    <p class="formula equation">f(x) = ½‖x‖²,<br>L<sub>c</sub> = f⁻¹(c) = {x : ‖x‖ = √(2c)} for c &gt; 0,<br>L₀ = {0}; &nbsp; f⁻¹(c) = ∅ for c &lt; 0.</p>
+    <p>Every positive level is a connected two-dimensional sphere. Together with the origin these leaves partition ℝ³, but their dimensions are not constant: the origin is a zero-dimensional singular leaf.</p>
+    <h3>Tangent directions from rotations</h3>
+    <p>The rotation vector fields preserve f:</p>
+    <p class="formula equation">X₁₂ = x₁∂₂ − x₂∂₁,<br>X₁₃ = x₁∂₃ − x₃∂₁,<br>X₂₃ = x₂∂₃ − x₃∂₂.</p>
+    <p>At x ≠ 0, their span is x<sup>⊥</sup> = ker(df<sub>x</sub>), the two-dimensional tangent plane to the sphere. Their flows are rotations, whose orbits are exactly these spheres and the origin. Their smooth-function span is closed under Lie brackets and gives a singular foliation.</p>
+    <p>All three fields vanish at 0, so the tangent space of its leaf is {0}. Although df₀ = 0 and therefore ker(df₀) = ℝ³, that kernel is <strong>not</strong> the tangent space of the singular leaf. Taking the differential's kernel point by point does not give the leaf tangent distribution at the critical point.</p>
+    <h3>Gradient paths cross the leaves</h3>
+    <p>For the Euclidean metric, grad f(x) = x. The negative gradient equation and its solution are</p>
+    <p class="formula equation">ẋ = −x, &nbsp; x(t) = e<sup>−t</sup>x(0),<br>f(x(t)) = e<sup>−2t</sup> f(x(0)).</p>
+    <p>The optional dashed radial paths cross spherical leaves toward the origin; they are not leaves of this foliation. A nonzero trajectory approaches the origin only as t → +∞. Arrows point in the direction of negative gradient flow. The breathing animation instead varies the selected value of c back and forth, without moving a point along a gradient trajectory.</p>
+    <h3>Drawing conventions</h3>
+    <p>The nested view samples three other levels, c = 0.16, 0.49, and 1.69; the foliation contains a sphere for every c &gt; 0. The cutaway omits a quarter of each rendered sphere to reveal the inner leaves and origin. This is only a drawing choice: the actual leaves have no holes or boundaries. Transparency can produce overlap artifacts. World coordinates use the same scale in all three directions.</p>
+    <p>The spheres and the origin are the orbits of SO(3). For singular foliations generated by group actions, see <a href="https://ncg-leiden.github.io/foliation2023/foliation_notes_narrow.pdf" target="_blank" rel="noopener noreferrer">Singular foliations notes, §1.2.3</a>.</p>
+    <p><a href="spherical-foliation.js">JavaScript model and interaction source</a></p>
+  </details>
+</main>
+<script src="https://cdn.plot.ly/plotly-3.1.1.min.js"></script>
+<script src="spherical-foliation.js"></script>
+</body>
+</html>
