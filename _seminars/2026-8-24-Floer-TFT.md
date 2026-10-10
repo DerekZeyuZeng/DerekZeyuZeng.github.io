@@ -2,7 +2,7 @@
 title: "2026 Fall Reading: Bordism and Floer Field Theories"
 collection: seminars
 permalink: /seminars/26fa/
-date: 2026-08-24
+date: 2026-08-22
 end_date: 2026-12-10
 author_profile: true
 published: true
