@@ -60,13 +60,11 @@ Weeks 1–5 constitute the common core; Weeks 6–12 are progressively more adva
 
 ### Week 7 (Oct. 10) — Tangential Structure
 
-- **Theme:** Symmetric monoidal categories, gluing, and the functorial description of topological field theories.
+- **Theme:** Reduction of structure groups and tangential structures.
 - **References:**
-  - [Michael Atiyah, *Topological Quantum Field Theories*](https://www.numdam.org/item/10.1007/BF02698547.pdf)
-  - [Dan Freed, Lecture 9 & 10](https://people.math.harvard.edu/~dafr/M392C-2012/Notes)
-  - [Dan Freed, *Lectures on Topological Quantum Field Theory*](https://web.ma.utexas.edu/users/dafr/OldTQFTLectures.pdf)
+  - [Dan Freed, Lecture 9 & 10](https://people.math.harvard.edu/~dafr/M392C-2012/)
 
-### Week 8 — Tangential Structure
+### Week 8 (Oct. 19) — Atiyah-Segal Definition of TQFTs
 
 - **Theme:** Symmetric monoidal categories, gluing, and the functorial description of topological field theories.
 - **References:**
