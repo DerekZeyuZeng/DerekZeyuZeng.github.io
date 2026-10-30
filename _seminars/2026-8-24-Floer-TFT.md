@@ -24,7 +24,7 @@ Each meeting will focus on a small collection of definitions, one principal theo
 
 **Prerequisites.** Participants should be comfortable with basic smooth manifold theory and algebraic topology, including vector bundles, orientations, transversality, homology and cohomology, CW complexes, and elementary homotopy theory. Familiarity with basic category theory—categories, functors, natural transformations, tensor products, and universal properties—is also expected. Prior exposure to Morse theory, symplectic geometry, spectra, or Floer theory will be helpful but is not required for the first half of the seminar. Additional background needed for the later topics, including J-holomorphic curves, Fredholm theory, stable homotopy theory, and higher categories, will be introduced selectively. The aim of the advanced readings is to understand their principal constructions and structural ideas rather than all analytic or higher-categorical foundations.
 
-Weeks 1–5 constitute the common core; Weeks 6–12 are progressively more advanced and may be adjusted according to the participants’ backgrounds.
+Weeks 1–5 constitute the common core; Weeks 6–17 are progressively more advanced and may be adjusted according to the participants’ backgrounds.
 
 ### Week 1 & 2 (Aug. 22 & 29) — Classical bordism and Pontryagin–Thom
 
@@ -64,29 +64,29 @@ Weeks 1–5 constitute the common core; Weeks 6–12 are progressively more adva
 - **References:**
   - [Dan Freed, Lecture 9 & 10](https://people.math.harvard.edu/~dafr/M392C-2012/)
 
-### Week 8 (Oct. 19) — Atiyah-Segal Definition of TQFTs
+### Week 8 (Oct. 19) — Atiyah–Segal axioms and duality in symmetric monoidal categories
 
-- **Theme:** Symmetric monoidal categories, gluing, and the functorial description of topological field theories.
-- **References:**
-  - [Michael Atiyah, *Topological Quantum Field Theories*](https://www.numdam.org/item/10.1007/BF02698547.pdf)
-  - [Dan Freed, *Lectures on Topological Quantum Field Theory*](https://web.ma.utexas.edu/users/dafr/OldTQFTLectures.pdf)
+- **Theme:** The oriented bordism category, with closed $(n-1)$-manifolds as objects and diffeomorphism classes of $n$-dimensional bordisms as morphisms; gluing as composition and disjoint union as the symmetric monoidal product. Formulate an oriented TQFT as a symmetric monoidal functor $Z:\mathrm{Bord}^{\mathrm{or}}_n\to\mathrm{Vect}_k$. Introduce evaluation, coevaluation, and the two snake identities, and explain why duality in the bordism category forces the state spaces of a vector-space-valued TQFT to be finite-dimensional.
+- **Example and discussion:** Match cylinders with identity maps and the empty manifold with the tensor unit. For a finite-dimensional vector space $V$, write evaluation and coevaluation using a basis and its dual, verify the snake identities, and interpret them by gluing intervals. This gives the one-dimensional model for the surface constructions in Week 9.
+- **Core reading:**
+  - [Dan Freed, Lecture 13: *An Introduction to TQFT*, pp. 5–7](https://people.math.harvard.edu/~dafr/M392C-2012/Notes/lecture13.pdf) — symmetric monoidal categories and functors.
+  - [Dan Freed, Lecture 14: *Bordism Categories*](https://people.math.harvard.edu/~dafr/M392C-2012/Notes/lecture14.pdf) — the bordism category and Definition 14.20 of a TQFT.
+  - [Dan Freed, Lecture 15: *Duality*, pp. 3–7](https://people.math.harvard.edu/~dafr/M392C-2012/Notes/lecture15.pdf) — dualizability, the snake identities, and Theorem 15.36 on duality in TQFT.
+- **Supplementary reading:**
+  - [Michael Atiyah, *Topological Quantum Field Theories*, §2, pp. 177–180](https://www.numdam.org/item/PMIHES_1988__68__175_0.pdf) — compare the original axioms with the functorial formulation.
+  - [Dan Freed, Lecture 16: *1-Dimensional TQFTs*](https://people.math.harvard.edu/~dafr/M392C-2012/Notes/lecture16.pdf) — categorical dimension and the classification of oriented one-dimensional theories.
 
-### Week 9 — Duality and one-dimensional TQFTs
+### Week 9 (Oct. 24) — Classification of oriented 2D TQFTs and examples
 
-- **Theme:** Dualizable objects, evaluation/coevaluation bordisms, and the algebraic meaning of duality in field theories.
-- **References:**
-  - [Dan Freed, Lecture 15: Duality](https://people.math.harvard.edu/~dafr/M392C-2012/Notes/lecture15.pdf)
-  - [Dan Freed, Lecture 16: One-Dimensional TQFTs](https://people.math.harvard.edu/~dafr/M392C-2012/Notes/lecture16.pdf)
-  - [Jacob Lurie, *On the Classification of Topological Field Theories*, §1](https://arxiv.org/abs/0905.0465)
+- **Theme:** Decompose oriented surfaces into disks, cylinders, and pairs of pants. Read these bordisms as the unit, counit, multiplication, and comultiplication on $A=Z(S^1)$, and derive the Frobenius relations from gluing. Explain the classification of oriented two-dimensional TQFTs by finite-dimensional commutative Frobenius algebras, up to isomorphism, including how the algebra reconstructs the maps assigned to surfaces.
+- **Example and discussion:** Work out $A=k[x]/(x^2)$ with counit $\varepsilon(1)=0$ and $\varepsilon(x)=1$. Check that the pairing $\langle a,b\rangle=\varepsilon(ab)$ is nondegenerate, determine the comultiplication, and compute the invariants of the sphere and torus by cutting and gluing. Use the handle operator to extend the calculation to higher-genus surfaces.
+- **Core reading:**
+  - [Dan Freed, Lecture 23: *An Application of Morse–Cerf Theory*, pp. 4–9](https://people.math.harvard.edu/~dafr/M392C-2012/Notes/lecture23.pdf) — Frobenius algebras, examples, and the classification theorem (Definition 23.20 and Theorem 23.27); review pp. 1–4 for the Morse–Cerf argument behind independence of a surface decomposition.
+  - [Joachim Kock, *Frobenius Algebras and 2D Topological Quantum Field Theories*, §3.3](https://doi.org/10.1017/CBO9780511615443) — the classification, with §1.4 for generators and relations and §§2.2–2.3 for Frobenius algebras and comultiplication. See also the [author's corrections](https://mat.uab.cat/~kock/TQFT.html).
+- **Supplementary reading:**
+  - [Jacob Lurie, *On the Classification of Topological Field Theories*, §1.1, Example 1.1.11 and Definition 1.1.12; §1.2, Example 1.2.1](https://arxiv.org/abs/0905.0465) — a concise view of the two-dimensional classification and closed-surface invariants.
 
-### Week 10 — Morse–Cerf theory and 2D TQFTs
-
-- **Theme:** Morse functions, Cerf moves, and the relation between bordism decompositions and Frobenius algebra structures.
-- **References:**
-  - [Dan Freed, Lecture 23: An Application of Morse–Cerf Theory](https://people.math.harvard.edu/~dafr/M392C-2012/Notes/lecture23.pdf)
-  - [Joachim Kock, *Frobenius Algebras and 2D Topological Quantum Field Theories*](https://doi.org/10.1017/CBO9780511615443)
-
-### Week 11 — Cobordism categories and stable homotopy
+### Weeks 10 & 11 — Cobordism categories and stable homotopy
 
 - **Theme:** The homotopical structure of cobordism categories and the role of Thom spectra in classifying them.
 - **References:**
@@ -147,8 +147,6 @@ Here is the current working note for the seminar:
 - Notes on Bordism and Floer Field Theories ([PDF]({{ '/files/Bordism-Floer.pdf' | relative_url }}))
 - View the note in [Writings]({{ '/writings/bordism-floer/' | relative_url }})
 
-Some side stories were also discussed along the way:
+Related working notes:
 
-- TBD
-
-These side topics will be expanded and updated on this page as the notes develop.
+- [Morse Theory of Homotopy Type: The Cohen–Jones–Segal Construction]({{ '/writings/morse-theory-homotopy-type/' | relative_url }}) ([PDF]({{ '/files/Morse_Floer_Htpy.pdf' | relative_url }})) — a draft for the Fall 2026 Morse theory course, developing the flow-category viewpoint relevant to Weeks 16–17.
