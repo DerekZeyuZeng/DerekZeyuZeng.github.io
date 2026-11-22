@@ -16,6 +16,13 @@ This site is a place where I share my research, talks and presentations, reading
 
 Feel free to explore other sections for more details, and reach out via the contact links in the sidebar.
 
+From Thoughts
+----
+
+**[On the Recent Development of AI in Mathematics]({{ '/thoughts/ai-in-mathematics/' | relative_url }})**
+
+对近期数学界中的AI的一点评述 · [中文]({{ '/thoughts/ai-in-mathematics/' | relative_url }}#chinese) · [English]({{ '/thoughts/ai-in-mathematics/' | relative_url }}#english)
+
 Some Useful Links
 ----
 
