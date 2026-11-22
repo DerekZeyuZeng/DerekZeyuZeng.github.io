@@ -134,6 +134,10 @@ Hilbert 谈数学各部分之间的联系，我所理解的就是这件事。我
 
 我最后想起的，还是开头的两个圆环。即使已经知道 2η = 0，我也想亲手画出那张曲面，看清楚两个朝同一方向拧了一圈的标架怎样一起延伸到里面去。为这个早已有了答案的问题花掉一个下午，我是愿意的。我担心的是，以后一个靠数学谋生的年轻人，还花不花得起这个下午。
 
+2026年11月22日凌晨<br>
+于UIUC校园<br>
+Derek
+
 </div>
 
 ---
@@ -262,5 +266,9 @@ On October 6 of this year, OpenAI released 722 mathematical manuscripts at once,
 In my view, this undermines the right of a scholarly community to exercise its own judgment. Researchers ought to have time to understand what a result means. They ought to be free to decide that another problem deserves more of their attention. Once the public has accepted a company announcement as a mathematical breakthrough, anyone who reserves judgment has the additional task of explaining their hesitation. Everyone involved might sincerely care about mathematics, and the order in which these things happen would still affect who gets to say what counts as progress. If the questions researchers pursue come to depend more and more on what a few companies choose to release, whose freedom to choose a problem has AI enlarged?
 
 I keep coming back to those two circles. I know that 2η = 0, and I would still like to draw the surface myself and see how the two framings, each given a full twist in the same direction, extend together over it. I would gladly spend an afternoon on that, knowing the answer in advance. What worries me is whether a young person trying to make a living in mathematics will still be able to afford that afternoon.
+
+Early morning, November 22, 2026<br>
+On the UIUC campus<br>
+Derek
 
 </div>
