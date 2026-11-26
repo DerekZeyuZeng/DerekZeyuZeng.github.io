@@ -7,8 +7,9 @@ redirect_from:
   - /about.html
 ---
 
-![宁拙毋巧，宁朴毋华 —— C. N. Yang](/images/CNYang.png)
-Favor substance over polish; plainness over flourish. (宁拙毋巧，宁朴毋华) —— C. N. Yang
+> 君子性非异也，善假于物也。
+>
+> —— 荀子《劝学》
 
 Hello! My name is Derek Zeng, and I am an undergraduate student at the University of Illinois at Urbana–Champaign, with a dual degree in Mathematics and Physics. My interests lie in geometry, topology, and mathematical physics—especially the relation between modern homotopy theory and differential geometry. I also did some work on general physics (fluid dynamics, particle physics, gravity) on high school and first year in college.
 
