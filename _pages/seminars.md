@@ -43,14 +43,6 @@ Participation
 
 Students and other interested readers are welcome to get in touch. When contacting me, please include your mathematical background, the topic that interests you, and whether you would be willing to present part of the material. My contact information appears in the sidebar.
 
-**Current and Past Participants:**
-
-- Derek Zeyu Zeng (曾泽昱, myself), University of Illinois Urbana-Champaign
-- Siyuan Wei (韦思远), Peking University
-- Tony Tunan Zhuang (庄图南), University of Illinois Urbana-Champaign
-- Andy Shuai Hao (郝帅), University of Illinois Urbana-Champaign
-- Yinjun Shen (申应君), Peking University
-
 Past Seminars and Materials
 ---------------------------
 
