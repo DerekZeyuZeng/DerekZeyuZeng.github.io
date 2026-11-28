@@ -14,6 +14,13 @@ The seminar runs from August 24 to December 10, 2026, and is organized as a slow
 
 The current plan is to begin with the basic language of cobordism, then move toward the functorial viewpoint of topological field theories, and finally connect these ideas to Floer-theoretic and related geometric constructions.
 
+## Organizer
+
+- Derek Zeng (曾泽昱, Myself), University of Illinois Urbana-Champaign, co-organizer
+- Siyuan Wei (韦思远), Peking University, co-organizer
+
+For questions or to join the reading group, please contact Derek at [derek6@illinois.edu](mailto:derek6@illinois.edu) or Andy at [wsyphy@stu.pku.edu.cn](mailto:wsyphy@stu.pku.edu.cn).
+
 ## Tentative Weekly Schedule
 
 We begin with bordism and stable homotopy, then study TQFTs and the Cobordism Hypothesis. The schedule may be adjusted as we go.
